@@ -213,7 +213,7 @@ theorem eventually_sharpEndpointBlockSize_sublinear
         nlinarith
   exact_mod_cast htotal
 
-/-- The same cube-root scale closes the honest squared-codegree isolation
+/-- The same cube-root scale satisfies the squared-codegree isolation
 condition: `lambda ≤ r`, `r^3 ≤ d`, and polynomial growth of `d` are
 enough eventually. -/
 theorem eventually_sharpIsolation_square_ratio_cube_scale (C : ℕ) :
@@ -264,7 +264,7 @@ theorem collisionCorrection_of_isolationBudget
 /-- One concrete retained round on an exactly regular padded system.
 
 The common isolation budget is the single quadratic inequality
-`hIsolationBudget`.  The six other displayed assumptions are the honest
+`hIsolationBudget`.  The six other displayed assumptions bound the
 Chernoff or Harris costs which depend on the current endpoint block size
 and degree. -/
 theorem exists_isolatedSharpFixedSlackRound_sharpConcretePadded

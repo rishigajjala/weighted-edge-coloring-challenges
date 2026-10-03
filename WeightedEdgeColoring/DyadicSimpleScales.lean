@@ -134,7 +134,7 @@ theorem dyadicSimple_extraGap_absorbs_floor
   have hcoef : 0 ≤ 1 - gamma := by linarith
   nlinarith [mul_le_mul_of_nonneg_left hfloor hcoef]
 
-/- Honest squared-codegree condition on the chosen polynomial scales. -/
+/- Squared-codegree condition on the chosen polynomial scales. -/
 set_option maxHeartbeats 800000 in
 theorem eventually_dyadicSimple_square_ratio
     (A : ℕ) (alpha gamma : ℝ)

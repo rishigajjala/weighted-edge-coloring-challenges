@@ -279,7 +279,7 @@ theorem eventually_isolatedLoss_scaled_of_polynomial_quantization
   · exact hratio d lambda hd hn hscale hpoly
   · exact hbudget
 
-/-- Honest codegree-scaled form of the isolation budget.  When
+/-- Codegree-scaled form of the isolation budget.  When
 `a = alpha/lambda` and `eta = a/64`, the logarithmic requirement is on
 `lambda^2 * U(d)^2`, not merely on `lambda * U(d)^2`. -/
 theorem isolatedLoss_scaled_of_squared_codegree_ratio

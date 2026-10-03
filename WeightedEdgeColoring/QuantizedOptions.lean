@@ -24,7 +24,7 @@ universe u v w
 /-! ## Explicit copies and their finite degrees -/
 
 /-- `IntegerCopy Option mult` contains exactly `mult o` labelled copies of
-the base option `o`.  The labels make repeated hyperedges honest elements of
+the base option `o`.  The labels make repeated hyperedges distinct elements of
 a finite type, so all subsequent matching statements can count them without
 using a multiset convention. -/
 abbrev IntegerCopy (Option : Type w) (mult : Option → ℕ) :=

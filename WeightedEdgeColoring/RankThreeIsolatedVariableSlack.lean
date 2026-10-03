@@ -118,7 +118,7 @@ theorem variableSlack_slotRetention_pos
   unfold fixedSlackSlotRetention variableSlackEta
   nlinarith [mul_nonneg hret0 hgap0]
 
-/-! ## The honest squared-codegree loss condition -/
+/-! ## The squared-codegree loss condition -/
 
 /-- A parameter-only inequality implies the isolation moment budget after
 the substitution `a=alpha*gamma/lambda`.  The scale hypothesis has the
@@ -287,7 +287,7 @@ theorem variableSlack_groupLossEnvelope_of_blockScale
 
 /-! ## Eventual closure on the `N=n^(3/2)` scale -/
 
-/-- For fixed positive `alpha,gamma`, the honest isolation condition follows
+/-- For fixed positive `alpha,gamma`, the isolation condition follows
 on the cube/square scale: `lambda≤r`, `r^3≤d`, and polynomial upper growth
 of `d`. -/
 theorem eventually_variableSlack_square_ratio_cube_scale

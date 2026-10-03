@@ -490,9 +490,8 @@ theorem selectedNormalizedLarge_add_tinyIntegral_load_le_one_add_error
       linarith
 
 /-- Exact feasibility follows if the additive tiny-rounding error fits in
-the unused fraction `(1-a)` of the selected reservoir.  This pointwise
-condition is the scalar slack still missing from the current profile
-pipeline. -/
+the unused fraction `(1-a)` of the selected reservoir.  The pointwise slack
+inequality is an explicit hypothesis. -/
 theorem selectedNormalizedLarge_add_tinyIntegral_load_le_one_of_slack
     (hn : 0 < B * k) (hs : 0 ≤ s) (hq : 0 ≤ q) (hr0 : 0 ≤ r)
     (hleftParam : 0 ≤ 1 - s * (1 + q + r))

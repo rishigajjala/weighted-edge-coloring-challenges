@@ -74,7 +74,7 @@ def profileLargeEdgeMass
     (G.graphExtraSlotCount bucket (G.profileResidual s β proposal) gamma t)
     (G.profileOrdinaryMass proposal R) (G.profileResidual s β proposal)
 
-/-- Under the honest retained-mass upper bound, every combined option has
+/-- Under the retained-mass upper bound, every combined option has
 nonnegative mass. -/
 theorem profileLargeEdgeMass_nonneg
     (bucket : G.E → Class) (gamma : ℝ) (t : ℕ)

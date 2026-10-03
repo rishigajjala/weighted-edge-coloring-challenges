@@ -7,8 +7,8 @@ import WeightedEdgeColoring.ProfileLargeEdgePackage
 
 The endpoint iteration assumes that every job edge has weight at least a
 fixed threshold.  In the application, this is true only for the large
-edges.  This file supplies the honest restriction: both the graph edge type
-and the job type are replaced by the same subtype.  A matching in that
+edges.  This file replaces both the graph edge type
+and the job type by the same subtype.  A matching in that
 system lifts to the original option system, and its residual active-star
 weight is exactly the weight of the available large edges in the original
 graph.

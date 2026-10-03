@@ -74,9 +74,8 @@ theorem hasColoredHeavySkeleton_of_shannon
   rcases hshannon hn F (G.degreeOn_greedySkeleton_le n) with ⟨base, hproper⟩
   exact ⟨F, base, G.greedySkeleton_hasHeavyWitnesses n, hproper⟩
 
-/-- The axiom-free weighted development reduces the exact theorem to the
-ordinary finite Shannon coloring theorem, with no analytic or asymptotic
-claim left in the bridge. -/
+/-- The ordinary finite Shannon coloring theorem implies the exact weighted
+bound `3 * ceil Δw`. -/
 theorem generalMultigraphThreeCeil_of_shannon
     (hshannon : ∀ H : WeightedMultigraph.{u}, ∀ n, H.ShannonThreeAt n) :
     GeneralMultigraphThreeCeil.{u} := by

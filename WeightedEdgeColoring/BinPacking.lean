@@ -206,9 +206,8 @@ end BinPackingInstance
 The assertion called *Elementary Grouping* (Lemma 4.1) in the paper.
 
 The upper bound `weight ≤ 1` is part of `BinPackingInstance`.  The additional
-hypothesis says that every item has weight at least `τ`.  This is deliberately
-a named proposition, rather than a postulate: later developments may take it as an
-explicit hypothesis or supply its proof without extending Lean's trusted base.
+hypothesis says that every item has weight at least `τ`.  This definition
+names a proposition; it does not assert the proposition or introduce an axiom.
 -/
 def ElementaryGrouping : Prop :=
   ∀ (B : BinPackingInstance.{u}) (τ θ F : ℝ),

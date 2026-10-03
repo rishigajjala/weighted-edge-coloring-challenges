@@ -170,7 +170,7 @@ end WeightedMultigraph
 
 universe u
 
-/-- Standard ordinary multigraph input still external to the development.
+/-- Uniform near-fractional coloring statement for ordinary multigraphs.
 
 The degree and odd-set hypotheses say that the fractional chromatic index is
 at most `L` by Edmonds' matching-polytope theorem.  Sanders--Steurer then

@@ -3,7 +3,7 @@ import WeightedEdgeColoring.SubtwoOrdinaryTriangleShortSaturation
 /-!
 # The ordinary seven-sixths obstruction theorem
 
-The critical-graph theorem gives an honest coloring result at every palette
+The critical-graph theorem gives a coloring result at every palette
 size at least two above the degree bound. This is the range needed by the
 asymptotic sub-two quotient.
 -/
