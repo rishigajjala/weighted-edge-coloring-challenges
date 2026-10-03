@@ -14,8 +14,7 @@ summing over both tables and traces again gives one.  Positive trace mass
 forces every recorded patch to be compatible with the table state at which
 it was selected.
 
-This file does not claim that a run terminates.  The missing witness-history
-estimate must bound long traces before a terminating trace can be extracted.
+Termination requires a separate witness-history bound on long traces.
 -/
 
 namespace WeightedEdgeColoring.FinitePartialResamplingFiniteRun

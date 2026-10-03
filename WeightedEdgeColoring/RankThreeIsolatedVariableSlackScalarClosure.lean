@@ -4,15 +4,13 @@ import Mathlib.Analysis.SpecialFunctions.Pow.Real
 /-!
 # Closed scalar choices for the variable-slack isolated round
 
-The earlier non-isolated round used `4 log (d+1)` as its event exponent.
-That exponent does not pay the quartic lower-row incidence budget after
-passing to the raw-sample-then-isolate construction.  Here we use
+The raw-sample-then-isolate construction has a quartic lower-row incidence
+budget.  To meet this budget, use the event exponent
 
 `z(d) = 8 log (d+1)`
 
-and choose the quadratic-moment order in base two.  The definition of the
-moment order is deliberately exact: it makes the comparison between
-`2*(1/2)^k` and `exp(-z)` a one-line ceiling argument and avoids any decimal
+and choose the quadratic-moment order in base two.  This choice compares
+`2*(1/2)^k` with `exp(-z)` by a ceiling inequality, without a decimal
 estimate for `log 2`.
 -/
 

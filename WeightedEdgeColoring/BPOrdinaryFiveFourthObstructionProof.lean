@@ -4,8 +4,8 @@ import WeightedEdgeColoring.BPOrdinaryFiveFourthDensity
 /-!
 # The five-fourths ordinary obstruction theorem
 
-This file closes the Andersen critical-graph argument and discharges the
-previously explicit ordinary obstruction proposition.
+Andersen's critical-graph argument proves the ordinary obstruction theorem
+used by the packet construction.
 -/
 
 namespace WeightedEdgeColoring

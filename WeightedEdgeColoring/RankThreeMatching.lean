@@ -14,11 +14,9 @@ are rounded.  An option has one owner (the job that it completes) and uses at
 most two slots.  Repeated copies of the same geometric option are represented
 by distinct values of `Option`.
 
-The main theorem in this file is an elementary greedy result.  It is weaker
-than the near-regular rank-three matching theorem needed by the full
-coefficient-one argument, but it gives an axiom-free executable core and a
-precise obstruction certificate: after some jobs have been chosen, a new job
-can fail only if the already chosen options cover its whole option fibre.
+The main theorem gives an elementary greedy construction and a precise
+obstruction certificate: after some jobs have been chosen, a new job can
+fail only if the chosen options cover its whole option fibre.
 -/
 
 universe u v w

@@ -4,8 +4,8 @@ import WeightedEdgeColoring.BoundedMultiplicityDeficitAwareRoundingProof
 /-!
 # Unconditional bipartite harmonic-charge coloring
 
-The proved deficit-aware bounded-multiplicity rounder closes the sole input
-of the finite-harmonic-plus-tiny construction.
+Combining deficit-aware bounded-multiplicity rounding with the
+finite-harmonic-plus-tiny construction gives the bipartite coloring bounds.
 -/
 
 namespace WeightedEdgeColoring

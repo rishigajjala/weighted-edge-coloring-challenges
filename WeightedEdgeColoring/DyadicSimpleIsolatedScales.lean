@@ -3,14 +3,14 @@ import WeightedEdgeColoring.RankThreeIsolatedVariableSlackScalarClosure
 import Mathlib.Analysis.Complex.ExponentialBounds
 
 /-!
-# Corrected isolated moments on the simple-graph polynomial scales
+# Isolated moments on the simple-graph polynomial scales
 -/
 
 namespace WeightedEdgeColoring
 
 noncomputable section
 
-/-- The exact base-two moment envelope is at most twice the earlier
+/-- The exact base-two moment envelope is at most twice the
 `8 log(d+1)+1` envelope. -/
 theorem isolatedVariableMomentUpper_le_two_sharpConcrete
     (d : ℕ) :
@@ -31,8 +31,8 @@ theorem isolatedVariableMomentUpper_le_two_sharpConcrete
   nlinarith [mul_nonneg hlogd
     (by linarith [hlog2] : 0 ≤ 2 * Real.log 2 - 1)]
 
-/-- The honest squared-codegree condition for the corrected isolated moment
-holds on the existing `m^30`/`m^14` scale. -/
+/-- The squared-codegree condition for the isolated moment holds on the
+`m^30`/`m^14` scale. -/
 theorem eventually_dyadicSimple_corrected_square_ratio
     (A : ℕ) (alpha gamma : ℝ)
     (halpha : 0 < alpha) (hgamma : 0 < gamma) :

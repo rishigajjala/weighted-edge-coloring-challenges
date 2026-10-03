@@ -5,16 +5,13 @@ import WeightedEdgeColoring.SimpleRoundingReduction
 /-!
 # Splitting a bounded-multiplicity bipartite multigraph into simple layers
 
-This file records the exact lossless part of a possible reduction from
-bounded-multiplicity multigraph rounding to simple-graph rounding.  Parallel
-edges can be ranked inside each oriented endpoint pair, giving a bounded
-family of weighted simple graphs.  The layers partition the indexed edges,
-and arbitrary edge sums (in particular star weights and proposal loads) split
-exactly over them.
+Ranking parallel edges inside each oriented endpoint pair partitions a
+bounded-multiplicity multigraph into weighted simple graphs.  Arbitrary
+edge sums (in particular star weights and proposal loads) split exactly
+over these layers.
 
-The final example records the obstruction to finishing the reduction by
-rounding the layers independently: feasible same-palette colorings of the
-individual layers need not remain feasible after the layers are reunited.
+The final example shows that feasible same-palette colorings of individual
+layers need not remain feasible after the layers are reunited.
 -/
 
 open scoped BigOperators
