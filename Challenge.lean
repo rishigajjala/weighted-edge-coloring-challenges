@@ -1,15 +1,14 @@
 import Mathlib.Algebra.BigOperators.Group.Finset.Piecewise
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Algebra.Order.BigOperators.Group.Finset
 import Mathlib.Data.Fintype.EquivFin
 import Mathlib.Data.Real.Archimedean
 import Mathlib.Data.Sym.Sym2
-import Mathlib.Topology.Algebra.InfiniteSum.Basic
 
 /-!
 # Five weighted edge-coloring challenges
 
 This file is self-contained apart from Mathlib.  It contains the graph model,
-the three parameters used in the statements, the harmonic constant, and the
+the three parameters used in the statements and the
 five main problem statements from the manuscript.
 
 The graph is edge-indexed, so distinct edges may have the same two endpoints.
@@ -166,16 +165,6 @@ noncomputable def deltaW : ℝ :=
 
 end WeightedGraph
 
-/-- The Sylvester numbers `1, 2, 6, 42, 1806, ...`. -/
-def sylvesterNumber : ℕ → ℕ
-  | 0 => 1
-  | n + 1 => sylvesterNumber n * (sylvesterNumber n + 1)
-
-/-- The harmonic bin-packing constant
-`h_infinity = sum_{n >= 0} 1 / sylvesterNumber n`. -/
-noncomputable def harmonicBinPackingConstant : ℝ :=
-  ∑' n : ℕ, (1 : ℝ) / sylvesterNumber n
-
 /-!
 ## The five problems
 
@@ -221,13 +210,13 @@ def Problem4GeneralDelta : Prop :=
 
 /-- **Problem 5: general multigraphs, local bin packing.**
 
-Prove
-`chi'_w(G) <= (h_infinity + 2/5) bp(G) + o(bp(G))`. -/
+Prove `chi'_w(G) <= (1999/1000) bp(G) + o(bp(G))` for every finite
+loopless weighted multigraph. `Solutions.lean` proves this statement by
+transporting the unrestricted theorem to this self-contained graph model. -/
 def Problem5GeneralBP : Prop :=
   ∀ ε : ℝ, 0 < ε → ∃ N : ℕ, ∀ G : WeightedGraph.{u},
     N ≤ G.bp →
-    (G.chiW : ℝ) ≤
-      (harmonicBinPackingConstant + (2 / 5 : ℝ) + ε) * (G.bp : ℝ)
+    (G.chiW : ℝ) ≤ ((1999 / 1000 : ℝ) + ε) * (G.bp : ℝ)
 
 /-- A convenient bundle for work that addresses all five problems. -/
 structure Solutions where

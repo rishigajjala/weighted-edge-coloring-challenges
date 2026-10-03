@@ -1,0 +1,16 @@
+import Solutions
+
+/-! Kernel dependency audit for the public theorem statements. -/
+
+#print axioms WeightedEdgeColoringChallenge.solve_problem_1
+#print axioms WeightedEdgeColoringChallenge.solve_problem_2
+#print axioms WeightedEdgeColoringChallenge.solve_problem_3
+#print axioms WeightedEdgeColoringChallenge.solve_problem_4
+#print axioms WeightedEdgeColoringChallenge.solve_problem_5
+#print axioms WeightedEdgeColoring.subtwoBPAsymptotic_unrestricted
+
+#check WeightedEdgeColoringChallenge.solve_problem_1
+#check WeightedEdgeColoringChallenge.solve_problem_2
+#check WeightedEdgeColoringChallenge.solve_problem_3
+#check WeightedEdgeColoringChallenge.solve_problem_4
+#check WeightedEdgeColoringChallenge.solve_problem_5

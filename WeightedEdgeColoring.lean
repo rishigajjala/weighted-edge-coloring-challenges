@@ -1,0 +1,7 @@
+import WeightedEdgeColoring.SubtwoUnrestrictedProof
+import WeightedEdgeColoring.SimpleUniformMultiplePartialRoundingProof
+import WeightedEdgeColoring.BipartiteHarmonicChargeColoringUnconditional
+import WeightedEdgeColoring.BipartiteTotalWeightAsymptotic
+import WeightedEdgeColoring.ShannonBridge
+
+/-! Weighted edge coloring for finite simple graphs and loopless multigraphs. -/
