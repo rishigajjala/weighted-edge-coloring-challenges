@@ -148,7 +148,7 @@ theorem selectedBlockCyclic_quantizedOrdinarySlotDegree_lt
     hcapacity (slot.vertex, slot.color, slot.place)
   exact hdegree.trans_lt (mul_lt_mul_of_pos_left hload (by exact_mod_cast hN))
 
-/-- A concrete residual-star cap is exactly the missing input for the
+/-- A residual-star cap implies the
 cyclic extra-slot degree bound. -/
 theorem selectedBlockCyclic_quantizedExtraSlotDegree_le
     (hn : 0 < B * k) (hs : 0 ≤ s) (hq : 0 ≤ q) (hr0 : 0 ≤ r)

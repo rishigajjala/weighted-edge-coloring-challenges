@@ -3,8 +3,8 @@ import WeightedEdgeColoring.SubtwoPhysicalFiveLiftedRows
 /-!
 # Pair and heavy-class indices in the physical certificate vector
 
-The two index maps are the lexicographic pair and triple orders used by
-the archived generator. The proofs below identify their observables with
+The two index maps enumerate pairs and heavy classes in lexicographic order.
+The proofs below identify their observables with
 the actual incident bundles and the chosen heavy classes.
 -/
 

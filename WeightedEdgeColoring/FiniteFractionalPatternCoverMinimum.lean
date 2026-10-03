@@ -81,8 +81,8 @@ theorem sum_coeff_mul_eq_coverage (C : B.FractionalPatternCover)
         (fun p c ↦ c * (p.multiplicity i : ℝ)) (by simp)
     _ = C.coverage i := rfl
 
-/-- Turn a feasible full coefficient vector into the finite-support cover
-structure used elsewhere in the development. -/
+/-- Turn a feasible full coefficient vector into a finite-support
+fractional pattern cover. -/
 def ofCoefficientFunction (x : B.Pattern → ℝ)
     (hx : CoefficientFeasible B x) :
     B.FractionalPatternCover := by

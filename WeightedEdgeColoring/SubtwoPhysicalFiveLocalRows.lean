@@ -1,10 +1,10 @@
 import WeightedEdgeColoring.SubtwoPhysicalFiveIndices
 
 /-!
-# Local physical rows in the archive's pair and triple coordinates
+# Local physical rows in pair and heavy-class coordinates
 
 Diagonal heavy classes have zero mass and zero price. Removing them gives
-the twelve coordinates at a vertex in the frozen generator's order.
+the twelve coordinates at a vertex, indexed by `subtwoFiveClassIndex`.
 -/
 
 open scoped BigOperators

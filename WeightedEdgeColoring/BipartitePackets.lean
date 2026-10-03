@@ -237,7 +237,7 @@ theorem oriented_conflict_of_common_inc
 end Bipartition
 
 /-- Kőnig's exact edge-coloring theorem, specialized to the indexed
-multigraph representation used by the weighted development. -/
+multigraph representation `WeightedMultigraph`. -/
 theorem exists_isProperOn_bipartite_of_degreeOn_le
     (b : G.Bipartition) (F : Finset G.E) (k : ℕ) (hk : 0 < k)
     (hdegree : ∀ v, G.degreeOn F v ≤ k) :

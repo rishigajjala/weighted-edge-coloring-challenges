@@ -1,8 +1,8 @@
 import Mathlib
 
 /-! Exact real-variable scalar inequalities for the two uniform five-vertex
-price models.  These statements are independent of the endpoint-potential
-structure, so it can later use them without importing any archive LP data. -/
+price models.  These statements involve only real scalars and do not
+require an endpoint-potential structure or linear-programming certificate. -/
 
 namespace WeightedEdgeColoring
 

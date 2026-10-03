@@ -249,8 +249,7 @@ theorem extend_feasibleOn_two_of_small_edge
 /-- Consequently, an edge-minimal obstruction to a `2n` coloring contains
 no edge at or below the small-edge threshold.  Minimality is expressed
 directly on the partial coloring of `univ.erase e`, so this lemma introduces
-no restricted graph type and no choice principle beyond the finite model
-already used by the development. -/
+no restricted graph type or additional choice principle. -/
 theorem weight_gt_small_edge_threshold_of_minimal_obstruction
     (n : ℕ) (hn : 2 ≤ n)
     (hbad : ¬ G.HasWeightedColoring (2 * n))
