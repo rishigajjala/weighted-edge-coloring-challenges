@@ -333,7 +333,7 @@ theorem rotatedSelectedIncidentPairCost_eq_vertexIncidentCost
     (selected (G.fst e)) (selected (G.snd e)) (pairCost e)
     (shift (G.fst e)) (shift (G.snd e))
 
-/-- The remaining scalar probability input for local synchronization.
+/-- The conditional scalar probability bound used by local synchronization.
 The centre shift is fixed, while all other vertex shifts remain independent
 and uniform. -/
 def SelectedProfileConditionalTail

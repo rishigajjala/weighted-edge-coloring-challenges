@@ -12,12 +12,11 @@ local star packing polytope.  The bounded-multiplicity whole-edge theorem then
 colors almost all residual weight in the packet palette, and descending-weight
 cleanup colors the remainder in fresh colors.
 
-The proposal is kept explicit because the currently proved
-`WeightedMomentPaletteMixing` theorem has a different graph-facing type: its
-proper skeleton and residual must be edge sets of one multigraph.  Here the
-proper skeleton consists of packet edges, while the rounded residual consists
-of physical edges.  Thus a packet/physical mixing bridge is still needed
-upstream of the theorem below.
+The proposal is an explicit hypothesis.  The `WeightedMomentPaletteMixing`
+interface requires its proper skeleton and residual to be edge sets of one
+multigraph.  Here the skeleton consists of packet edges, while the residual
+consists of physical edges.  Applying that interface therefore requires a
+bridge between these two edge types.
 -/
 
 open scoped BigOperators

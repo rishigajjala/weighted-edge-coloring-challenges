@@ -420,8 +420,8 @@ theorem residualActiveStarWeight_largeEdgeRestriction
 
 The returned set is expressed on the restricted option type, so its residual
 degree statements are exact.  Its lift is simultaneously certified as a
-partial matching of the original option system.  The last line measures the
-remaining work using the original graph edges and vertices. -/
+partial matching of the original option system.  The final bound measures
+residual active large-edge weight at the original graph vertices. -/
 theorem exists_fixedRate_largeEdgeIteration_to_target
     {beta : ℝ} (L lambda J d0 S0 target : ℕ) (epsilon : ℝ)
     (hbeta : 0 < beta)

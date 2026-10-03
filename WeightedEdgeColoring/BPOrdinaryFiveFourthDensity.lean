@@ -76,9 +76,9 @@ multigraph has chromatic index at most `(5 Delta + 2) / 4`; an elementary
 multigraph is controlled by its odd-set density.  The harmless `+1` below
 absorbs both integer roundings.
 
-This is intentionally kept separate from
-`OrdinaryMultigraphNearFractionalColoring`: it is a strictly weaker input
-and is the precise remaining recolouring theorem for the packet range. -/
+This statement is strictly weaker than
+`OrdinaryMultigraphNearFractionalColoring` and suffices for the packet
+range. -/
 def OrdinaryMultigraphFiveFourthDensityColoring : Prop :=
   ∀ (G : WeightedMultigraph.{u}) (F : Finset G.E) (A L : ℝ),
     0 ≤ A →

@@ -3,8 +3,8 @@ import WeightedEdgeColoring.FinitePartialResamplingCapped
 /-!
 # Finite histories and resampling tables
 
-This file contains the finite process layer needed by a partial-resampling
-argument.  It deliberately stops before the witness-history estimate.
+This file defines finite partial-resampling histories and their probability
+distributions.
 
 For a bad row, a nonnegative hitting weight on compatible partial
 assignments is normalized to a probability distribution.  A selected
@@ -18,9 +18,9 @@ source advances its pointer by one.  A history of length `h` reads at most
 the first `h+1` cells of every source.  Finite table prefixes carry the
 expected product mass, whose total is again proved to be one.
 
-No termination or simultaneous-avoidance theorem is asserted here.  Such a
-theorem still needs the separate witness-history bound that turns the charge
-inequalities into a uniform bound on the length of a run.
+Termination and simultaneous avoidance require a separate witness-history
+bound that turns the charge inequalities into a uniform bound on the length
+of a run; they are not conclusions of this module.
 -/
 
 namespace WeightedEdgeColoring.FinitePartialResamplingProcess

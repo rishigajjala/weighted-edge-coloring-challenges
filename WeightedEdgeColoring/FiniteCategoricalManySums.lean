@@ -18,13 +18,11 @@ deviation, including deviations larger than twice the mean bound.  The second
 part supplies all numerical details for the finite support-overlap local
 lemma.
 
-This is a genuine simultaneous, count-independent theorem, but it does not
-yet derive the overlap degree `d` from a weighted column-sum bound alone.
-That implication is false for the ordinary support graph: one column may have
+The overlap degree `d` does not follow from a weighted column-sum bound
+alone.  One column may have
 arbitrarily many nonzero entries of arbitrarily small size while its total
 mass stays bounded.  Replacing `d` by weighted column mass therefore needs a
-mass-sensitive local lemma or partial-resampling theorem; this is the exact
-remaining Harris--Srinivasan step.
+mass-sensitive local lemma or partial-resampling theorem.
 -/
 
 namespace WeightedEdgeColoring.FiniteCategoricalSelection

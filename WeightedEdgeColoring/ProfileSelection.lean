@@ -14,10 +14,9 @@ source-state column is supported on at most two rows and every entry is at
 most `tau`, one can choose one state at every source while increasing no row
 by more than `2 * tau` above its fractional mean.
 
-Unlike an assertion of the Harris--Srinivasan many-sums theorem, the result
-below is a proved finite theorem.  Its two-row support hypothesis is stronger
-than the column-sum hypothesis used in the manuscript's profile-selection
-step; see the module docstring after the theorem for the remaining gap.
+The two-row support hypothesis is stronger than the column-sum hypothesis
+in the Harris--Srinivasan many-sums theorem.  The result below applies under
+this explicit support restriction.
 -/
 
 noncomputable section

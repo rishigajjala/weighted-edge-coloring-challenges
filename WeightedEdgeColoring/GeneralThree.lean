@@ -7,9 +7,8 @@ universe u
 
 variable (G : WeightedMultigraph)
 
-/-- The sole combinatorial certificate still needed after the weighted
-insertion argument: a descending greedy skeleton together with an ordinary
-proper Shannon coloring. -/
+/-- A certificate for the weighted insertion argument: a descending greedy
+skeleton together with an ordinary proper Shannon coloring. -/
 def HasColoredHeavySkeleton (n : ℕ) : Prop :=
   ∃ F : Finset G.E, ∃ base : G.E → Fin (3 * n),
     G.HasHeavySkeletonWitnesses F n ∧ G.IsProperOn F base

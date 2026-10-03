@@ -301,11 +301,7 @@ theorem fiber_card_le_exchangePool_add_two_mul
 /-- The all-depth expansion certificate, in a form ready for iteration.
 After deleting `P` from a maximum matching `M`, the exchange pool has a
 partial matching `Q` of size at most `P.card`.  Every job not represented in
-`Q` contributes at most `P.card * (2 * lambda)` locally eligible options.
-
-The remaining step toward the fixed-slack theorem is to show, from global
-near-regularity and low pair-codegrees, that this bound cannot persist as the
-deleted set grows. -/
+`Q` contributes at most `P.card * (2 * lambda)` locally eligible options. -/
 theorem exists_small_exchange_certificate
     {M P : Finset Option}
     (hM : H.IsPartialMatching M)

@@ -61,9 +61,8 @@ theorem demandPrice_sum_le_pairPrice_cost :
       ∑ e : Fin 10, D.pairPrice e * D.bundleCost e := by
   exact Finset.sum_le_sum (fun e _ ↦ D.indexed_bundle_price_cost_row e)
 
-/-- The analytic transfer for an actual rank-two five-block. The only
-remaining input is the local five-vertex price estimate for these exact
-physical demand coordinates. -/
+/-- The analytic transfer for an actual rank-two five-block, assuming the
+local five-vertex price estimate for these physical demand coordinates. -/
 theorem physical_reserved_price_transfer_of_local_bound
     (hlocal : G.LocallyPacksInto n)
     (b : (G.subtwoFloorQuotient n).V)

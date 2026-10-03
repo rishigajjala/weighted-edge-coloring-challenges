@@ -125,9 +125,8 @@ theorem thresholdCrossingMass_le_one_floorCell
       simp [hnone b hb]
     rw [hzero]
 
-/-- If every open floor cell has mass below `q`, every threshold loses less
-than `q`.  This is the threshold statement needed after the manuscript's
-finite descending scan. -/
+/-- A uniform bound of `q` on open floor-cell mass gives a strict loss bound
+of `q` at every threshold. -/
 theorem thresholdCrossingMass_lt
     (support kept : Finset ℝ) (mass : ℝ → ℝ) (round : ℝ → ℝ)
     (hmass : ∀ b ∈ support, 0 ≤ mass b)

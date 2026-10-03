@@ -147,9 +147,8 @@ theorem retained_add_repairs_le_one {δ : ℝ} (hδ : 0 ≤ δ) :
     (1 - δ) * (1 + δ / 4 + δ / 4) ≤ 1 := by
   nlinarith [sq_nonneg δ]
 
-/-- The combined output currently available from the finite-profile
-development.  It includes the complete raw occurrence assignment and the
-bounded compression data.  `tail_repaired` is the Hall-type supply inequality
+/-- A finite-profile law with its raw occurrence assignment and bounded
+compression data.  `tail_repaired` is the Hall-type supply inequality
 for the later large-edge reassignment. -/
 structure BoundedProfileLaw {v : G.V} (x : G.StarEdge v → ℝ)
     (s β q r : ℝ) where

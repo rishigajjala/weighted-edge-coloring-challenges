@@ -6,8 +6,8 @@ import WeightedEdgeColoring.BPHarmonicColoringInterface
 # Final reduction for the bipartite `81/50` bound
 
 This file connects the simultaneous three-mode certificate to the exact
-`104/75` one-bin charge theorem.  The only remaining deep input is the
-bipartite harmonic-charge coloring interface.
+`104/75` one-bin charge theorem, using the bipartite harmonic-charge coloring
+interface as a hypothesis.
 -/
 
 open scoped BigOperators

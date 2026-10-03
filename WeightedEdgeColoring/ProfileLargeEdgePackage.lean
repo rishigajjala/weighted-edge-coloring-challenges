@@ -11,8 +11,8 @@ namespace WeightedEdgeColoring
 This module combines the ordinary mass obtained from bounded profile
 realizations with the graph-indexed extra-slot construction.  The residual
 of an edge is defined to be one minus its retained ordinary mass.  Local
-hypotheses state exactly what is still needed from the surrounding rounding
-argument; no global capacity estimate is assumed here.
+hypotheses specify the assumptions on the surrounding rounding argument;
+no global capacity estimate is assumed here.
 -/
 
 noncomputable section

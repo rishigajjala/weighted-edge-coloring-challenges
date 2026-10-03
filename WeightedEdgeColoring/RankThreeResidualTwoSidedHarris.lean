@@ -173,8 +173,9 @@ theorem genuine_degree_shrink_of_normalized_delete_lower
 
 /-- One exact two-sided Harris round.  The lower deletion thresholds are
 normalized: job rows use denominator `2*lambda`, and unused-slot rows use
-denominator `3*lambda`.  The four displayed exponential assumptions are the
-only remaining probabilistic/numeric obligations. -/
+denominator `3*lambda`.  The conclusion is conditional on the displayed
+conflict bound and exponential bounds for group coverage and residual
+deletion. -/
 theorem exists_oneRound_residual_harris_two_sided
     (q : Option → ℝ) (members : Group → Finset Job)
     (lambda : ℕ) (hlambda : 0 < lambda)

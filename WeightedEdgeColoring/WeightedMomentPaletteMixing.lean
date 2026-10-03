@@ -1,7 +1,7 @@
 import WeightedEdgeColoring.BipartitePackets
 
 /-!
-# The remaining weighted-moment palette-mixing statement
+# The weighted-moment palette-mixing interface
 
 The deterministic lemmas in `PaletteMixing` assume a pointwise lower bound
 on every common missing palette.  The Kempe-switch lemma used by the
@@ -9,11 +9,11 @@ coefficient-two proof is weaker: a small exceptional set of residual edge
 weight may have poor palette overlap.  It directly constructs fractional
 proposals and controls their total uncovered charge.
 
-`WeightedMomentPaletteMixing` records exactly that remaining existence
-statement in epsilon--threshold form.  It is a proposition to be proved,
-not a theorem established in this file.  The recoloring is only required to
-remain proper on `F`; reachability by explicit Kempe path switches is a proof
-mechanism and is not consumed by any later coloring argument.
+`WeightedMomentPaletteMixing` defines this existence statement in
+epsilon--threshold form.  This module defines the proposition; it does not
+prove it.  The recoloring is only required to remain proper on `F`;
+reachability by explicit Kempe path switches is a proof mechanism and is not
+an assumption of the later coloring arguments.
 -/
 
 namespace WeightedEdgeColoring

@@ -7,8 +7,8 @@ import WeightedEdgeColoring.BipartiteHarmonicConstructionBounds
 # Harmonic-charge coloring from coordinated bounded-multiplicity rounding
 
 This file performs the final uniform parameter choice.  All finite harmonic
-classes and the tiny tail are rounded in one common missing palette; the only
-remaining input is the coordinated whole-edge rounding theorem.
+classes and the tiny tail are rounded in one common missing palette, assuming
+the coordinated whole-edge rounding theorem.
 -/
 
 namespace WeightedEdgeColoring

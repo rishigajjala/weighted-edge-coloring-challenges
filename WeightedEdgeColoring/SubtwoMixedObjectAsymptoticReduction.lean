@@ -7,8 +7,8 @@ import WeightedEdgeColoring.GeneralTinyThresholdMixedRepacking
 The cutoff and partial-coloring error are chosen before the arbitrary
 original graph. Tiny aggregation increases the local packing scale by only
 4/S, its coloring expands exactly, and the four-ceil cleanup absorbs the
-remaining weighted loss. Constructing the uniform mixed-object partial
-coloring is an explicit, still substantive hypothesis of this reduction.
+remaining weighted loss. The uniform mixed-object partial coloring is an
+explicit hypothesis of this reduction.
 -/
 
 open scoped BigOperators

@@ -284,8 +284,9 @@ theorem boundaryLabelDiscardedWeight_nonneg
   · exact le_rfl
 
 /-- Exact cost of imposing hard endpoint-label classes on a proposal.
-This identity isolates the missing quantitative estimate: to preserve the
-sub-two bound, the discarded weight must be `o(n)` at each vertex. -/
+The masked deficit equals the original deficit plus discarded incident
+weight.  An `o(n)` bound on that weight at each vertex preserves the
+sub-two coefficient. -/
 theorem boundaryLabelMaskedProposal_deficit_eq
     {G : WeightedEdgeColoring.WeightedMultigraph.{u}} {B L : Type*} {q : ℕ}
     (assign : B → Fin q → L)
@@ -308,8 +309,8 @@ theorem boundaryLabelMaskedProposal_deficit_eq
 
 /-- If the original local feasibility certificate is a harmonic charge row,
 hard masking preserves that certificate and hence every local star-packing
-polytope constraint.  The only unresolved issue is how much proposal mass
-the mask discards. -/
+polytope constraint.  Its effect on the deficit is quantified separately
+by `boundaryLabelMaskedProposal_deficit_eq`. -/
 theorem boundaryLabelMaskedProposal_localFeasible_of_charge
     {G : WeightedEdgeColoring.WeightedMultigraph.{u}} {B L K : Type*} {q : ℕ}
     [Fintype K] [DecidableEq K]
@@ -356,7 +357,8 @@ theorem boundaryLabelMaskedProposal_localFeasible_of_charge
 /-- Construct disjoint endpoint-label classes at every block, then mask a
 charge-certified physical proposal to those classes.  The resulting proposal
 is locally feasible and supported on the chosen labels.  The exact deficit
-identity states the further estimate needed to use it at coefficient κ. -/
+identity expresses its deficit in terms of the discarded incident weight;
+an appropriate bound on that weight yields coefficient κ. -/
 theorem exists_boundaryLabelClasses_and_localProposal
     {G : WeightedEdgeColoring.WeightedMultigraph.{u}} {B L K : Type*} {q : ℕ}
     [Fintype L] [DecidableEq L] [Fintype K] [DecidableEq K]

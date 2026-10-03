@@ -17,8 +17,8 @@ the corresponding ideal retention factors are
 
 Their first-order terms cancel exactly in the gap calculation.  Consequently
 an additive error `xi * d` on each side still leaves half the original gap
-when `4 * xi <= gamma`.  Constructing a partial matching with these two
-retention estimates is the remaining probabilistic input.
+when `4 * xi <= gamma`.  These scalar estimates apply to a partial matching
+satisfying the two retention bounds.
 -/
 
 namespace WeightedEdgeColoring

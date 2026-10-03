@@ -19,10 +19,9 @@ error is at most `|State|` times the range of the statistic; in particular it
 does not depend on the graph, on the number of rows one later tests, or on
 the number of colors.
 
-The construction is an application of the already proved finite
-column-mass selector to the state-indicator rows.  It does not control a row
-whose summand couples profile choices at two different vertices; those are
-the genuinely remaining synchronization rows.
+The construction applies the finite column-mass selector to the
+state-indicator rows.  Rows whose summands couple profile choices at two
+different vertices require a separate synchronization argument.
 -/
 
 noncomputable section

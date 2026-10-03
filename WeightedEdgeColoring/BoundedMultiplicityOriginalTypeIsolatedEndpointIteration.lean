@@ -508,9 +508,9 @@ theorem exists_endpointNaturalIsolatedSharpIteration
     G htrace hK hdelta1 ha0 htheta1
   exact ⟨final, htrace, hdegree, hslot, hweight⟩
 
-/-- Fixed-constant multiple-round partial rounding.  Every combinatorial,
-recurrence, and endpoint-weight conclusion is closed; the sole remaining
-per-round input is the concrete isolated scalar record `data`. -/
+/-- Fixed-constant multiple-round partial rounding from the per-round
+concrete isolated scalar record `data`.  The conclusion includes the
+combinatorial, recurrence, and endpoint-weight bounds. -/
 theorem exists_endpointSharpConcreteIsolatedIteration
     {beta : ℝ}
     (initial : OriginalIterationState H)

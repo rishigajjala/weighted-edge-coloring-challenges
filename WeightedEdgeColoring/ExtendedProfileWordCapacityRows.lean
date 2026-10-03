@@ -12,7 +12,7 @@ the fractional large-row scale is then `n * rho`, while the desired additive
 error divided by `n` is asymptotically small.
 
 The contribution depends on the packed word at both endpoints.  Therefore it
-is a pair coefficient, not yet a `FiniteCategoricalSelection.rowLoad`.  On a
+is a pair coefficient rather than a `FiniteCategoricalSelection.rowLoad`.  On a
 bipartite graph it must be handled in two passes, one shore at a time.
 -/
 
