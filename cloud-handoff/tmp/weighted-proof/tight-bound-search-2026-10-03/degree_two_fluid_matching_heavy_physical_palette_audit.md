@@ -85,3 +85,25 @@ Choosing `tau,eta_h,rho,K/q` small in that order gives `(3/2+epsilon)N+O_epsilon
 ## Exact remaining limits
 
 This construction relies on an underlying **matching** of heavy pairs to schedule all leftover heavy identities in the same extra colors, and on simple tiny degree at most two for the pointwise `g_d` row inequality. The adjacent-pair field trick uses only pairwise independence; it does not supply the capped `3/4` policy needed for a `4/3` palette. The root agent independently checked the ghost-slot, field-moment, stock, parameter, and manuscript `lem:two` interfaces on 4 October; the present scratch proof has not been integrated into the manuscript or Lean files. For fixed `epsilon`, the field and bucket sizes are constants and `M=O(N)<=O(m)`. With rational input weights and rational fixed parameters, deterministic option rounding uses finite rational arithmetic.
+
+## Fixed simple tiny degree `k` corollary
+
+The same method works at every **fixed** simple tiny-support maximum degree `k>=2`, with a weaker leading coefficient `2−1/k`. Put `alpha_k=k/(2k−1)` and use the same common-uniform nested heavy-pair occupancy law with marginal `alpha_k x_i`. The distinct-pair product calculation and same-pair Jensen argument give, uniformly in all categorical weight profiles,
+
+`m_ij=E R_iR_j >=1−alpha_k+alpha_k D_iD_j`.
+
+Therefore `f_e=alpha_k y_e R_uR_v/m_uv` has exact mean `alpha_k y_e` and pointwise cap at most `alpha_k/(1−alpha_k)y_e=k/(k−1)y_e`. For a vertex with allowance `d`, bundle mass `Y` at a neighboring vertex has `D_neighbor>=Y`, so its contribution to the row divided by `R_v` is at most
+
+`g_d(Y)=alpha_k Y/(1−alpha_k+alpha_k dY)`.
+
+This function is concave. At most `k` distinct bundles meet the vertex and their masses sum to at most `d`; Jensen yields
+
+`sum g_d(Y)<=k g_d(d/k)=alpha_k d/(1−alpha_k+alpha_k d²/k)<=1`,
+
+where the last inequality is equivalent to `(1−d)(k−1−d)>=0` for `d∈[0,1]`. The cases `d=0` and an internal edge of a heavy pair are covered by the same moment bound.
+
+For the physical palette, a heavy pair touches at most `2k` other pairs in the tiny interaction graph. Properly color that graph with `2k+1` labels and take a fixed field size `q>=2k+1`; the `q²` block still gives exact pairwise-independent symbols on every fluid-adjacent pair. The ghost-slot, source-stock, option-probability, and `2tau` row-rounding arguments above are unchanged after replacing `alpha` by `alpha_k`. Thus, under the same heavy-matching, strict `>1/2` heavy-weight, tiny-weight, and local packing assumptions, one obtains the **scoped** fixed-`k` bound
+
+`chi'_w(G) <= (2−1/k+epsilon) bp(G)+O_{epsilon,k}(1)`
+
+for sufficiently small `tau(epsilon,k)`. It gives `3/2` at `k=2` and `5/3` at `k=3`. It does not address unbounded simple tiny degree or arbitrary heavy support.
