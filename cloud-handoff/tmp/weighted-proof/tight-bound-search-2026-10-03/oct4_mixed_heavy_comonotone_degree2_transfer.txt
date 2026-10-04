@@ -1,0 +1,49 @@
+4 October 2026 — sharp capped two-thirds transfer on fluid paths and cycles
+
+Status: exact scoped one-color theorem. The root's moment/flow proof was independently audited by the forest and physical-rounding agents. The forest agent then removed an unnecessary weight restriction and piecewise bound; the root checked that simplification. The abstract theorem below allows arbitrary categorical guard weights in [0,1]. It does not claim an unrestricted coloring theorem or, by itself, an integer physical palette.
+
+MODEL
+The simple support of the categorical guard edges is a matching. At pair i, guard types h have weights w_h in [0,1] and targets x_h>=0 with x_i=sum_h x_h<=1. Write a_i=sum_h w_h x_h and D_i=1-a_i. Each endpoint has allowance D_i; an unguarded vertex has D=1. Divisible fluid targets y_e>=0 have incident sum at most D_v. Each fluid edge has per-state cap C_e>=2y_e. The underlying simple support of positive fluid targets has maximum degree two; arbitrarily many parallel fluid identities/types are allowed.
+
+THEOREM
+There is one law on categorical guard matchings and feasible capped fluid flows with coordinate means exactly (2/3)x_h and (2/3)y_e. The combined graph need not be bipartite. The constant 2/3 is best possible for this class. The law and policy are explicit and independent of any profit vector.
+
+PROOF
+Put alpha=2/3. Draw one uniform U in [0,1]. Occupy pair i iff U<=alpha x_i. Conditional on occupancy, draw its type h with probability x_h/x_i, independently across pairs and independently of U. Let R_i be the common residual at its endpoints, equal to 1-W_i if occupied and 1 otherwise. A pair with x_i=0 is unoccupied. Each guard identity has marginal alpha x_h.
+
+For x_i>0 let mu_i=a_i/x_i. Since x_i<=1, mu_i>=a_i. For distinct pairs, common occupancy thresholds give
+  M_ij=E[R_i R_j]
+      =1-alpha(a_i+a_j)+alpha min(a_i mu_j,a_j mu_i)
+      >=1-alpha(a_i+a_j)+alpha a_i a_j
+      =1-alpha+alpha D_i D_j.
+For the same pair, Jensen and mu_i>=a_i give
+  E[R_i^2]=1-2alpha a_i+alpha x_i E[W_i^2]
+           >=1-2alpha a_i+alpha a_i^2
+           =1-alpha+alpha D_i^2.
+An unguarded endpoint has R=1, and E[R_j]=1-alpha+alpha D_j, so the bound still holds. Thus every fluid edge uv satisfies
+  M_uv=E[R_u R_v] >= (1+2D_u D_v)/3 >=1/3.
+
+In each sampled state put
+  f_e = (2/3)y_e R_u R_v / M_uv.
+This gives E[f_e]=(2/3)y_e and 0<=f_e<=2y_e<=C_e.
+
+To check capacity at v, write s=D_v and combine parallel target values to each distinct fluid neighbor into Y_j. Every neighbor has D_j>=Y_j. Since R_j<=1,
+  sum_{e incident v} f_e
+    <= R_v sum_j [2Y_j/(1+2sY_j)].
+The function g_s(t)=2t/(1+2st) is increasing and concave for t>=0. There are at most two neighbors, and sum_j Y_j<=s. Padding with zero if needed, Jensen gives
+  sum_j g_s(Y_j) <=2g_s(s/2)=2s/(1+s^2)<=1,
+where the last inequality is (1-s)^2>=0. Hence the fluid load is at most the actual residual R_v in every state. This proves all coordinate marginals and feasibility simultaneously. No separation theorem, optimization oracle, or case division is needed.
+
+SHARPNESS OF TWO-THIRDS
+Take one unit guard edge ab with target x_ab=1/2 and fluid edges ca,cb with target 1/2 each. All local rows are feasible. At a common scale alpha, the guard is present with probability alpha/2, blocking both fluid edges. Otherwise c can carry at most one unit of fluid. Desired total fluid mean is alpha, so alpha<=1-alpha/2, giving alpha<=2/3. Caps 2y=1 are inactive in this example. This is the existing triangle obstruction, now matching the scoped theorem; it is not a new unrestricted lower bound.
+
+LOCAL BRANCH EXTENSION
+For k>=2 distinct positive fluid neighbors, the same Jensen argument bounds the row multiplier by
+  2s/(1+2s^2/k).
+Thus the same law and policy work on any support where this is at most one at every vertex (degree-one rows also work). For k=2 this holds for all s<=1; for k=3 it holds up to s=(3-sqrt(3))/2; for arbitrary degree it holds whenever s<=1/2. High-residual branch vertices remain the unresolved case for this policy.
+
+SHARPNESS OF CAP TWO FOR THIS LAW
+Join two distinct unit-guard pairs by one fluid edge of target y=d, with both original guard presences 1-d. Under common occupancy the endpoints are free together with probability (1+2d)/3. With edge cap Kd<1, expected flow is at most Kd(1+2d)/3. Achieving (2/3)d requires K>=2/(1+2d), tending to 2 as d tends to zero. This proves only sharpness of the proportional cap premise for this fixed law.
+
+LIMITS
+Pure common occupancy can fail on diffuse stars under proportional caps. The theorem does not remove arbitrary high-residual branching. Guard supports beyond a matching and a finite integer palette with exact physical stocks are also outside this proof. A separate physical-palette audit is in progress for the degree-two fluid scope. None of these notes changes the existing unrestricted manuscript bounds.

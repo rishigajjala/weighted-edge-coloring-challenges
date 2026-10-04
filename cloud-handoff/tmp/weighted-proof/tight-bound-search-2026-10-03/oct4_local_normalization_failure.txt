@@ -1,0 +1,9 @@
+4 October 2026 — explicit failure of naive proportional flow
+
+A candidate direct flow rule was f_e=y_e times the indicator of free endpoints, divided by max(1/12,S_u,S_v), where S_v is total target on edges whose endpoints are free. This is feasible in each state and respects cap12y, but does not always give marginal >=(2/3)y under the 3/4-independent plus 1/4-comonotone unit-guard law.
+
+Let heavy pairs be (u,u'), (v,v'), (w,w'), all unit weight. Fluid targets are y_uu'=1/5, y_uv=3/5, and y_uw=d>0. Original residual allowances are D_u=4/5+d, D_v=3/5, D_w=d. These targets form just one star, already covered by the audited optimal-recourse star theorem.
+
+As d tends to zero, conditional on u and w free in independent mode, active target load at u is 1/5+(3/5)B, where B is v-pair availability with probability 11/15. Its reciprocal has expectation (4/15)*5+(11/15)*(5/4)=9/4. The joint availability of u,w tends to (13/15)*(1/3)=13/45, giving normalized marginal 13/20 in independent mode. In comonotone mode, when w is free every other source is free, so the normalized marginal tends to (1/3)/(4/5)=5/12. The mixture limit is (3/4)*(13/20)+(1/4)*(5/12)=71/120<2/3. By continuity, sufficiently small positive d gives a counterexample to this rule.
+
+The failure is solely of the proposed proportional policy, not of the desired hull theorem or the revised hybrid law with optimal recourse. The example explains why a profit-independent local normalization cannot replace the star's adaptive flow proof.

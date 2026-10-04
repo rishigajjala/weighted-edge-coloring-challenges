@@ -1,0 +1,38 @@
+Research checkpoint, phase 8 — 4 October 2026
+
+PREVIOUS TURN CLASSIFICATION
+Progress: the private cloud-migration branch was actually created and pushed, preserving a portable research/manuscript snapshot. No cloud task has launched: no published environment was listed. The user has already authorized a new Codex Cloud task and has been asked to publish the repository environment. This is not a blocker for local mathematical work. Do not repeatedly ask the same authorization. The active goal remains tight bounds for both bipartite and general multigraphs; it is not complete.
+
+UNRESTRICTED STATUS
+Re-read the current main manuscript lines around its result index: it still states bipartite interval [4/3,81/50] and general interval [3/2,1999/1000]. No new unrestricted upper or lower bound is established in this phase. No edits to the main manuscript or Lean proof sources.
+
+NEW EXACT STRUCTURE: SIMPLE MOMENT/PRODUCT POLICY
+Read oct4_mixed_heavy_comonotone_degree2_transfer.txt first. It supersedes the longer piecewise calculation in oct4_heterogeneous_pure_comonotone_degree_two_audit.md and the earlier unit-only hybrid degree-two note.
+
+Guard simple support is a matching, with arbitrary categorical weights in [0,1] and total presence x_i<=1. Fluid targets obey local residual degrees D_i=1-sum(w_h x_h). Fluid underlying SIMPLE support has maximum degree two, with arbitrary parallel identities. Common-U scaled occupancy at alpha=2/3 and conditionally independent guard types yield E[R_u R_v]>=(1+2D_uD_v)/3, including endpoints of the same guard pair. No weight-half cutoff is needed for this abstract statement. Exact flow f_e=(2/3)y_e R_uR_v/E[R_uR_v] has marginal (2/3)y_e and cap 2y_e. A one-line concavity/Jensen row estimate gives load/R_v<=2D_v/(1+D_v^2)<=1. Both forest and physical agents audited the product rule; forest agent removed an unnecessary half-weight assumption and the root checked that simplification. Parallel types can be aggregated for degree counting because their moment denominators agree.
+
+The old triangle with one unit guard target1/2 and two fluid spokes of target1/2 shows alpha<=2/3 in this class. The cap factor2 is sharp for this particular pure-comonotone law as the target of a single fluid edge tends to zero. Neither is a new unrestricted lower bound.
+
+For k fluid neighbors, the same argument suffices if 2D/(1+2D^2/k)<=1; in particular all degrees work for D<=1/2, and k3 works up to (3-sqrt(3))/2. High-residual branch vertices remain the obstruction to this direct policy. Pure common occupancy fails diffuse stars, so it cannot simply replace the independent/comonotone mixture everywhere.
+
+NEW SCOPED PHYSICAL PALETTE
+Read degree_two_fluid_matching_heavy_physical_palette_audit.md. Root independently checked the finite-field, ghost-stock, and option-rounding details against the actual manuscript lemma lem:two (zero options remain fixed). For every epsilon>0, a small enough tau gives a deterministic (3/2+epsilon)N+O_epsilon(1) coloring if all non-guard edges weigh at most tau, their simple support has degree<=2, guard simple support is a matching, and guard physical counts and all weighted degrees are at most N. For strict guard weights>1/2, take the computable N=max(ceil Delta_w,max guard-pair count)<=bp(G). At exactly1/2 retain the explicit count premise.
+
+Construction: round guard weights upward and use pseudo-weights min(1,barw/(1-3tau)); choose fixed q and blocks of q^2 colors. Pair i is ideally occupied in a common prefix floor(n_i/q^2) of blocks. Proper5-color the pair interaction graph (degree<=4). Within each block enumerate two field coordinates; distinct slopes give exactly independent symbols on every fluid-adjacent pair. Floor type probabilities to symbols; unused symbols are ideal weight-one ghosts with no physical guard placed. Actual residual always dominates the ideal. Shrink ideal input presence enough that its mean load is at most original guard load. All physical guard slots are within bucket stocks; leftover guard count per pair is <q^2+KM/q. Exact per-edge tiny color probabilities proportional to R_u(c)R_v(c) sum to one, with row expectation <=(1-3tau)R_v. Source-preserving two-row rounding adds at most2tau; pseudo-weight slack makes colors feasible. This is an actual whole-edge result at the stated restricted scope, not arbitrary multigraphs.
+
+NEW CAPPED BRANCH FAMILY
+Read oct4_two_paired_stars_bridge_hybrid_analytic.md. Three unit-guard pairs A,B,C, fluid bundles A's two vertices to B's first endpoint, B's second endpoint to C's two vertices, and the internal bridge across B. All D and all profits; caps C>=12y. The original 3/4 independent scaled +1/4 comonotone scaled law achieves exact two-thirds fluid means. Loweragent's six-ray proof uses full-free capped star values a,c and bridge value b; recourse is at least I_B max(b,I_A a+I_C c). Scaling target flow by min(12,1/s) bounds local profit by a max(s,1/12), etc. The three floors on the interacting ray cost at most1/6, paid by a sharp three-source event inequality. Root checked the algebra and ray reductions; the separate physical-agent audit passed and is saved as oct4_capped_two_stars_bridge_independent_audit.md. This handles one genuine branching family but not arbitrary forests.
+
+FAILURES THAT PREVENT FALSE SHORT PROOFS
+1. oct4_local_normalization_failure.txt: a simple per-edge normalization by active neighbor target sums is feasible but yields only71/120 of one edge's target in a limiting three-source star, below2/3. The revised hybrid law itself survives via optimized recourse.
+2. oct4_paired_leaf_naive_induction_counterexample.md: even a two-edge star defeats a bare per-leaf marginal comparison. Paired leaves have D=.1, profits1 and2, unguarded center. Full recourse4/5 minus reduced recourse19/25 is1/25, smaller than deleted scaled target1/15. A proof needs a surplus invariant or grouped paired-source elimination; conditioning on a shared source invalidates the ordinary independent-vertex leaf proof.
+3. In a fluid tree, a paired-endpoint alternating target perturbation decreases both endpoint loads only for an odd-length path; an even path changes them oppositely. This is a structural observation, not a recourse inequality.
+
+COMPUTATIONS (DIAGNOSTICS ONLY)
+The Oct4 C6 and octahedral polar scans, and the two-stars bridge scan, found no revised-hybrid counterexample. Extremal ratios again reduced to a paired-leaf star. The bridge family now has an analytic proof; the other finite scans do not certify arbitrary graphs. oct4_arbitrary_heavy_capped_search_status.md records finite heterogeneous-heavy full-hull checks at alpha=.75,.85, and a detected stronger-alpha=.9 obstruction. Nothing there proves arbitrary-heavy 3/4 transfer.
+
+NEXT WORK TOWARD THE FULL GOAL
+A. Prove/refute capped two-thirds transfer for arbitrary branching fluid graphs under a suitable unit-guard law; a surplus invariant must survive paired-source dependence. The fresh degree-two theorem and capped five-edge family give genuine bases, not a full induction.
+B. Handle heterogeneous guard weights in branching supports, and arbitrary heavy support. The common-mean bipartite three-quarter theorem from phase7 remains scoped; generic heterogeneous pipage still has its exact failure example.
+C. Keep the physical palette simple when possible: quadratic residual policies need only pairwise independent local labels, not full component distributions. Unbounded heavy components and arbitrary branching still require new structure.
+D. Lower-bound searches still have no improvement above4/3 bipartite or3/2 general. Do not mistake a fixed-law obstruction for a coloring lower bound.
