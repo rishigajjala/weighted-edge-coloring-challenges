@@ -1,0 +1,10 @@
+{"event": "enumeration", "maximal_patterns": 6006}
+Restricted license - for non-production use only - expires 2026-11-23
+{"event": "oracle_check", "patterns": 6006, "independent_pricings": 30}
+{"event": "start", "Q": 8, "variables": 532, "constraints": 590, "seed_cuts": 122}
+{"event": "progress", "callbacks": 25, "cuts_added": 21, "elapsed": 0.9013617909999999, "best_priced_ratio": 1.5}
+{"event": "progress", "callbacks": 50, "cuts_added": 46, "elapsed": 1.7142033330000002, "best_priced_ratio": 1.5}
+{"event": "progress", "callbacks": 75, "cuts_added": 71, "elapsed": 2.1543349160000003, "best_priced_ratio": 1.5}
+{"event": "progress", "callbacks": 100, "cuts_added": 96, "elapsed": 3.017072458, "best_priced_ratio": 1.5}
+{"event": "progress", "callbacks": 125, "cuts_added": 121, "elapsed": 8.81384075, "best_priced_ratio": 1.5}
+{"event": "terminal", "best_priced_ratio": 1.5, "callbacks": 143, "cuts_added": 139, "elapsed": 485.70106095799997, "finished": true, "solver_status": 2, "grid": 8, "maximal_patterns": 6006, "master_upper": -0.0, "incumbent": -0.0, "final_prices": [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "final_means": [0.0, 0.5, 0.0, 0.5, 0.0, 0.5, 0.5, 0.0, 0.0, 0.5, 0.0, 0.5, 0.5, 0.0, 0.5, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "final_cap": 1, "final_global": 1, "final_fully_priced": true}

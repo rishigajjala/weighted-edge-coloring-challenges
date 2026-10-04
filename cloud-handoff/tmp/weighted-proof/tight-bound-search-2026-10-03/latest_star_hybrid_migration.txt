@@ -1,0 +1,27 @@
+MIGRATION NOTE — unit-guard capped star hybrid (2026-10-04)
+
+PROVED, SCOPED FLUID STATEMENT
+Full proof and independent audit:
+tmp/weighted-proof/tight-bound-search-2026-10-03/unit_guard_capped_star_hybrid_two_thirds_audited.md
+
+Assumptions: all heavy edges have weight exactly 1; their simple support is a matching, with categorical parallel physical identities allowed. Divisible fluid edges form a vertex-disjoint star forest, not necessarily bipartite together with the heavy edges. The target (x,y) obeys local capacity and categorical constraints. Each fluid edge has one-color cap C_e >= 12 y_e. Conclusion: (2/3)x for every heavy identity and (2/3)y for every fluid edge have a common one-color convex-hull realization. This is a fractional fluid-hull result, not an integer stock coloring or a theorem for arbitrary tiny-edge support.
+
+One fixed, profit-independent heavy law: with probability 3/4 sample each heavy pair independently with categorical marginals (2/3)x; with probability 1/4 use one common uniform U, making pair P free iff U <= 1-(2/3)x_P and choosing an occupied identity conditionally from x_h/x_P. Both modes individually give every heavy identity marginal (2/3)x_h. For each profit prefix in a star, center target s and leaf-pair groups of target Y_i are reduced pessimistically to d_i=Y_i/2, activation (1+2d_i)/3, and aggregate cap c_i=min(1,24d_i). The proof divides groups at d_i=1/24, bounding independent failure factors by (2/3)(1-d_i) for strong groups and exp(-8d_i) for weak groups. The comonotone mode pays the strong-group or all-weak deficit. It also handles a center paired directly to one of its own leaves. Greedy star recourse simultaneously maximizes every decreasing-profit prefix, so the prefix bound integrates to arbitrary nonnegative q; support separation gives exact fluid marginals under the same heavy law. Shared heavy sources across different stars do not affect expected additive star recourse.
+
+EXACT NEGATIVE RESULT FOR A DIFFERENT FIXED LAW
+tmp/weighted-proof/tight-bound-search-2026-10-03/product_empty_hybrid_exact_failure.md
+The 3/4 independent-scaled plus 1/4 (full-marginal pair-product with probability 2/3, otherwise globally empty) law fails already on a unit-heavy triangle guard with two fluid spokes: at epsilon=3/4 its optimum fluid recourse is 95/192, below required 1/2. This does not refute the comonotone-scaled law or the mixed hull.
+
+SMALL EXPERIMENTS, NOT PROOFS
+tmp/weighted-proof/tight-bound-search-2026-10-03/comono_hybrid_six_vertex_tree_probe.py
+All 1296 labeled six-vertex fluid trees, three fixed unit-heavy pairs, five prescribed residual triples, q_e=1, LP-optimal local y and caps C_e=12y_e: 6480 cases, no negative hybrid surplus; minimum 0 at a degenerate star.
+tmp/weighted-proof/tight-bound-search-2026-10-03/comono_hybrid_weighted_path_probe.py
+All 15 pairings of a six-vertex fluid path, all 27 residual triples in {1/4,1/2,3/4}^3, all 32 q_e in {1,2}^5, LP-optimal y and C_e=12y_e: 12960 cases, minimum surplus 1/12. An additional four-vertex exhaustive check of all 64 simple fluid supports and residuals in {1/4,1/2,3/4,1}^2 with q_e=1 had no violation; minimum 0. These checks do not establish arbitrary-support validity.
+
+SIMPLE UNIFORM-d SUFFICIENT REGIME (PROVED DIRECTLY)
+Suppose every fluid-target vertex has total target load at most a common d in [0,1], and every guarded vertex has heavy residual allowance at least d. Under the same fixed hybrid law, when d >= 1/12 route y_e/d on each fluid edge whose endpoint heavy sources are free; when d <= 1/12 route 12 y_e there. Every state is feasible because incident routed load is at most 1, and C_e >= 12y_e. For distinct heavy pairs, endpoint availability is at least B(d)=(3/4)p^2+(1/4)p with p=(1+2d)/3; same-pair or unguarded endpoints only improve availability. The identity B(d)-(2/3)d=(1-d+2d^2)/6>0 proves the d >= 1/12 case. For d <= 1/12, B(d)>=1/6 gives routed marginal at least 2y_e. This works for arbitrary fluid support but requires the global common load/residual parameter; it does not imply the unrestricted theorem.
+
+MAIN GAPS
+1. The fixed comonotone hybrid is unproved for arbitrary nonstar fluid support, especially heterogeneous residual profiles and odd fluid cores. The diagnostics above are only small cases.
+2. The audited star proof uses binary residuals of unit heavy guards. Heterogeneous heavy weights yield real residual profiles, and common-quantile ordering by mean is invalid without an additional argument.
+3. No new unrestricted multigraph integer coloring bound follows. Exact physical tiny-edge stocks, capped locality beyond this star scope, and heavy supports beyond a matching remain separate tasks.

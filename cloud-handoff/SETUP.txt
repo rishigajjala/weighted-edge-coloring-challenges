@@ -1,0 +1,18 @@
+Cloud environment setup
+
+Repository: rishigajjala/weighted-edge-coloring-challenges (private).
+Task branch: cloud/research-2026-10-04.
+
+Provide Git, Python 3, and a Python virtual environment with:
+  python3 -m pip install -r cloud-handoff/requirements-research.txt
+
+Lean verification uses elan, Lean 4.27.0, and the Mathlib revision pinned by lakefile.lean and lake-manifest.json. Install the pinned toolchain, then run from repository root:
+  python3 scripts/check.py --fetch-cache --jobs 3
+Use --jobs 1 when memory is limited. Research can continue before a full Lean rebuild. No local .lake cache or prebuilt macOS binaries have been copied.
+
+For the main unrestricted Lean theorem alone after fetching the cache:
+  python3 scripts/check.py --module WeightedEdgeColoring.SubtwoUnrestrictedProof --theorem WeightedEdgeColoring.subtwoBPAsymptotic_unrestricted
+
+For experiment scripts, change directory to cloud-handoff and set OPENBLAS_NUM_THREADS=1. Read each script before choosing a run; some older searches can be expensive. gurobipy is optional, requires appropriate solver access, and is not necessary for the current basic probes. No license files or credentials are in this snapshot.
+
+The cloud runtime and setup have not yet been tested: no cloud environment was available when this snapshot was prepared. Once the repository environment is published, start a task using CLOUD_TASK.txt.

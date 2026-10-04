@@ -1,0 +1,1690 @@
+{
+  "base_commit": "65856c8e27e48efc51b429719e075f097a08e119",
+  "files": [
+    {
+      "path": "CLOUD_TASK.txt",
+      "bytes": 953,
+      "sha256": "2b0839f3089f308f09fd1c35011cc2bba14ba057666f2571bb240051a78c1fc7"
+    },
+    {
+      "path": "CONTINUE.txt",
+      "bytes": 8114,
+      "sha256": "a0ec276a78018ad31b02ae896dcb4eb2ab5d270ac141cfdf72dee645e442aead"
+    },
+    {
+      "path": "SETUP.txt",
+      "bytes": 1398,
+      "sha256": "039859e5c513e0f04e93b1882bca2d64e196700185cb0c817451a765e330b145"
+    },
+    {
+      "path": "manuscript/weighted_edge_coloring_1999_current.tex",
+      "bytes": 288804,
+      "sha256": "a249c6ec8c3a36dc87b2575d1865ce9deaa3a7f08ede11740e8607afba5c3372"
+    },
+    {
+      "path": "requirements-research.txt",
+      "bytes": 28,
+      "sha256": "9488d37ef97dff30460031323e306586fc75abe9323b99415659e3cc9e4cf333"
+    },
+    {
+      "path": "tmp/weighted-proof/exploration_heavy_fluid_polytope.py",
+      "bytes": 3959,
+      "sha256": "9c477a4f65782ea7d6927bcdae42799bedaac7b79e10d0b22415e6e11defd57e"
+    },
+    {
+      "path": "tmp/weighted-proof/search_three_triangles_mixed_heavy_ring.py",
+      "bytes": 1392,
+      "sha256": "928cc2ec0a0775d31dc98862042d6f1046c0fee1dde8c2c4ff0fbf69244dff90"
+    },
+    {
+      "path": "tmp/weighted-proof/search_two_triangles_k33_joint_grid.py",
+      "bytes": 6129,
+      "sha256": "8324aa9973392d5da86e7c7acf59ea63e223861fca33702d7498274fee469ab3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/adversarial_projected_law_probe.log",
+      "bytes": 698,
+      "sha256": "dabb33f62d9a17650259a287c93a2fb5463ddd00d6872d481f662a80d90ad003"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/adversarial_projected_law_probe.py",
+      "bytes": 3567,
+      "sha256": "f6f3d73607d687dbed3e8137347f58e4dab22918d519226f95167d52ea38a132"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/alternating_medium_guard_reverse_polar.py",
+      "bytes": 2888,
+      "sha256": "eac340cf83438e846a327936af240103784f0d6495b92c6fa54ac24b62045253"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/alternating_rank_batch_guard_polar.py",
+      "bytes": 2213,
+      "sha256": "3401efebbf5ec256ed8998879622d51d8c2eaa2442862b1185375d1131561ac1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/alternating_rank_batch_guard_stationary.py",
+      "bytes": 2505,
+      "sha256": "52f2732f658743fa219fa35a6a0c6b54c62a3178832cf9d8500d89dc7ed241a0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_bip_common_heavy_weight_five_fourths_candidate.md",
+      "bytes": 13200,
+      "sha256": "91a8d0e13b93c37c284038c516778395a639cbf8942d5ccbde3c261e21ae8bd2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_bip_fluid_forest_extreme_face_reduction.md",
+      "bytes": 6313,
+      "sha256": "83e8848679159e8c5e4239aeec51a800dec6abb2511459f3fc9718331be02e1d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_fluid_hull_search.py",
+      "bytes": 3008,
+      "sha256": "138b02d161b2f91e5db3494b4c4e97c97f9b42e61fdb17a6575f656b261e4d59"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_fluid_matching_three_quarters.md",
+      "bytes": 5186,
+      "sha256": "8823f4f4a40ae15b1720d7a9240ad133cbba74b3add4595b85c35996a6544954"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_fluid_n3.json",
+      "bytes": 693,
+      "sha256": "2789e82171575a252c988fb20363bd1055807bc06bd47302d86b94901c9a0975"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_fluid_n4.json",
+      "bytes": 2155,
+      "sha256": "df99052e7116553e2be5b650159b30dc22dd9bdffa078701f955a85dbc03c682"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_heavy_fluid_n5.json",
+      "bytes": 1572,
+      "sha256": "fe26ee590754e812353750d1b486f6efed96e8c66f6a4f302ff6690f033dd0b3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_linked_stars_real_integer_transport.md",
+      "bytes": 9797,
+      "sha256": "3b8b2eb996217eaca59f7aa8151d130a5d6308653f3cb5dd883d0800193eb41e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/arbitrary_tiny_support_repair_audit.md",
+      "bytes": 12716,
+      "sha256": "a5a1ca000061698c8921a47168c6fe8f87f9fc393490d2921f48c59f4c5f377d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/asymmetric_triangle_factor_network_three_halves.md",
+      "bytes": 4892,
+      "sha256": "ae670be777e642176b2a91e72afb1187c5a1d9f40e0ce39dedf5c6b5ac502741"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/balanced_graded_path_all_ranks_four_thirds.md",
+      "bytes": 2730,
+      "sha256": "cbd4947622e63599bcb6aac865294868a669bb635fb5662915fdeab906cdf6e5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bip_independent_vertex_activation_three_quarters.md",
+      "bytes": 3542,
+      "sha256": "097957d650c667a2e45f71854ed95b7c680465e0cc6dc66f09b29dcf543b138b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bip_vertex_activation_forest_probe.json",
+      "bytes": 374,
+      "sha256": "5e497760fc4d8551455618950e96f346173b343fa0c0f87d7f7f8718e6d2c20c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bip_vertex_activation_forest_probe.py",
+      "bytes": 2682,
+      "sha256": "a2e6db92cb21656239efa3bcac0fd2466579cb5b176cf41e653532a304d8598c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_arbitrary_child_compat_four_thirds.md",
+      "bytes": 8616,
+      "sha256": "ed27695ca457de38c9dbf83d7ad217444251edfd4f76a6fb31e3888ac3760799"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_branched_guard_count_barrier.md",
+      "bytes": 4809,
+      "sha256": "cf49e1f7950d65a3264a5e4cfb186d999399c51a0037c87fabba45e9e7e2e801"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_cycle_guard_targeted.log",
+      "bytes": 268,
+      "sha256": "e714e36c6554f4c4d2e5ce2c8c07f222b8f0bb479fa8e6db9ed001ed82f7af5b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_cycle_guard_targeted.py",
+      "bytes": 2848,
+      "sha256": "62ce7471b870d0bc556f0633452fe580e7239832673f59c97ae81fee7165c0bc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_cycles_branch_search.py",
+      "bytes": 1127,
+      "sha256": "2d8b9fb78a6a2fc8574267bfb9cad07a28eff17896f938ae462c3712900dd172"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_first_cg_all_weights_audit.md",
+      "bytes": 2509,
+      "sha256": "b9dc6c9d4221f9324c09d686989dec9029a58369b6f6cce780d6a404c6655c10"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_fluid_matching_heterogeneous_heavy_transfer.md",
+      "bytes": 4340,
+      "sha256": "43ad400e44d4582a41c9d912a34d5bbdd31f379a0a9eee6dc2369885d5f6b034"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_guarded_cycle_closure_barrier.md",
+      "bytes": 5151,
+      "sha256": "81792d333812718049d4994c75ec52ed7a8b3383c913d7aba1b4fa2e529c0835"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_heavy_c6_one_chord_exact_recourse.md",
+      "bytes": 2766,
+      "sha256": "a2a862bb0b26578e0b5f2ddd4aae4ab942968ccf046eb6320bfe2783c714058c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_homogeneous_right_polar.log",
+      "bytes": 1495,
+      "sha256": "9cc62e2544b1a1d000f132e061c74290a71d09f474156e3fa3afbd89051a3cf4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_homogeneous_right_polar.py",
+      "bytes": 903,
+      "sha256": "53b601ba6f5123b73623b04ebe495ba5b360abaac39addec917ea66acc84abb8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_hybrid_port_frustration_polar.py",
+      "bytes": 3521,
+      "sha256": "901580d5b9ac8a0780eec25f59d7647ced4bb5abd3b041ac545aaaa56d266f00"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_independent_activation_reduction.md",
+      "bytes": 9994,
+      "sha256": "e80f678630ee4a8df0862d107eab36433645041c1e595ea68823d2618008dd4a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_matching_heavy_arbitrary_fluid_five_fourths_candidate.md",
+      "bytes": 11191,
+      "sha256": "cd506448e9b05a75da5ea6fd4ce74d31b1984af14876a51f554f0301d0897035"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_bundle_cycle_probe.log",
+      "bytes": 1562,
+      "sha256": "9b37102e5eff8a58988fdd3aaa64edbcd2b0769d076c293b65215701277b1374"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_bundle_cycle_probe.py",
+      "bytes": 1753,
+      "sha256": "388e30309bf7f7b43b98798578658504989e919d0468b0bbed171d3a96f4dca2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_fluid_sharpness_audit.md",
+      "bytes": 7969,
+      "sha256": "dc5fdc301586622cc63a3dea3b6417cf353a4ff40af984e4a8d8296472824bf7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_path_search.py",
+      "bytes": 3473,
+      "sha256": "30050804e056927d9cd823eb37ecadc237c56c27df1c5e80cd07bc86b88531d4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_rank_high_threshold_exact.log",
+      "bytes": 2576,
+      "sha256": "8d2d2f87174441916a7b39cf20450ca97b2ebf706de7e19c7d30fe2615023b0c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_rank_two_three_guard.log",
+      "bytes": 2310,
+      "sha256": "c325fb3979e4cbeb0053a265d7d9cd0e3b7679ac5b107b8fe848d71fbc307d24"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_rank_two_three_guard.py",
+      "bytes": 3019,
+      "sha256": "7bb36c2cd8dd452a2c44ddb4981399091aee146c7e9ddcdebe72eec750b2c2cd"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_rank_two_three_guard_exact.log",
+      "bytes": 3526,
+      "sha256": "65680a09fdd2ba9cbce9267ce55c50898f1f7d2dc7f330f37c249812a0c817b1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_mixed_rank_two_three_guard_exact.py",
+      "bytes": 2644,
+      "sha256": "73c3137650126b471ee6dc03b25c7e3678a572fe9f5e2fabd0302ca6db24119c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_multirank_k33_polar.py",
+      "bytes": 3520,
+      "sha256": "29bbd4e6ff297a70f16eafdc9375777a21a30d69ddf193b8c88ed3b3a58f8ec8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_multirank_k44_profit_probe.py",
+      "bytes": 3446,
+      "sha256": "921913a88faff252603012564e28d5585b440de9d1bc085eda05c29eb562812d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_paired_bernoulli_probe.log",
+      "bytes": 753,
+      "sha256": "b0e865e13289f33baabc78dfb3521acc9882cfe329e61cc391b2bf6465011e68"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_paired_bernoulli_probe.py",
+      "bytes": 2259,
+      "sha256": "5c8d60d9724e1e374938fd0de308ee4699bd1a48d936a3aef75de2af0113e5ed"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_cg1_incompleteness_facet.md",
+      "bytes": 2854,
+      "sha256": "af0b8e68c65a2531f2fe48ad2936b50d118d1e7ee549c45ff32e0d164465467a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_first_cg_three_quarters.md",
+      "bytes": 5248,
+      "sha256": "c57f69e7d7929f4817a2e7606e6e0be6afd91d0cf8ff7b4a23650953cdb64829"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_mixed_blossoms_three_quarters.md",
+      "bytes": 3919,
+      "sha256": "72c14f125e3b275fd78cfc09d28c38dd9700495b92d22f5233d52a7ed6316715"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_pairing_rounding_route.md",
+      "bytes": 7568,
+      "sha256": "6b3382226a565ff4e1c0f637a5e5a838544ba03b6226de3fe54ba9f3b5dd0acb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_c4double.log",
+      "bytes": 1523,
+      "sha256": "401c71bd42a7e8fdedc2767eed03d3170fd6937a0f09499c50f13882522b4582"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_gap.py",
+      "bytes": 4093,
+      "sha256": "b0d5a0b6ca2c588ff92bad7614c7a2b7e0c3688452e17b7fb7c90067c0582ccc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_k33.log",
+      "bytes": 1335,
+      "sha256": "dc5fc75ded71c3ad467fa4feec83e676061e1f3d30ddec2a7724e708eb619982"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_pathchord.log",
+      "bytes": 1283,
+      "sha256": "95658d8cd3e33cb65990a3bc46da3e6022eba0e601eb3bf2c2531dc686329e0c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_search_checkpoint.md",
+      "bytes": 1596,
+      "sha256": "81e27f578a3941b4b5a493b848e6a25978b06e31aa86c6335e9fcc3e36a13c9c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_rank_two_polar_sweep.py",
+      "bytes": 2530,
+      "sha256": "14bf7254cd39d741589d7c9b9d162999ba4a3e65f9bc7d59b7e3642369523668"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_resonant_ladder_stationary.log",
+      "bytes": 2558,
+      "sha256": "f6e77b7a340d6671ae64151976c716834935e011ff25492f194d84ad04b0aaf3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_resonant_rank_two_four_shared_guard.log",
+      "bytes": 5177,
+      "sha256": "8b054eeba537affe266047bb970065146e93bf419c6c3ff91a8866c79a67d200"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_resonant_rank_two_four_shared_guard.py",
+      "bytes": 2799,
+      "sha256": "6506a30483b89f9b9d0f29ca5c5e952df130307d3c00d3c3ade04582b53990b3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_resonant_rank_two_four_shared_guard_exact.log",
+      "bytes": 2540,
+      "sha256": "fe3d4c6d53e50aa3b734737ccc0ac9febe76196b7b7e842fac1e7943cd1d819d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_factor_parity_barrier.md",
+      "bytes": 4392,
+      "sha256": "e3efd78c4791833e80789dda92b36e3c0c69b174accd1df439e746a23bd5eefc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_guard_k44_exact_gap.md",
+      "bytes": 5645,
+      "sha256": "7bd7d3d156f7507a31f396f0dad3b961b48da3e6c6d1c5eedc48900deedd32ff"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_guards_k44.log",
+      "bytes": 424,
+      "sha256": "8b81701d62d759b81754e1d2176551a3fca3093c4baa9f040ef225a598902e30"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_guards_k44.py",
+      "bytes": 2037,
+      "sha256": "7d6de96eb063965677644fdc81cc80d4f91e9f15028dad1ea160a5689c32066e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_rung_ladder_stationary.log",
+      "bytes": 1231,
+      "sha256": "905aefe24623eccf971182699528e1877139c892623287b59a9f535276da57b9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_shared_rung_ladder_stationary.py",
+      "bytes": 3174,
+      "sha256": "f5db7836780780546f936f3ec85953670f3f4872307892eacd6ad0b79fcdcc50"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_single_fluid_star_heterogeneous_heavy_transfer.md",
+      "bytes": 7637,
+      "sha256": "8c472402594d29b461610cdbd40457ef35a64e032727a793cee2707e541af6e9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_star_forest_phase_synchronization_gap.md",
+      "bytes": 5598,
+      "sha256": "5ca25e680cd8c0999545000e14aae1ecdb7c02c17f0bd57621d654f4048efbe7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_double_guard_sweep.log",
+      "bytes": 347,
+      "sha256": "c3729be67eb1513a91d12697f2c9e86af655ad450feeebb04a0ab6ba7077f7ec"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_double_guard_sweep.py",
+      "bytes": 2357,
+      "sha256": "0d51840ca0b32419c97d0bc872f728c027b969b78e1859e4561929a791e36996"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_opposing_exact.log",
+      "bytes": 2680,
+      "sha256": "49ac108ea31d6710d8313224139cc26f338f9dd215c1ae6c052f6c8d38d87f1c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_parameter_sweep.log",
+      "bytes": 1414,
+      "sha256": "640cfb5fb1d21c2badeba359a05824da6a25174152f10071e157e37dc52a29f9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_parameter_sweep.py",
+      "bytes": 2480,
+      "sha256": "c0017623328c7f9b64ddd5ec6946cd524e3db7025c20f09c67c4e37f56252d5f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_stationary.log",
+      "bytes": 2337,
+      "sha256": "9f52104502f568bb7aeb8f9ffbfa130ffc47e239d0a5a1700b7457cd9ea1783e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_stationary.py",
+      "bytes": 2779,
+      "sha256": "db915243ec83ab61632ab812dc56323461d094ad61838ced0836995a753a4b7f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_stationary_exact.log",
+      "bytes": 1293,
+      "sha256": "2d03fb604f4455bc2c30882532fbfc0cef08c9a032190eb46551f95c61a639b4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_rank_stationary_exact.py",
+      "bytes": 2181,
+      "sha256": "b1da29a3c9f804408daf7117f5cb8f31d6570b93bd44d53ae96585ca7d3f3807"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_two_size_search.py",
+      "bytes": 1284,
+      "sha256": "f4295224582fd597b0a59586ac1ffb5e7efbef9b3ff63a1e91213c2fb51f1fb6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_unheavy_center_star_forest_phase_transfer.md",
+      "bytes": 6307,
+      "sha256": "2794c2fd54445da22b7e4eb84094eaf871a18087b678e97ef4129e11a9953760"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bipartite_unheavy_star_forest_five_fourths_candidate.md",
+      "bytes": 7889,
+      "sha256": "a2e8feaeffe8d6aaf242872b7ddf303ed05749aeaafbf61cc084bcc21de28f48"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bounded_degree_capped_localization_audit.md",
+      "bytes": 5192,
+      "sha256": "2fb1fa8de7a351c1e089721c5fa369014def8ca95809693cd5631e8c12313245"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bounded_heavy_component_transfer_interface.md",
+      "bytes": 10636,
+      "sha256": "3bb5a135ee596dbc5d7bb61373cecb4d25f0ae376ccfb4ce3bda21907ef9ecd2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bounded_heavy_pairs_integer_transfer_candidate.md",
+      "bytes": 7105,
+      "sha256": "810119e9ee1bb44e181dd541e6be4c40ba0a6ad36f32c0261d94fda052094032"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/bounded_tiny_degree_palette_conditional.md",
+      "bytes": 7105,
+      "sha256": "dfada844504b2db11eae400892dd6b5cd01d103b8e0bc4ab2c3371c8793bf039"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/cap45_common_prefix_star_obstruction.md",
+      "bytes": 1897,
+      "sha256": "e358244563d04056a65479dec72815427aeddf129c8d6246fb3d10ff91b9094c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/circular_convolution_star_cap_smoothing.md",
+      "bytes": 19514,
+      "sha256": "ff509c12ccbc61e9edff88bd1104f3d6a4f458d73cbdfcade0ebedb58637c838"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/common_mean_capped_heavy_transfer_audit.md",
+      "bytes": 7971,
+      "sha256": "c2c3851d5c52ece0a05b6db5a12409ba29b0dce6152a81bdb539c3d67cc20eac"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/common_weight_capped_pipage_independent_audit.md",
+      "bytes": 5399,
+      "sha256": "fe3a513580e15b77156eac761a7cbac5b026b90828df98eedc7fb3c7ad5ad11a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/common_weight_heavy_dependent_rounding_capped_candidate.md",
+      "bytes": 7033,
+      "sha256": "0b2e5ad5d8ae3dc035ec0033dd34a61ac7b4f5c0d495090511bb1764c6e46f0a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/comono_hybrid_six_vertex_tree_probe.py",
+      "bytes": 1813,
+      "sha256": "bca5034a1e7b036f5fe89dc924b16f05a425e1ff2b67501ff3fef783dc1aa906"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/comono_hybrid_weighted_path_probe.py",
+      "bytes": 1538,
+      "sha256": "7d3c98831f1a03b6c413f0d96e61f0260977e32a12ad1954ae51997ae252f8fe"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/connected_dual_local_policy_audit.md",
+      "bytes": 10114,
+      "sha256": "7b2f1f9fa3716c8d08125c192119351340b2fe3838367e834d80a4ee4984655e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/diamond_two_boundary_hall_criterion.md",
+      "bytes": 2656,
+      "sha256": "83741af710793d0b757ebc0e31e6f029586f75fa8c11494289c8ccefe7ab21ca"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/directed_branch_rank_transition_lp.py",
+      "bytes": 2715,
+      "sha256": "1fd60838aa1dcbe7dcae7d51db011d319e330232d2f35900720aec4911db24ee"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/discrete_triangle_factor_network_three_halves.md",
+      "bytes": 4660,
+      "sha256": "e7c726ec6da6b495eda22eeb1222151b975eba544b04909dd51d98fb2ff17a39"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/exhaustive_k4_nested_vertices.json",
+      "bytes": 15789,
+      "sha256": "41fe2311740bbdf18d42308494699f8acd0f13cb700beb98a0d854711c340856"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/exhaustive_k4_nested_vertices.log",
+      "bytes": 9176,
+      "sha256": "9f99ff8e53ea86a9d464b05e3b434faf5f2c7d2ecc4188a39366b061eb40321f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/exhaustive_k4_nested_vertices.py",
+      "bytes": 5282,
+      "sha256": "a9b1235011e5df3454e697ac6374b4d55a65876a682684112cf6f1fe8a3aa80f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/finite_palette_capped_transfer_audit.md",
+      "bytes": 7502,
+      "sha256": "e24056fc150b1d614060329884d19815aaf7842912bdc44a9f02e05a5d79857b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/finite_palette_self_bounding_deficit.md",
+      "bytes": 2657,
+      "sha256": "cf80632e65634677bbadd2c5f0215884e784aea007b426db415d15f3e264e8ae"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_capped_activation_audit.md",
+      "bytes": 4618,
+      "sha256": "c45f2e01e452a4f527c6e73bbbb98be2bc4bc992c8faca0685332385134fb12e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_capped_activation_probe.json",
+      "bytes": 2554,
+      "sha256": "3023a31e7747122f2cec0c5a31bf39e8f0aab54b54091d50a73bc837c3421475"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_capped_activation_probe.log",
+      "bytes": 3488,
+      "sha256": "652184fdcf50467c79ec4ea8aa95a1ff77df51d1467cc5059e57300f2f3f827f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_capped_activation_probe.py",
+      "bytes": 2025,
+      "sha256": "81ce9b842f2f84ec7e16af62bcb8a0748b74ed9df38f67eb4315892951a9a774"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase1.md",
+      "bytes": 6737,
+      "sha256": "4234dd5632acc3dd8a13f7e53d426e32e9d93551f3ce1783c231a2840f3212ce"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase2.md",
+      "bytes": 4965,
+      "sha256": "00dc21e3128e56c4fc018b77e4ea5844ade3861ccbee2b0752d86f02c1bf89a7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase3.md",
+      "bytes": 8979,
+      "sha256": "61b5b63d9541b4281f76f5e1f1d3bfe395fd3ffeec1dc116de18b54fd02d323b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase4.md",
+      "bytes": 12980,
+      "sha256": "98e4114b2451d8493e708a1d78f0c2851ba2a5229919cc1a2f71a4038440b1ff"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase5.md",
+      "bytes": 10162,
+      "sha256": "be75968a6475a0feb73ecdac9288792738f342bc5b3cb44030b6f51c4165bd19"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase6.md",
+      "bytes": 8700,
+      "sha256": "a2fa25cd83770a402e94ee57ec00cf45f110c4a9b5490a27f8b954be3b727104"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase7.md",
+      "bytes": 8609,
+      "sha256": "83de9dc5d649c1038c8cbaa98a3877f2da8acdecc9a2e60898f93029ae4079aa"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_research_protocol.md",
+      "bytes": 2001,
+      "sha256": "c2760c0f492764f24be378226743abb9fd9f8ea0629cb11c7056adaf9fa57e1d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/forced_path_thinning_obstruction_at_four_fifths.md",
+      "bytes": 3762,
+      "sha256": "f8d9ca17165ce62b2e4348278fee765298fa353ceebe7510bfa68b433c6637fe"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/forest_extension_reserved_double_stars.md",
+      "bytes": 8755,
+      "sha256": "eec778f03a557e24c8496b8653979de4593de80e79fbb752f7a703e54097264e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/forest_l1_sensitivity_search.py",
+      "bytes": 2293,
+      "sha256": "e170aed6b963908dcd92352c3642099cf9a73682d6f633a4db68cdec94a99f1f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/forest_optimum_l1_sensitivity_and_palette_gap.md",
+      "bytes": 6956,
+      "sha256": "afdc8b3c376e42d3de62c3aae3565a5c0333cac40d47c93edc428b573c4cac21"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/four_rank_incoherent_factor_probe.py",
+      "bytes": 2902,
+      "sha256": "b24ab836802ade929a195828cd656e7aaaf9c3fcdd1cf0a32c108357355eeefa"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_barbell_mixed_polar.py",
+      "bytes": 495,
+      "sha256": "b8335fb6eb9e6b97bc79e4b92b8d80e03d22ee1404c3853a0a1b71a334a1887c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_bowtie_hypothesis_sweep.py",
+      "bytes": 1736,
+      "sha256": "1f75582577016deb5b07fd31f7cc0892bc05deda0168d5bed40ba78d37f440cd"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_bowtie_mixed_polar.py",
+      "bytes": 444,
+      "sha256": "25b934ae78d2688b5281031eeadc01974ece996e239387e1127c7673592c3a2a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_bowtie_parallel_ports_polar.py",
+      "bytes": 503,
+      "sha256": "2a480436a1a7b4a1e92442f6b4bda58b3ad9886c0518767513301c31e6e395fc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_c5_chord_mixed_polar.py",
+      "bytes": 3298,
+      "sha256": "ef73dd91c52a9704d2b8f34a5687d0bbf5c13ebead08474d6efc3289eb3df969"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_c5_cycle_hypothesis_sweep.py",
+      "bytes": 1712,
+      "sha256": "151865725b0c5953bd570836882b4a117f3cee0cec4746384d71860cd222e507"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_c5_cycle_polar.py",
+      "bytes": 436,
+      "sha256": "623e6981db492fba92b6109dcb86a2b66e7f8c8755a57c49aae48628561a46e2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_diamond_discrete_fluid_polar.py",
+      "bytes": 4092,
+      "sha256": "9f1f38ecf374ff994977d2e0ac546eabc69f30cefda4251cda35a9f1c68a1eca"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_diamond_parallel_mixed_polar.py",
+      "bytes": 499,
+      "sha256": "aa1f61f167f34f1e44e1492e8359d299c5af55c1554aacf5bc462e8c526ca38a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_fixed_template_nonconvex_polar.py",
+      "bytes": 2337,
+      "sha256": "d1269b95cd7ca4521fbfa2e2f6f354eae72972ecb28705c8af5e96bc4fa890c5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_incompatible_rank_band_three_halves.md",
+      "bytes": 5741,
+      "sha256": "c8b661029f6de74a62dd388a4639e6ab53aaead7e97e3bf121ab90240eaebd95"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_independent_audit_paired_fluid_star_forest_half_deficit.md",
+      "bytes": 7172,
+      "sha256": "8512bde7caaa4c1a7c6010509e0ba1a70b96fd581ad6910b1d986b72b2d4b2ef"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_independent_audit_rooted_guard_forest_four_thirds.md",
+      "bytes": 5531,
+      "sha256": "5fbe31b9afc54875776232a2fd8e5cf16bbc123c59b4c9d40ff3ba6b50868424"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k4_mixed_rank_polar.py",
+      "bytes": 3316,
+      "sha256": "08fa844668fa2db70d591f53920e58ba673fdf4ad1ff7316bfa0439abb64a740"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k4_targeted_hypothesis_sweep.py",
+      "bytes": 1544,
+      "sha256": "8c29a331ed64e2a422e59b96095d3225241f11d6e8519b1b3a1bf81b70c5c833"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_cycle_chords_polar.py",
+      "bytes": 499,
+      "sha256": "36057c3aae2eebd93ff75a2fbef040369ae461da1fc465b8b2fa37e6b56f4f4e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_parallel_chords_class_profit.py",
+      "bytes": 1329,
+      "sha256": "315bb214af1daa6fb743a3a48f5260c87eb59b6786f4457ab64c2daf8b587416"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_parallel_chords_milp.py",
+      "bytes": 2768,
+      "sha256": "e20c4a516db71f863a05127a35d9805384cbbe668ec4d956569ce1a5468668ac"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_parallel_chords_polar.py",
+      "bytes": 535,
+      "sha256": "9e30a6e58183707a7a12e4c04560b1d326fbb9adca5ee109fae99d677f84731c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_parallel_cycle_heavy_milp.py",
+      "bytes": 524,
+      "sha256": "0d38c4dff8eaa7c5453130f092893e49c2b0d7dd38d172ec6038e3a11b9656b8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_k5_targeted_hypothesis_sweep.py",
+      "bytes": 1975,
+      "sha256": "6670d571c774ad56dec5415bdc4f190d46a7818e55616807ba5d1d771efaf324"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_matching_heavy_capped_fluid_matching_two_thirds.md",
+      "bytes": 3066,
+      "sha256": "606385fa0faf4d5fc07aea1d3c96fc13b46afafffa717e5c911c4e3f08b022f1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_matching_heavy_capped_global_coin_obstruction.md",
+      "bytes": 3765,
+      "sha256": "48ff9cd7341dbbfc70fe891d93ee300386f39ac21967baa92bec95a1d87f56bd"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_matching_heavy_odd_cycle_reduction_candidate.md",
+      "bytes": 9758,
+      "sha256": "cee8564a6d763d408288f21312750549835aafd8a834b2b29ce12a53ecc1128c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_paired_activation_probe.log",
+      "bytes": 1837,
+      "sha256": "69bfe2183cc6e15a4e08433fb2ccdcbd9359c1dd389c18c648f8ad9f622637f0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_paired_activation_probe.py",
+      "bytes": 2183,
+      "sha256": "f59d250623bf0d597d8a61621eb3443050646d3c66f60a33047abd97c055489f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_paired_activation_two_leaf_counterexample.md",
+      "bytes": 3855,
+      "sha256": "d7cd5b59185880fbea5d0504670162b5c4a57d957e1b7640616718a603c4a7b3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_triangle_external_blockers_fluid_polar.py",
+      "bytes": 3331,
+      "sha256": "cd7130ddd40063909378f25ca203405ddda632a1ac4ab073d621de3981001e5f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/general_triangle_two_type_polar.py",
+      "bytes": 3156,
+      "sha256": "3bc4a618dd581d4de847897b292c254a1c8746417a41c3a8b81dad30b2e0cdf9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_2to3_threshold_cells_polar.py",
+      "bytes": 3176,
+      "sha256": "b1b48cba8b38e754d149a6f43b659a1b76984db9ca9da62d2c554ce6e439d76e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_diamond_full_matching_probe.py",
+      "bytes": 2456,
+      "sha256": "2f498787853578e4b791f2796eedc0f126f20e57a82955d80f1b2aeb4bf852d4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_five_core_rank_cascade_lp.py",
+      "bytes": 2117,
+      "sha256": "54e30a29c86c58172b7b0ff6aef25595b01d8a847e9d15e38fa6b60190afa838"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_path_multirank_checkpoint.md",
+      "bytes": 5376,
+      "sha256": "e204b85999a312797d7f6a52e3f45807545017820e340ad7dc30634266ae5b92"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_rank_transition_path_lp.py",
+      "bytes": 2053,
+      "sha256": "cb0d0a54ed6688ce600b260cd8f5f9babc5ce3aa2b2e617ee5bc532e4ce2757e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_three_core_full_polar.py",
+      "bytes": 2545,
+      "sha256": "d8870e8d394deb805b06a2bff5005c2951ad3b7c7d108ad3d5d49fddf9927b87"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/graded_two_core_2to3_full_polar.py",
+      "bytes": 2337,
+      "sha256": "d160560c0d5d16b599718afb9a15bf1e2460b828223db08c29d4f0372a20bb17"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/half_weight_arbitrary_bip_heavy_exact_fluid_hull.md",
+      "bytes": 3215,
+      "sha256": "c11b623136f59166685137909091617ea61e0950188b315afa3c6395e2b391d3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heavy_forest_bipartite_activation_candidate.md",
+      "bytes": 33062,
+      "sha256": "6ce7792a3cfd59324785fb4363bcaad6e6b4e366a7b15b0c69f159b86d59079c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heavy_mixed_charge_path_polar.py",
+      "bytes": 2343,
+      "sha256": "4b3e50c035869d2f04ad10fbad0108fdc95ed75b91a9d7c78b6afb796416ba13"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heavy_path2_fluid_lp_probe.py",
+      "bytes": 2524,
+      "sha256": "d7d780ac654166de2fc66621f17650a315808283975bbc26aa1af5d1360d8c62"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heavy_path3_hull_probe.py",
+      "bytes": 2699,
+      "sha256": "ad94269a45d5a08a494361e4c7382efd436cfe6fc46b0dec4162ed6646d847bd"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heavy_rank_two_six_factor_probe.py",
+      "bytes": 2387,
+      "sha256": "848808d21115c825cb494ba0a251b03ba8f33f04c94bc9c26cf5d83a1ea55067"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heterogeneous_blocker_lift_obstruction.md",
+      "bytes": 2002,
+      "sha256": "daba67ac3d3307fe78404a5109965f99ffd3118525ae871c9f5fc0bc0db09842"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heterogeneous_pipage_chord_exact_obstruction.md",
+      "bytes": 3054,
+      "sha256": "e2d8daf7e373cd7118d5ffb210ce470fd1dbd08357c6695c7d672db908090763"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heterogeneous_recourse_domination_probe.log",
+      "bytes": 1181,
+      "sha256": "8a0dfcf7ba21eaf85e110528b41139b1e68f0a1aef7249299df524dc74ec074c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/heterogeneous_recourse_domination_probe.py",
+      "bytes": 2643,
+      "sha256": "50bdd55aa3ef2353b3f9c63f85ee947fbbeb60f1bf77255602b554bc05abc7e6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/homogeneous_shore_higher_rank_polar.jsonl",
+      "bytes": 3853,
+      "sha256": "9327774c40121b84bd2d1c99dadbc4305a38d8f407b4e92e713851c66b98c0b9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/homogeneous_shore_higher_rank_polar.py",
+      "bytes": 2924,
+      "sha256": "a4297885eea51eda8839e183f2ae6d8d601900578c86e35ea3ec712756cdc721"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/incoherent_factor_full_profit_lp.py",
+      "bytes": 3052,
+      "sha256": "d485d0b8e23718dc9b8d172504e2a63ff007d037fa419b023f8c527a880ab5a0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/incoherent_three_port_factor_network_probe.py",
+      "bytes": 2491,
+      "sha256": "df7108abeb47981c504c5721abc0e5ed26f34a36d557d093fa0b4572b3306fec"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/incoherent_three_port_overlap_probe.py",
+      "bytes": 2562,
+      "sha256": "3eca8e43e9479322d4d66104aa92c31b3d0cb83ec0b8bf4dfd3a38dd5b236efe"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/independent_heavy_pair_recourse_probe.log",
+      "bytes": 1033,
+      "sha256": "0b78d906e5179c21bf5fd202bede730e4e60baad625fce74ffe3632f42e7b245"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/independent_heavy_pair_recourse_probe.py",
+      "bytes": 3102,
+      "sha256": "b441e851b14dc6159d9c9549006d8c95781392849234b2e5983230d7ba487651"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/independent_heavy_recourse_counterexample.md",
+      "bytes": 2471,
+      "sha256": "974856792abb4aee67c245fe2c78d784fbcc5d6f50cf9664e08c28267e387898"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/irregular_heavy_crown_coloring_milp.py",
+      "bytes": 2250,
+      "sha256": "b459e0b9eb44bb26cb66a28ba2f51c917414da7702f00e2406fa0d8b27e22ca9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/k2_jensen_probe.py",
+      "bytes": 1262,
+      "sha256": "deb019f3a0beb634e712b86923f5c8a4db6a042d8480c5b73cd3fe04b7e4b706"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/k3_expected_max_moment_altlp.py",
+      "bytes": 2432,
+      "sha256": "bf6a5c71f617fb598c2f5fb75ad12cea9157b70405cee0b0257acc5bdc4c853a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/k3_max_reduced_star_scan.py",
+      "bytes": 1482,
+      "sha256": "0c7552d4210fdf87234932cea14ba74cff3d5ab6bd0ec8f5e3cb7db0dba9efb6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/latest_star_hybrid_migration.txt",
+      "bytes": 4699,
+      "sha256": "f6c4934d983baef2b724b8b6e82745fa13b1ebe404f828169a3869778d67d5af"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/local_pair_internal_probe.py",
+      "bytes": 615,
+      "sha256": "f92c785b548077048ef1c680ef3c1d60a589a8a517220d0bf272ea4cf34ba723"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/local_policy_adversarial_scan.py",
+      "bytes": 1183,
+      "sha256": "c271abebca2c9257c1fb35f3c51af0ee38138e3d38da71610ef21481516badeb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/local_policy_k_scan.py",
+      "bytes": 1301,
+      "sha256": "b0c4bfb6cce837cb02ee293a704eb3b9cfef7fddc3e94321715529f664d4758f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/local_star_critical_probe.py",
+      "bytes": 999,
+      "sha256": "719435b1623aa82985f061dc6e1e6265cd474e25332d51910930bdf5c3ed4f2c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/local_star_de_extended.py",
+      "bytes": 2604,
+      "sha256": "82650cfb0f5122176ea441885d1b1a0f313091a92e414cdb3920f1b7a0ce9a84"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_fluid_path2_gap_probe.py",
+      "bytes": 1674,
+      "sha256": "b1e901fd4e2f7c1a9efa80a131839b1762e2a4ee65613fc300821ca725383ca2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_heavy_charge_c4_profit_probe.py",
+      "bytes": 2297,
+      "sha256": "20faef32bafd5065a9e71087d850f7d7f23b5b8a5b3920f2af9e42aaf4fff357"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_heavy_charge_c6_stationary_polar.py",
+      "bytes": 2539,
+      "sha256": "e84add354912172ad8d038a0ba01c759669870a5bfb772a7b3aa547d6472f027"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_knapsack_star_activation_test.py",
+      "bytes": 1842,
+      "sha256": "9d6eb1d9f10282876000fec083e5c381932d00cf1f054f0596d987fcab0ccc5a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_medium_batch_reversal_and_diamond_barrier.md",
+      "bytes": 4265,
+      "sha256": "4038848f116e6fc0978185787300e74f76b484850928b419f2b23befbd5764e2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_rank_hierarchy_diagnostic_2026-10-03.md",
+      "bytes": 6886,
+      "sha256": "04ee92b2023c1bd5383f2168f2cee60c9aa456fdc951ec1f52c4770de8374b6c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_rank_triangle_factor_activation_test.py",
+      "bytes": 1443,
+      "sha256": "bfcda4cfbda2f6b480b6c21f406898dfae2074046a85f9b82345d923cbd39595"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_cube2.log",
+      "bytes": 856,
+      "sha256": "f334222055d11dff783db1b15a11d88001ea4d769e0059ebf23fee9426e2a914"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_cube2_result.json",
+      "bytes": 848,
+      "sha256": "4890d9f7eda48407660d2faae38ff024784f44fc266fd2c53110f35b5b6a1ce1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_cube8.log",
+      "bytes": 3448,
+      "sha256": "509ad44107fc0b0ffa79912634b0fd93eac6384c485b8f8afdc7fbdbcf19a68f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_cube8_result.json",
+      "bytes": 930,
+      "sha256": "dc3e842d48db20474f18afe5d16e71e2f6a76d2f321193dabe395be84973ea14"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_cuts.json",
+      "bytes": 92014,
+      "sha256": "67da13a6fa66266bb8ddf84b64c36b0caa28bf824ce13ae7da0613285e9dc976"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_grid8.log",
+      "bytes": 1404,
+      "sha256": "7a570dd52a83f01146a8bf33384bb6d084b7d4a2feb3ab10149321bc3b7f9147"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_grid8_result.json",
+      "bytes": 828,
+      "sha256": "9c85018ecc7a8a7e8b062482e53a50dc08c3e23cd022461f22a7b996eb4a1a38"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/mixed_triangle_ring_maximal_patterns.npy",
+      "bytes": 360488,
+      "sha256": "bd1fb4b762c83edd334abbe6f970d75e17d657e656b5e9aefb76acf6f412fa2e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/multi_fluid_matching_fivecolor_compatibility.md",
+      "bytes": 4537,
+      "sha256": "eb49127a26de87fa27fb7baff23a12dfbc9754155c535be33b3994c9329d84ab"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/multiscale_palette_design_route.md",
+      "bytes": 6517,
+      "sha256": "2e5c58fa0ed3dcd1c1dbc601198de1e4e84112c438a1e9ddf02cf170164d7877"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/one_fluid_edge_independent_audit.md",
+      "bytes": 2465,
+      "sha256": "4de24692acfa01e75374728e5cd9db1fd6ed4aac2b45548a785a56bd4c3527ea"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/one_star_reciprocal_policy_lemma.md",
+      "bytes": 3967,
+      "sha256": "b5411c38da7e1cf61a3c0367a8850fd614396049a0a04ac332ebea39500e1ae1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/opposite_shore_two_capacity_lipschitz.md",
+      "bytes": 7046,
+      "sha256": "c5db0ab6154d436f74b1a359a6448496c51d88ad77998aaa165390cf27ca41ee"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/overlapping_blocker_expander_milp.py",
+      "bytes": 1664,
+      "sha256": "fa07d30827ac54f5f3dfb69fd7f39d3aa3f3d14c2d751e7b0c31d06f037a7ec5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/overlapping_blocker_mixed_rank_probe.py",
+      "bytes": 1737,
+      "sha256": "9532f5d074cc8511a76e8025ea20a73375233c61b06de79653f500612d07b61e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/overlapping_blocker_triangle_probe.py",
+      "bytes": 2533,
+      "sha256": "43c382f821411fbf8a2ca94fc5e7c21b7d999e52d691501436314cf1cc281ebc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_bernoulli_fluid_probe.log",
+      "bytes": 651,
+      "sha256": "1e618617137f79906aa4d676f11409380334e58122f50784d77b33c58dfec21d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_bernoulli_fluid_probe.py",
+      "bytes": 2066,
+      "sha256": "2e3d048a920d4fb9b64e99a901245cf59a0410f12988cd3037c7029fd5d2854a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_capped_45_lp_search.py",
+      "bytes": 4209,
+      "sha256": "12375c43f0d8dd5a9cfe14633b7f67b6b204df9ea1fef2676e71d8652efe6a54"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_categorical_capped_45_lp_search.py",
+      "bytes": 2780,
+      "sha256": "ccab79ba1dfb5d454c5086fc940522b03609ab137d6a63021e5727b21f4c14a4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_fluid_port_reuse_mixed_rank_diagnostic.md",
+      "bytes": 3599,
+      "sha256": "71fc2c09d29494ab9ff8a7d4c5213e123fc0bb691f738edfe09406cd7624295b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_fluid_relation_port_parity_barrier.md",
+      "bytes": 2344,
+      "sha256": "2da7388200fada60f579afebf18536cb8c812446f653c222ef0dd9ddb3740053"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/paired_fluid_three_pair_c6_gauge.py",
+      "bytes": 4720,
+      "sha256": "90800aca5dffd3f8d6aa540d91e8916f9becbf7062a1e63f0edf656fb34c0668"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/path_chord_mixed_hull_probe.py",
+      "bytes": 2337,
+      "sha256": "5db22825e45ae6d2267f1d29e3454255546d3b252dbaabf42ffd56db57e8f2cc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/phase2_local_policy_and_additive_gap_audit.md",
+      "bytes": 6144,
+      "sha256": "9406d611003352b37ae02d80c246f64f164f53223f97b8ebe05be57628891c20"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_heavy_matching_tiny_star_forest_transfer.md",
+      "bytes": 11582,
+      "sha256": "0e25456bdf9a71f2c500121eada5459029ddbb4b229367482e31c3364c22fc19"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_linked_tiny_stars_additive_majorant_barrier.md",
+      "bytes": 3541,
+      "sha256": "9886a60b68997e2dbed6426724da3e2b608660cd56d99a272771b5b8695a4bf6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_linked_tiny_stars_capacity_two_bridge.md",
+      "bytes": 11975,
+      "sha256": "fc92a7573047c705f3ab3f963617eae62b35438be2e79855eb33d26eae3ead35"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_linked_tiny_stars_empirical_transport.md",
+      "bytes": 6851,
+      "sha256": "fd780b8d0a92aae525d626cbcf38fc77efd251df420c5815724d3cbc5c0afba4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_linked_tiny_stars_integer_gluing.md",
+      "bytes": 6565,
+      "sha256": "daa855d06fa327fae01be2b0c11ab426b81f08134cccf54bb7262ac2823b3a00"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_linked_tiny_stars_symmetric_binary_transfer.md",
+      "bytes": 5637,
+      "sha256": "58191d78f22ed5ea07b281f6aaaa16987810261d22f49f6f4efb65dea9091a4e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_single_tiny_star_integer_transfer.md",
+      "bytes": 8919,
+      "sha256": "7fd91d4cb0e62ba6eeef06f8904818aacf982e5d9eb5cd399afeecbae82aa5bf"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/physical_tiny_cap_rounding_route.md",
+      "bytes": 14680,
+      "sha256": "5cdee043069dfedd0f9e9e20624e8202736e78610da0f3138333ec9d37b02fb0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_general_pair_fluid_search.json",
+      "bytes": 982,
+      "sha256": "6f42aecb4a94bf898a9ba1634fe6ac5f11eedd28b84249f598d28f34366f7f52"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_general_pair_fluid_search.py",
+      "bytes": 2902,
+      "sha256": "3b1aeaaab065c00363911d3f214148d85eb06bd21833dd5c51ff0351a314a9f6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_private_star_coupling.json",
+      "bytes": 408,
+      "sha256": "c86b3cf7da4a43c72edb6764c8ac2def46c12b5c101740660f112ee6ae551946"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_private_star_coupling.py",
+      "bytes": 2199,
+      "sha256": "e9cfd92af596e80f5e03470e9e15ec1683094ed6223125b85cdfc18471580395"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_vertex_deficit_search.json",
+      "bytes": 810,
+      "sha256": "3745ddad66a6a78a97ab6df8d645dfea18feb4e2865c3bf67fff05f43f72917b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/primary_vertex_deficit_search.py",
+      "bytes": 2677,
+      "sha256": "d6898172881a59370e67b552fe70d6ddd075ebd89d97785436b3ccd82629f82b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/private_single_guard_arbitrary_fluid_five_fourths_candidate.md",
+      "bytes": 6023,
+      "sha256": "eabbe3c2f97353104202173e088bfbbafe9aa50007f5459073f25dcc06e13cea"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/product_empty_hybrid_exact_failure.md",
+      "bytes": 2184,
+      "sha256": "5c3d91ee524a2c193839bd148047785e1e9e21fcd7d3ba3880b99ce3b7fd1724"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/projected_matching_law_repair_probe.log",
+      "bytes": 323,
+      "sha256": "11c0c6a39d4e8549da581f091c4df1de9a800bc521d13fcb566242277c3901ab"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/projected_matching_law_repair_probe.py",
+      "bytes": 3694,
+      "sha256": "f7acff8a5aae06d70f73a37c25c2a215ff108e11edc25c2690c0f880f4877856"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/rank_three_packet_charge_four_thirds_hull.md",
+      "bytes": 3590,
+      "sha256": "e8387f25b19e64523001702b61c72ddaf12f884a52bfdef065dfd076cbdd0350"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/rank_two_pair_atom_cycle_no_go.md",
+      "bytes": 3387,
+      "sha256": "6bf348a5dc4992ab12b7c133d6ef333cb35f48efa15f283806e601d476ff62df"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/reciprocal_moment_fixed_law_certificate.md",
+      "bytes": 2230,
+      "sha256": "24e17e0d8b06218a37b1b6658cef2fc15bf7de08a808529968566929944887a3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/research_checkpoint_adversarial_repair.md",
+      "bytes": 7138,
+      "sha256": "8a5d7ff569f5ce67f4c262d9a3fb50c823c6fb30e5d11d25bc7cf5bdbaa72ece"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/research_checkpoint_blossom_repair.md",
+      "bytes": 6547,
+      "sha256": "1c685f53c408d04d6ad7646b95410461f8664064b89ee359ff53cd0639dbb2e8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/research_checkpoint_global_coupling.md",
+      "bytes": 7744,
+      "sha256": "d79a3a3130c9c04d62196ab35eadc2ead06ad828eafac8c5e0ec28ac78af33a7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/research_checkpoint_physical_transfer.md",
+      "bytes": 4975,
+      "sha256": "8e6979057aa7f9680aa85738498867076cf65126b52248f3f6ce20862bb15adc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/sampled_neighborhood_finite_label_candidate.md",
+      "bytes": 6788,
+      "sha256": "c6575f41a268322ce543ba7f4157f44c295bae26d39510fafcf1f5e0874b09ed"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/search_mixed_triangle_ring_persisted.py",
+      "bytes": 10323,
+      "sha256": "b81c37fcc66d3f0f716d711b8b88b3b6294accb72897275d5a1d1ab77e5892f3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/shared_blocker_mixed_rank_checkpoint.md",
+      "bytes": 4608,
+      "sha256": "f364e7137dadedce0d64080c9fc26b722063aa925d0df26659a17984a7d2a424"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/shared_heavy_free_set_factor_barrier.md",
+      "bytes": 2899,
+      "sha256": "babcae5b7ba5b7ddaa01a2ef087064a99e06c3dc0a9d31658d83a8f7f133d5f5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/shared_profile_capped_heavy_transfer_audit.md",
+      "bytes": 8339,
+      "sha256": "1650f0069248fe274efbff6d514e1d85752c5e99229b2fe14fe5e9deea86c3b1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/shared_source_range_two_audit.md",
+      "bytes": 17587,
+      "sha256": "9fa1d7c757c273b9e186e0257597dcf6bdc55d3538aa5ac62cebfd544dc93f96"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/slot_shape_cover_W12.json",
+      "bytes": 2561,
+      "sha256": "4a049b61dafa2523b27582754536333cdb6302549e146a9a783e9686c7c6c067"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/slot_shape_cover_W16.json",
+      "bytes": 3237,
+      "sha256": "704e8355824facbf4441abd753597b84e3bc58559d5883b0f6e4f68604f81b17"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/slot_shape_cover_W20.json",
+      "bytes": 3312,
+      "sha256": "063f98a5458d3816915e47e300a494799ab270449021f0011d3be471acea8422"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/slot_shape_cover_lp.py",
+      "bytes": 2551,
+      "sha256": "5a3e18022062e7bee142649654de82d3d2e915b47fcbf05f0f69c666b106cc71"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/sparsify_localize_type_palette_bridge_candidate.md",
+      "bytes": 15571,
+      "sha256": "e5024d13883f78b09aa3eade1c9ab83d163162da425f6f976004fe0019cb95af"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/sparsify_localize_type_palette_independent_audit.md",
+      "bytes": 4097,
+      "sha256": "1f79fc3d2ec5e0c93ac222cad38018c38fd9d5a074ed9548eaa7a94f4b69112d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/star_forest_physical_transfer_candidate.md",
+      "bytes": 3563,
+      "sha256": "7b8e03415aa540ff74789ad93b5e2949455d914114f6e9fc598f47909eaa77e2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/symmetric_triangle_relation_ring_three_halves_barrier.md",
+      "bytes": 3087,
+      "sha256": "6430043783db3e92d74f0d51e5a72ff19ddf7a93cd1fb59f1a2d8bb4bdd8772f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/three_item_packet_factor_parity_dilution.md",
+      "bytes": 3680,
+      "sha256": "aac5d93cc1341de6cd269e3bd6704221d6af670e385a13f5c9f4d42a9b63bbd3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/three_phase_rank_mixture_probe.py",
+      "bytes": 1702,
+      "sha256": "dcd6bbe62cab40ed90451f4310ebcafb578050915972596d06127ca9b0266481"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/three_phase_shared_blocker_probe.py",
+      "bytes": 1802,
+      "sha256": "53eb503adb9257d9f56d6aef97d1261a230ac2d0e88179dd66f6b0220f161bf0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/three_port_mixed_hub_activation_test.py",
+      "bytes": 1826,
+      "sha256": "9d4218c4c4fee90ef78f957c4f812561eefae12ea5cb1617328368f2905f4f48"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_all_heavy_extreme_support.md",
+      "bytes": 4767,
+      "sha256": "a8ad2f8868dbba661b220935f2c77ab96dc9a1871e4a38aedbd67400c2873862"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_audit_physical_single_star_and_fractional.md",
+      "bytes": 7260,
+      "sha256": "19a9a8bb6fc003bb1dff19f492662177d50dceda3dd00b448d63f99e193cc056"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_direct_matching_bipartite_and_blossom_obstruction.md",
+      "bytes": 4410,
+      "sha256": "2d0094b06efb2c05ac65e2ba943fd2f248f3352d8fc8002c544f774e943e0f93"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_disjoint_tight_blossom_projection.md",
+      "bytes": 3382,
+      "sha256": "91c49fc6ab7444d9588794a9244565ea575e6d7b82befa26a5b7a6360f26cf76"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_general_mixed_gap_search.json",
+      "bytes": 1629,
+      "sha256": "ba134f6d39d825da339f8024e3c78597bbef09902f2c7b50f2c6b991259af96a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_general_mixed_gap_search.py",
+      "bytes": 3455,
+      "sha256": "255fcc516941b124b6a4458ad5be756c013ee6cf4274de1a20a5f5736ea4ba1d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_heavy_arbitrary_fluid_matching_7over4.md",
+      "bytes": 3647,
+      "sha256": "138f784c55468e635124f04e2d185c70368e91cf322a9f7c01118174dae42a2e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_heavy_fluid_six_probe.py",
+      "bytes": 1039,
+      "sha256": "1999543316528af3398389a0810efd60b48923dfe98dab6756140375235ae67f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_k5_extreme_dual_probe.json",
+      "bytes": 636,
+      "sha256": "1ccbc594a4746e42253916a04910d4ed5c5bf8b0bdec14c656d897f90dfdd4ce"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_k5_extreme_dual_probe.py",
+      "bytes": 3134,
+      "sha256": "dd7f2db4978f8402623ab0cd148dab852ad36b7b0906f4f4f8c7153e47d4256a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_matching_jensen_probe.json",
+      "bytes": 809,
+      "sha256": "7a7f8d640c58def01338a860f17260d29cdf25c76c8f08fd2b8c7b324fff4dcf"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_matching_jensen_probe.py",
+      "bytes": 3307,
+      "sha256": "300fa905718ad296e5ff6eed59bff9137e3311d73105019ac9e494cbb2fe4b5e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_near_unit_exact_three_halves_blossom_repair.md",
+      "bytes": 7344,
+      "sha256": "65138ab81f0a31a547b9785c18e35a05af3698d0f287640df61cab3ab3f4625e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_near_unit_heavy_mixed_bound.md",
+      "bytes": 2356,
+      "sha256": "a6f834affdc12052f036b633beb1ba3cbc34c0aca07f5c000a86a147c8f55a61"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_nested_dual_research_checkpoint.md",
+      "bytes": 3423,
+      "sha256": "52ddbe4610d773c3d46620f8b0f56d1c44ba806f850e09f8a248d3b7677578fe"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_nested_matching_probe.json",
+      "bytes": 59,
+      "sha256": "20248ef707767eaf25405c5e6af709320bc44b71b3cc7556a37aa5c6f3052a3b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_nested_matching_probe.py",
+      "bytes": 4029,
+      "sha256": "f9d6067572b53ed2032598e61ebd9dd498ec21eb47c649db0386255fd3331aa5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_nested_matching_sufficient_theorem.md",
+      "bytes": 6011,
+      "sha256": "4c7c7ad29d7b0ad83e99c452d28f95fe639cd78c0ff2da5de3ff16f655c23ca1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_one_blossom_reoptimization_lp.md",
+      "bytes": 13539,
+      "sha256": "bb330f95ca3462aea8bb96c4d1c8472c771fd94ca96c4d30d003fa57973357f6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_pairwise_covariance_star_lemma.md",
+      "bytes": 3193,
+      "sha256": "da4dffecbd7bc5eade228ecc26f3e290f5d5553304feedd86e54a5e4f6033e18"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_physical_tiny_fluid_barrier.md",
+      "bytes": 7544,
+      "sha256": "41fd584535b0822a0084c3690e52c7869a43b2b36c83152a5ab4bc66d08d7351"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/transfer_three_scenario_median_half_integral_heavy.md",
+      "bytes": 5342,
+      "sha256": "8e73f2af06e32e8afe52f5d8ce31cd7e42a7ebefe6049d7ca5756224cf502fb7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/triangle_blocker_substitution_fluid_gauge.py",
+      "bytes": 2469,
+      "sha256": "d3f6cad4e78544bee052b6fb033ca8af396e99db2d6a98a0060563504478b39e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/triangle_relation_ring_real_polar.py",
+      "bytes": 2612,
+      "sha256": "8d2008f40f6bd3ccbae95e3513ea28e2cf50c18185e6a248c5d65c1f4ac890f7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/triangle_substitution_and_four_vertex_checkpoint.md",
+      "bytes": 8818,
+      "sha256": "576eaa781176a9dd1d50a40dacb185a0b26aeb0f606cf10757fd34c735f96df2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/twisted_rank_two_phase_network_four_thirds_barrier.md",
+      "bytes": 2676,
+      "sha256": "d08d5589c9d759c450c0f072f5ba5b695010069f85c587ffc2824532a70621e8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_blocker_factor_activation_lemma.md",
+      "bytes": 2873,
+      "sha256": "a99fb117932b417601e6054fabda87c289d57223f3700f3beb6eb2dfc5a9c96f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_blocker_triangle_factor_test.py",
+      "bytes": 1872,
+      "sha256": "724ff16a69ae62ba9734353a2345770543af3877a092e63ebc2ae0bc55a8014e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_endpoint_three_rank_opposing_polar.py",
+      "bytes": 2155,
+      "sha256": "ac82e6bf4b885e5844cf8b66e4209d8c48e9324f33eb973768507e25ea75550e"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_matching_midpoint_single_fluid_edge_five_color_lemma.md",
+      "bytes": 8624,
+      "sha256": "42fbc602331c69b5820995963fa2d19dee01eb5388e4b00b99a51ad595207256"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_joint_moment_probe.py",
+      "bytes": 1874,
+      "sha256": "1d054a7c2e599af01b255a730020d5085a53344822bc00d4b450a48f27f758e0"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_k3_expected_max_scan.py",
+      "bytes": 1632,
+      "sha256": "06e90aeb9093535c3a04aa75c7f0896de7ee587161e4805b6be3163a6c3b4cc1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_max_mean_scan.py",
+      "bytes": 1552,
+      "sha256": "7d18dd09f94af31f788d8cb760029a2761603b8596436fac4854a3f214fee549"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_max_probe.py",
+      "bytes": 914,
+      "sha256": "ea221915fd7581ca0d2879675d2e5f784468b4a7120e0acc124f5cc841f647e2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_moment_altlp_scan.py",
+      "bytes": 3086,
+      "sha256": "56eea1952760f392baaa0878ec90913af0225f6de51753f10a5c47ac7496ab81"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_moment_relaxation.json",
+      "bytes": 70923,
+      "sha256": "bec40a70b01114658137e80573aeecd5849ff9749c63ef260bdd632aa33e90e6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_moment_relaxation.py",
+      "bytes": 2199,
+      "sha256": "57ef7474c99a81331b0ec0eaba9f413905642f523086ed91bc0a68e289cbd593"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_moment_two_point_scan.py",
+      "bytes": 1417,
+      "sha256": "c3219493a470650cbd9d7c0ab8792dba794c7ae9108550c307adbcc734e1c2d6"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_policy_adversarial_optimization.json",
+      "bytes": 57779,
+      "sha256": "8e18c276523b79250f8dae2e7d25bb9b937b5bd6a802cd3b93021d4a402319c4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_policy_adversarial_optimization.log",
+      "bytes": 42973,
+      "sha256": "9378a814d761306296ae2078ff41d50dc4d65c8c9098e1cf9443a69e2396e870"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_policy_adversarial_optimization.py",
+      "bytes": 3586,
+      "sha256": "99351e9c7b4497f038ce47abbaee828a4db73c1e64d2fa1aa13992c8dba2e970"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_product_moment_scan.py",
+      "bytes": 1808,
+      "sha256": "6c0340d75f79b53f37de1a32b7ace4e7ea26ff7fe5251cb0cbf29573dbb34ba5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/two_star_zero_covariance_exact_obstruction.md",
+      "bytes": 1753,
+      "sha256": "965e1013f66762265437808ac3d252b6a37bf0669d8976f890896224d932192c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uncapped_two_star_moment_reduction.md",
+      "bytes": 3075,
+      "sha256": "dbbe686a155928334c429492a1bd416187029763a3edde4df116190444e390ef"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/unequal_graded_guard_paths_four_thirds_ceiling.md",
+      "bytes": 6729,
+      "sha256": "98d365425d6aa5c0b074a8ae3ea791814683e73d31153b0e8a9d47f1e7e9f4d8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uniform_factor_polar_base.log",
+      "bytes": 444,
+      "sha256": "424af4ecf581ac3b92ed3d87633b61da5d0089d7ee4cbc41bc9887cb35ac5613"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uniform_factor_polar_cutting.py",
+      "bytes": 3593,
+      "sha256": "eee5a1cbe18af737198c7c34f517203bef10b442556c2de5d9b792b147e0156f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uniform_factor_polar_lift67.log",
+      "bytes": 731,
+      "sha256": "1afee5e9b0736e2c3582eb8c4654248612c6188e73906b17bc5aa6ea08f17c35"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uniform_factor_polar_lift67_perturb.log",
+      "bytes": 861,
+      "sha256": "39a21b4d6d9fabf591d3721d56d50fa95b78fc3a3f6161d9ba5e6f5878fa5017"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/uniform_rank_triangle_factor_network_three_halves.md",
+      "bytes": 3741,
+      "sha256": "54ca49f793b6c6fa704bd4f7d2d29e241764b88e1796f7d573da6b84a79ec591"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/unit_guard_capped_star_hybrid_two_thirds_audited.md",
+      "bytes": 6777,
+      "sha256": "0ed0d3505adc53cf85d0cf810db29c06b6df2da989797568f13a3cc1e52d5099"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/unit_heavy_cap4_lp_search.py",
+      "bytes": 4340,
+      "sha256": "fa820040ebf5798db17d5abff73fea261d604dbdda278354ad51e3bfd03c45f3"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/unrestricted_first_integer_rounding_closure.md",
+      "bytes": 7098,
+      "sha256": "40473e6ec9f9a66829d43ef0415ce687be1487a5fd94321241dcd1793eb6d417"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_all_prefix_width_counterexample.md",
+      "bytes": 2483,
+      "sha256": "037a426572d3d8554c3324ef40edef048af5f32fbbb2a06bbed1d6929d281bfc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_arbitrary_paired_star_forest_half_deficit.md",
+      "bytes": 13281,
+      "sha256": "ee43dcc2a336254dcc715e52b2235e7027afdf874ada35634d282011a671de2f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_crossing_prefix_star_proof.md",
+      "bytes": 3463,
+      "sha256": "5d8889410c6b871c1279c592e35834ebd5775e59baae45ff99befb60774533db"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_independent_star_forest.md",
+      "bytes": 5786,
+      "sha256": "fdbb462633f7495401054a7774202977f0da926afd42f725b94546613cb4823c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_prefix_width_search.py",
+      "bytes": 1939,
+      "sha256": "9b68f50e0b538882d0b58e3426e9e778cbce1dd259979eb9a93a796740a0a067"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_private_multi_lp.py",
+      "bytes": 1849,
+      "sha256": "ebf9d1c52f905a752030dee158a27cdc7849052e10172c838232ea624b29f1db"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/upper_private_pair_probe.py",
+      "bytes": 1042,
+      "sha256": "8fa43251f97504032f13f25b598e42559d843733744497c11b072a92f27873b8"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/verify_bipartite_k44_blossom_incomplete.py",
+      "bytes": 2283,
+      "sha256": "165762de51aa326a7389e5628d5404d00ecb8834cfc0faae9a0efdf82ef38c24"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/verify_weighted_quadratic_counterexample.py",
+      "bytes": 1469,
+      "sha256": "dc4677749925a047824b48705101b4bfa90bcb757284a94e9eed1d279e9975bc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_defective_palette_bridge_conditional.md",
+      "bytes": 12781,
+      "sha256": "8b165b58398b67ba1746a16cfe97bb470f85a91a2442ab6faf26c76e5d73c785"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_heavy_path_submod_order.py",
+      "bytes": 3342,
+      "sha256": "03623fd6a8ad717704ce4752145de9debde7bb898f6bbf9d9c9354e5e91a8718"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_l2_k4_grid_exhaustive.log",
+      "bytes": 25,
+      "sha256": "e899c666c3dfa4ef64c92fb5734779f33bb92a244767855be193118080618fe4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_l2_k4_grid_exhaustive.py",
+      "bytes": 1398,
+      "sha256": "82b1f47793306901c3e741ce3d0e255aac754989dbb2953d16f9a255092ce546"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_quadratic_balancing_counterexample.md",
+      "bytes": 4198,
+      "sha256": "9c53bb779efc628e04355b72ea643466bc28b5631f4a6f44e4858422eef3e895"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_binary_perturb.log",
+      "bytes": 854,
+      "sha256": "160e2e6063994c3c5183f4f25dc070631161d36d5ae21b09906e310f4ea93526"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_binary_perturb.py",
+      "bytes": 2106,
+      "sha256": "aa0951cad460ffed65685682201b5f454c6853df69a43c59cc268f7f3421a3e5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_l2_sign_test.log",
+      "bytes": 1073,
+      "sha256": "fa76a66243f6457c62bf36fbdfe4bc49641be2c5c7555053a3e5af031dbc6a52"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_l2_sign_test.py",
+      "bytes": 2108,
+      "sha256": "52cb798a316e00ca7cc5ccecbe5fd4d1cfefb1e78458c86d75aecba7b429b547"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_l2_sign_test_mixed.log",
+      "bytes": 1073,
+      "sha256": "fa76a66243f6457c62bf36fbdfe4bc49641be2c5c7555053a3e5af031dbc6a52"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/weighted_two_sparse_l2_sign_test_mixed_record.log",
+      "bytes": 1307,
+      "sha256": "4cd2b100d0a1dd092a15fc0625f3c4af6ab557840800ca1373158b607bc0dd36"
+    }
+  ]
+}

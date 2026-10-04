@@ -1,0 +1,8 @@
+BEST {"case": 0, "weights": [42, 56, 64, 52, 46, 46, 68, 56, 35], "edges": [[0, 3], [0, 4], [0, 5], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5]], "feasible_patterns": 129, "maximal_patterns": 15, "polar_vertices": 66, "evaluated": 66, "gap": 1.25, "profit": [-0.0, -0.0, -0.0, 0.5, 0.5, -0.0, -0.0, 0.5, -0.0], "local_point": [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.5, 0.0], "global_profit": 1.0, "local_rows": 26, "elapsed": 0.051457874999999986}
+PROGRESS {"case": 0, "best": 1.25, "elapsed": 0.051599167}
+PROGRESS {"case": 50, "best": 1.25, "elapsed": 2.219284625}
+PROGRESS {"case": 100, "best": 1.25, "elapsed": 4.350049167}
+PROGRESS {"case": 150, "best": 1.25, "elapsed": 6.461856875}
+PROGRESS {"case": 200, "best": 1.25, "elapsed": 8.604529625000001}
+PROGRESS {"case": 250, "best": 1.25, "elapsed": 10.682311875000002}
+FINAL {"tested": 300, "failures": 0, "best": {"weights": [42, 56, 64, 52, 46, 46, 68, 56, 35], "edges": [[0, 3], [0, 4], [0, 5], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5]], "feasible_patterns": 129, "maximal_patterns": 15, "polar_vertices": 66, "evaluated": 66, "gap": 1.25, "profit": [-0.0, -0.0, -0.0, 0.5, 0.5, -0.0, -0.0, 0.5, -0.0], "local_point": [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.5, 0.0], "global_profit": 1.0, "local_rows": 26, "elapsed": 0.051457874999999986}, "elapsed": 12.781376125000001}

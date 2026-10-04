@@ -1,0 +1,23 @@
+Restricted license - for non-production use only - expires 2026-11-23
+{"event": "oracle_check", "patterns": 6006, "independent_pricings": 30}
+{"event": "start", "Q": 8, "cap_upper": 136, "unrestricted_cap": true, "variables": 532, "constraints": 769, "seed_cuts": 301}
+{"event": "heartbeat", "elapsed": 30.169664708, "master_upper": 1.3721083162472456, "master_incumbent": -0.0, "cuts_added": 5}
+{"event": "heartbeat", "elapsed": 60.216541833, "master_upper": 1.237715483055932, "master_incumbent": -0.0, "cuts_added": 9}
+{"event": "heartbeat", "elapsed": 90.260450667, "master_upper": 1.161434637470213, "master_incumbent": -0.0, "cuts_added": 13}
+{"event": "heartbeat", "elapsed": 120.299844292, "master_upper": 1.1089700070512707, "master_incumbent": -0.0, "cuts_added": 13}
+{"event": "heartbeat", "elapsed": 150.352659542, "master_upper": 1.0701009040195575, "master_incumbent": -0.0, "cuts_added": 13}
+{"event": "heartbeat", "elapsed": 180.37472575, "master_upper": 1.0405989807798712, "master_incumbent": -0.0, "cuts_added": 14}
+{"event": "heartbeat", "elapsed": 210.406374167, "master_upper": 1.014490497240697, "master_incumbent": -0.0, "cuts_added": 14}
+{"event": "heartbeat", "elapsed": 240.416248375, "master_upper": 0.9938694968229546, "master_incumbent": -0.0, "cuts_added": 14}
+{"event": "heartbeat", "elapsed": 270.427961667, "master_upper": 0.9740262348590937, "master_incumbent": -0.0, "cuts_added": 15}
+{"event": "heartbeat", "elapsed": 300.436141208, "master_upper": 0.956449931735805, "master_incumbent": -0.0, "cuts_added": 15}
+{"event": "heartbeat", "elapsed": 330.460605167, "master_upper": 0.9401798960440105, "master_incumbent": -0.0, "cuts_added": 16}
+{"event": "heartbeat", "elapsed": 360.55082, "master_upper": 0.9255097216168576, "master_incumbent": -0.0, "cuts_added": 16}
+{"event": "heartbeat", "elapsed": 390.5515005, "master_upper": 0.9122086687774992, "master_incumbent": -0.0, "cuts_added": 16}
+{"event": "heartbeat", "elapsed": 420.584865333, "master_upper": 0.9006387653548019, "master_incumbent": -0.0, "cuts_added": 16}
+{"event": "heartbeat", "elapsed": 450.594840875, "master_upper": 0.8899262669528446, "master_incumbent": -0.0, "cuts_added": 16}
+{"event": "heartbeat", "elapsed": 480.64143987499995, "master_upper": 0.879979010831408, "master_incumbent": 1.111111086012984e-09, "cuts_added": 17}
+{"event": "heartbeat", "elapsed": 510.70079545799996, "master_upper": 0.8705724146676149, "master_incumbent": 1.111111086012984e-09, "cuts_added": 17}
+{"event": "heartbeat", "elapsed": 540.742783583, "master_upper": 0.8618356482744818, "master_incumbent": 1.111111086012984e-09, "cuts_added": 17}
+{"event": "heartbeat", "elapsed": 570.751626125, "master_upper": 0.852907694715753, "master_incumbent": 1.111111086012984e-09, "cuts_added": 17}
+{"event": "terminal", "best_priced_ratio": 1.5, "callbacks": 22, "cuts_added": 17, "unrestricted_cap": true, "elapsed": 600.0023355000001, "master_upper": 0.844836569844105, "master_incumbent": 1.111111086012984e-09, "finished": true, "solver_status": 9, "grid": 8, "maximal_patterns": 6006, "incumbent": 1.111111086012984e-09, "final_prices": [0, 8, 2, 8, 0, 8, 8, 0, 8, 0, 0, 8, 8, 0, 0, 8, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "final_means": [0.0, 0.5, 0.0, 0.5, 0.0, 0.5, 0.5, 0.0, 0.5, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0, 0.5, 0.0, 0.5, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 1.0, 0.0], "final_cap": 24, "final_global": 24, "final_fully_priced": true}

@@ -1,0 +1,35 @@
+# Uniform finite palette for bounded simple tiny degree, conditional on a local policy
+
+**Status (2026-10-03): conditional research proposition.** The radius-one independent-activation policy in `connected_dual_local_policy_audit.md` has not been proved to deliver `3/4` of every edge target. Nothing here establishes an unrestricted integer bound. This note shows that *if* that local inequality holds, the remaining finite-palette quantifier gap can be closed when the simple tiny support has fixed maximum degree, with no bound on graph order or the number of heavy pairs.
+
+## Conditional statement
+
+Fix `d` and `epsilon>0`. Assume that for every bipartite target `y` with degree bounds `D<=1`, independent activations `p_v=1/4+3D_v/4`, and caps `12y_e`, the radius-one policy
+
+`b_e=min{(4/3)y_e/(p_up_v),12y_e}`, `L_v=sum_{e at v}b_e A_uA_v`, `z_e=b_e A_uA_v/max{1,L_u,L_v}`
+
+has `E z_e>=(3/4)y_e` for every edge. Then, for sufficiently small maximum physical tiny weight `tau` and sufficiently large local bin count `N` (thresholds depending on `d,epsilon`), a bipartite weighted multigraph with matching heavy simple support and maximum **simple tiny-support degree** at most `d` has an integer weighted edge coloring with at most `(4/3+epsilon)N+1` colors. Heavy parallel multiplicity, graph order, tiny parallel multiplicity, and the smallest positive tiny weight do not enter the threshold.
+
+The conditional policy is applicable after reserving tiny edges internal to a heavy pair as in `connected_dual_local_policy_audit.md`. Its coordinatewise expectation for external edges survives correlating opposite-shore endpoints of each matched pair: the endpoint pair's other bit does not enter an external edge's local formula, and a third pair's two bits change the two competitor loads in a supermodular direction. Conditional Bernoulli interpolation lifts the policy from binary to actual residual capacities while retaining locality and pointwise capped feasibility.
+
+## Exact heavy stocks and fixed-dimensional state law
+
+Use the surplus parameters from `bounded_heavy_pairs_integer_transfer_candidate.md`: `alpha=3/4`, `s=1-3tau`, `M=ceil((1+rho)N/(alpha s))`, with positive `eta,delta,rho` and `eta+delta<=rho`. Round each physical heavy weight upward into one of `K=O(1/eta)` bucket values and use pseudo-weight `w''_b=min(1,bar w_b/s)`. Each heavy physical identity has categorical probability `1/M`, and normalized tiny target is `y'_e=(1+delta)w_e/(alpha s M)`. The local vector is feasible, every capped physical tiny fraction is `O(1/N)`, and pseudo-capacity scaled by `s` leaves at least `3tau` physical slack at each used vertex/color.
+
+Contract each matched heavy pair to one supervertex, retaining bare vertices as deterministic supervertices. If the simple tiny support has maximum degree `d`, the external tiny-interaction supergraph has maximum degree at most `2d`. For an external bundle `e` joining supervertices `P,Q`, the radius-one/interpolated policy for that bundle depends only on heavy states at supervertices in `S_e=N[P] union N[Q]`. Each two members of `S_e` have supergraph distance at most three. A proper coloring of the third power of this supergraph uses `T=O(d^3)` labels, and all members of every `S_e` get distinct labels. This coloring exists for arbitrary graph order by the usual greedy bound `T<=1+Delta+Delta(Delta-1)+Delta(Delta-1)^2` with `Delta<=2d`.
+
+For each label `t=1,...,T`, choose a permutation of the `M` grid ranks `1,...,M`. In palette color `c`, the seed for label `t` is its rank divided by `M` (use midpoint ranks to avoid boundary ties). At a heavy pair `P` of label `t`, map the seed to its categorical *bucket* state by consecutive quantile intervals of lengths `n_(P,b)/M`, with the remaining interval empty. Every bucket count at every heavy pair is now exact because each type seed visits every rank once. Assign the actual heavy identities of bucket `b` bijectively to its `n_(P,b)` slots. No physical heavy identity repeats.
+
+There exist choices of the `T` permutations whose empirical distribution on `[0,1]^T` has box discrepancy `D_M=O_T(sqrt(log M/M))` for all axis-aligned grid boxes. One proof chooses the permutations independently at random. A fixed box count has the correct mean and changes by at most two under a transposition in one permutation, so permutation bounded-differences gives a tail `exp(-c t^2/(TM))`. There are at most `M^(2T)` grid boxes; a union bound with `t=C_T sqrt(M log M)` gives the stated discrepancy. This union is over a **constant-dimensional seed class**, not over graph edges or vertices, so the bound is independent of graph order.
+
+For any fixed external tiny bundle `e`, every tuple of local bucket states is the intersection of at most `|S_e|<=2+4d` coordinate intervals in distinct seed dimensions, hence one axis-aligned box. If each pair has at most `K+1` categorical states, the total-variation error of the empirical local state law relative to its product law is at most `(K+1)^(2+4d) D_M/2`. The interpolated local-policy flow of `e` is a bounded function of this local tuple, with physical upper bound `C^act_e=12(1+delta)w_e/(alpha M)` for a physical tiny edge. Therefore its **palette total** differs from its product-law mean by at most
+
+`[12(1+delta)/alpha] (K+1)^(2+4d) D_M w_e`.
+
+The product-law mean is at least `(1+delta)w_e`. Since `d,K,delta` are fixed, the discrepancy term is at most `delta w_e` for all sufficiently large `N`, simultaneously for every physical tiny edge. Internal tiny edges depend on one pair state only; their empirical bucket law is exact and their mean is at least `(1+delta)w_e`. Thus the constructed exact heavy schedule and its feasible per-color local-policy tiny flows cover **every** physical tiny stock at least once in total, without a union bound over edges. Scale each tiny edge's palette flow downward individually to make its total exactly `w_e`; all capacity and cap constraints remain valid.
+
+Finally set `x_(e,c)=z_(e,c)/w_e`, preserve every source row and sufficiently populated vertex/color load row by the bipartite iterative rounding argument in `physical_tiny_cap_rounding_route.md`. Its load increase is at most `3tau`, exactly absorbed by the pseudo-heavy slack. Every physical tiny edge receives one color, and all heavy identities were already exact. This yields the conditional integer bound.
+
+## Remaining obstruction
+
+The graph-order-independent seed design relies on `T=O(d^3)` fixed. With unbounded tiny degree, one might mark neighbors whose incident bundle target exceeds a threshold `gamma`; each vertex has only `O(1/gamma)` such strong neighbors. The many weak neighbors have small individual influence but can carry most of the vertex's tiny stock. Reusing a seed for all of them can synchronize their residual states and make a star infeasible. Uniformly balancing their weighted activation sums across the palette, while keeping each pair's exact heavy counts and every strong local joint law, is a separate discrepancy problem. Standard union bounds or a fixed-dimensional joint-state table do not settle it.

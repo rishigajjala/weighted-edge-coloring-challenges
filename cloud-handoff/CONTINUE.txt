@@ -1,0 +1,41 @@
+CLOUD RESEARCH HANDOFF — 4 October 2026
+
+Read this first. This is a research snapshot on a private branch, separate from the stable five-theorem Lean library at repository root. The historical notes include conjectures, failed approaches, and superseded claims; their presence does not establish a theorem. The status and scope below take precedence over older progress notes.
+
+OBJECTIVE
+Find substantially better, ideally tight, asymptotic bounds for weighted edge coloring of loopless multigraphs, both bipartite and general. Maintain exact distinctions between a divisible one-color flow statement and an integer edge-coloring theorem uniform in graph order, multiplicity, and minimum positive weight. Do not turn a successful numerical search into an unrestricted theorem claim.
+
+BASELINE
+The existing manuscript/repository has bipartite lower bound 4/3 and upper bound 81/50=1.62; general lower bound 3/2 and upper bound 1999/1000=1.999. No new unrestricted improvement was obtained in the latest search. The five public Lean statements and build commands are in the root README, Challenge.lean, Solutions.lean, and Verification.lean. The clean base commit is 65856c8e27e48efc51b429719e075f097a08e119. These source files were not changed or freshly rebuilt while preparing this handoff.
+
+CONVENTIONS
+Each edge has weight in (0,1]. A color is feasible when its incident weight at every vertex is at most 1. chi'_w is the fewest colors. Delta_w is maximum incident weight. bp(G) is the maximum, over vertices, of the minimum number of unit bins needed for that vertex's incident edges. Parallel edges have distinct physical identities. In research flow notes, heavy edges have weight >1/2 and fluid represents divisible tiny-edge load; this relaxation is not automatically an integer coloring.
+
+LATEST RESULTS AND GAPS
+The notes live in tmp/weighted-proof/tight-bound-search-2026-10-03 relative to this cloud-handoff directory.
+
+1. Start with five_hour_checkpoint_phase7.md, then this update. Its common-weight/shared-profile discussion is superseded by common_mean_capped_heavy_transfer_audit.md.
+
+2. Audited scoped physical bridge: sparsify_localize_type_palette_bridge_candidate.md, sampled_neighborhood_finite_label_candidate.md, sparsify_localize_type_palette_independent_audit.md. Combined graph bipartite, heavy simple support a matching, all other physical weights at most sufficiently small tau: the proposed palette bound is (4/3+epsilon)bp+O_epsilon(1), uniform in graph order and minimum tiny weight. Independent agents found no gap at that scope. Temporary forest-term caps must be 12y^k, averaged caps 12 times the averaged target; average all sampled supports WITHIN each color. Determine the finite field from an a priori label-count bound before choosing palette size. This is not a theorem for arbitrary medium weights or arbitrary heavy topology.
+
+3. Capped common-mean theorem: common_mean_capped_heavy_transfer_audit.md. Combined graph bipartite; within each connected heavy component, all endpoint-pair bundles have the same conditional mean heavy weight, but may have different distributions. For fractional heavy matching target x and fluid target y with feasible local loads and caps C>=12y, a profit-independent heavy law supports means (3x/4,3y/4). The proof uses signed mixed derivatives of independent-activation recourse, path/cycle dependent rounding, and nonnegative covariance at a selected heavy edge. It holds at the divisible one-color level even for unbounded components. Unequal means invalidate the ordinary path-rounding argument.
+
+4. Physical transfer for bounded heavy components: bounded_heavy_component_transfer_interface.md together with the common-mean note. Both heavy and tiny targets must be scaled after sparsification. Upward bucketing needs pseudo-weight at least min(1,w/(1-3tau)); restore exact common means by category padding. Finite matching-state menus work for bounded component order. A bipartite expander prevents reducing arbitrary components to bounded ones by discarding vanishing heavy stock. The unbounded component palette remains open.
+
+5. General graph scoped star theorem: unit_guard_capped_star_hybrid_two_thirds_audited.md and latest_star_hybrid_migration.txt. Unit-weight heavy support is a matching and fluid support is a vertex-disjoint star forest. Caps C>=12y. With probability 3/4 use independent pair states at heavy marginal 2x/3; with probability 1/4 use a common uniform threshold for pair absences at those same marginals. This law supports fluid means 2y/3. Profit-prefix estimates give a proof; neither heterogeneous heavy weights nor arbitrary fluid support follows. The migration note also gives an elementary uniform-residual sufficient regime for arbitrary fluid support.
+
+6. Negative results worth retaining: heterogeneous_pipage_chord_exact_obstruction.md disproves one generic heterogeneous pipage rule, not the desired hull inclusion. general_matching_heavy_capped_global_coin_obstruction.md defeats full-heavy rounding plus a global empty coin under caps. product_empty_hybrid_exact_failure.md defeats a different product/empty hybrid. These do not defeat the revised scaled comonotone mixture.
+
+7. Latest diagnostics: comono_hybrid_six_vertex_tree_probe.py checked 6,480 small tree instances; comono_hybrid_weighted_path_probe.py checked 12,960 path instances. No counterexample was found. These are finite floating-point experiments, not proofs for arbitrary support or parameters. Try to prove or refute the revised hybrid for nonstar fluid supports and heterogeneous residual allowances; separately investigate how to handle heavy weights below 1.
+
+8. Lower bounds: mixed_medium_batch_reversal_and_diamond_barrier.md and three_item_packet_factor_parity_dilution.md record failed mechanisms and why straightforward factor/parity constructions dilute. No improvement above the established bipartite 4/3 or general 3/2 was obtained in this search.
+
+USER PREFERENCES
+Use multi-agent reasoning aggressively, with independent proof audits. User requested Astra Ultra for the main strategy and GPT-6 Sol Medium/High for subagents when available; do not silently substitute a named model. User asked for at least five hours of real exploration before claiming a breakthrough. The prior research session exceeded that threshold; this is evidence of time spent, not proof correctness. Favor sustained research and clean arguments over tiny numerical improvements or large opaque certificates. State failures and remaining hypotheses honestly. Exponential-time reasoning/computation is acceptable during proof search.
+
+Keep unproved/intermediate results out of the main manuscript. Authors: Rishikesh Gajjala, New York University Abu Dhabi; Arindam Khan, Indian Institute of Science. Use plain language accessible to an undergraduate with graph theory and advanced algorithms. Put computationally proved parts in an appendix. Do not restore the previously removed forest-weights-greater-than-one-third statement. Keep the maintained repository free of informal unrelated references.
+
+PORTABILITY AND VERIFICATION
+The complete current manuscript source is manuscript/weighted_edge_coloring_1999_current.tex. Original local files and stable main were left unchanged. The research snapshot preserves its original tmp/weighted-proof directory structure. Run experiments from the cloud-handoff directory, not repository root; some scripts contain working-directory-relative paths. requirements-research.txt lists ordinary dependencies. A few optional older experiments import gurobipy and need a separately configured licensed solver; no solver credentials or license files are included. Standard library, numpy/scipy, and small exact checks suffice for the main current approaches.
+
+First inspect notes and establish the next precise lemma. Do not rerun every old search or a full Lean build merely to resume mathematical work. If formal proof files change, use the repository verification helper and check the printed axioms. Keep newer checkpoint notes explicit about theorem scope, audit status, and reproducible evidence.
