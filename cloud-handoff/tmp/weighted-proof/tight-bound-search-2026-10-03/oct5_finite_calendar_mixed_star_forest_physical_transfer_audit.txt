@@ -1,0 +1,203 @@
+FINITE PHYSICAL CALENDAR FOR MATCHING-HEAVY / STAR-FOREST-TINY GRAPHS
+Independent audit, 5 October 2026
+
+STATUS AND SCOPE
+
+The bounded-label law in oct5_bounded_labels_mixed_star_hybrid_audit.txt
+and the pre-deletion conditional-flow theorem in
+oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt together admit
+an exact finite physical palette. The argument below checks the
+denominators, heavy stock, dummy types, tiny caps, and 4*tau reserve.
+It assumes physical heavy weights STRICTLY greater than 1/2, heavy
+simple support a matching, tiny edge weights at most tau, and tiny
+simple support a vertex-disjoint star forest. It does not handle
+arbitrary medium weights or arbitrary tiny branching.
+
+Let N=max(H,Delta_w), where H is the maximum physical heavy-edge count
+at a vertex and Delta_w is the maximum weighted degree. Both are at
+most bp(G): H<=bp uses physical heavy weights >1/2. For a fixed
+accuracy eta>0, choose constants
+
+  alpha=2/3, beta=alpha-epsilon0, kappa>=64/epsilon0,
+  0<tau<1/4, sigma>0, Q integer,
+
+with tau, sigma, and B/Q sufficiently small in terms of eta; B is
+the number of upward heavy-weight buckets, at most ceil(1/sigma)+1.
+Take Q large enough that B/(alpha Q)<1 and the palette period below
+is at least kappa/beta. These are fixed constants independent of the
+number of vertices, edges, and the smallest tiny weight.
+
+1. BOUNDED LABELS AND PERIOD
+
+Use the source-label construction of the cited bounded-label audit,
+with split parameter q_split=ceil(2*kappa). It produces at most
+L=(4(floor(16*kappa)+1)+1)*q_split labels. The center source is marked
+and unique at its star. Every prefix-strong leaf group has a unique
+label. Each label's unmarked weak groups at a star have aggregate
+whole-star mass at most 3/(4*kappa). Unguarded weak leaves form one
+deterministic block; an unguarded strong leaf alone supplies the
+needed rank. Thus the all-strong and weak-product arguments survive
+seed sharing within labels. A heavy source meets at most two stars,
+which is the essential sparsity for the label construction.
+
+Use one Q-point uniform coordinate for occupancy and one for type
+at each label, plus one Q-point common occupancy coordinate. Give
+independent mode weight 3/4 and common mode weight 1/4. Enumerating
+all tuples with three copies of independent mode and one of common
+mode gives a period
+
+  P = 4 Q^(2L+1).
+
+Redundant coordinates are harmless. Each coordinate grid is chosen
+as Q equally weighted points representing threshold intervals of
+length 1/Q. Source occupancy and categorical type thresholds below
+are multiples of 1/Q, so every source/type has its exact prescribed
+marginal in this finite period. Correlations only occur among sources
+sharing a label and are already covered by the bounded-label audit.
+
+2. PALETTE SIZE AND ROUNDED INPUT
+
+Choose M as the smallest multiple of P satisfying
+
+  M >= max{ kappa/beta,
+    (1+4*tau+sigma)*N /
+      [beta*(1-4*tau)*(1-B/(alpha*Q))] }.
+
+Then M is chosen BEFORE applying the label construction; M=O_eta(N)+
+O_eta(1), M>=N, M is divisible by Q^2, and beta*M>=kappa.
+
+For each physical heavy edge of weight w, use its upward surrogate
+
+  w' = min(1, sigma*ceil((w+4*tau)/sigma)).
+
+There are at most B surrogate types per matched heavy pair. If w'<1,
+then w'>=w+4*tau; if w'=1, its surrogate occupied residual is zero.
+Also w'<=w+4*tau+sigma. A heavy pair has d physical identities,
+of which d_j have surrogate type j. Because d<=H<=N<=M, define
+
+  p=floor(Q*d/M)/Q,
+  r_j=floor(Q*d_j/d)/Q       (d>0),
+  r_0=1-sum_j r_j.
+
+The type 0 is a dummy of surrogate weight one; set p=0 when d=0.
+These quantities lie on the Q-grid. Give the abstract source target
+x_pair=p/alpha and conditional type probabilities r_0,r_1,... .
+Its pre-deletion heavy-law marginal for type j is p*r_j. Define
+fluid target y_e=w_e/[beta*M*(1-4*tau)] and per-state cap
+C_e=w_e/(1-4*tau). Then C_e/y_e=beta*M>=kappa. The latter equality
+also ensures that after scaling the eventual per-color fluid amount
+by 1-4*tau it never exceeds physical edge weight w_e.
+
+At each vertex the abstract target row is at most one. Indeed the
+real-type heavy target load is bounded by
+  sum_j (p/alpha) r_j w'_j
+    <= [W_heavy(v)+(4*tau+sigma)*d(v)]/(alpha*M).
+The dummy target load is at most p*r_0/alpha<=B/(alpha*Q), because
+r_0<B/Q and p<=1. The tiny target load is
+W_tiny(v)/[beta*M*(1-4*tau)]. Since alpha>=beta,
+W_heavy+W_tiny<=N, and d(v)<=N, their sum is at most
+
+  (1+4*tau+sigma)*N/[beta*M*(1-4*tau)]
+     + B/(alpha*Q) <=1.
+
+Also x_pair=p/alpha<=1, since M>=N/alpha. The star-forest abstract
+theorem therefore applies with the bounded-label heavy law.
+
+3. EXACT BULK HEAVY STOCK
+
+Enumerate the P seed states and repeat the period M/P times. In
+EITHER hybrid mode, source i has occupancy probability p and
+conditional real type j probability r_j, so the calendar has exactly
+
+  b_j=M*p*r_j
+
+type-j occupied slots at that physical pair. Because M is divisible
+by Q^2, b_j is an integer. Since p<=d/M and r_j<=d_j/d,
+b_j<=d_j. Assign distinct physical type-j edges to these slots;
+delete every dummy slot. Deletion only increases residual capacity.
+
+The unassigned heavy stock at the pair is
+
+  d - sum_j b_j = (d-M*p)+M*p*r_0
+                  < M/Q + d*B/Q
+                  <= (B+1)*M/Q.
+
+All unassigned heavy identities can be colored in fewer than
+(B+1)*M/Q+1 extra colors, because the heavy simple support is a
+matching: use the same leftover color across all different pairs.
+No per-identity approximation or denominator depending on graph size
+is needed. The physical calendar must use the PRE-DELETION alpha
+heavy law; the final beta/alpha deletion in the abstract theorem is
+only for its equal heavy/fluid marginal statement and is omitted here.
+
+4. EXACT TINY STOCK AND ROW RESERVE
+
+The proof of the abstract theorem supplies a conditional fluid flow
+for EACH finite seed state whose mean is exactly beta*y_e for every
+tiny identity. This is a finite LP: the state law is the uniform
+period above, the per-state star flow constraints are linear, and
+the bounded-label support-function proof guarantees feasibility.
+Choose one such flow in each state and scale every flow by 1-4*tau.
+Across M repeated colors, the total scaled flow of edge e is
+
+  M*(1-4*tau)*beta*y_e=w_e.
+
+If F_ec denotes the scaled flow in color c, set z_ec=F_ec/w_e.
+Then sum_c z_ec=1 and 0<=z_ec<=1, the latter following from
+C_e=w_e/(1-4*tau). At a vertex-color row, the fractional physical
+load is at most 1-4*tau when no surrogate heavy is present. If a
+surrogate heavy of weight w'<1 is present, the scaled fluid load is
+at most (1-4*tau)*(1-w')<=1-w'; the actual physical heavy weighs
+w<=w'-4*tau, so the row has at least 4*tau slack. If w'=1, the
+surrogate row has zero flow, hence every z_ec touching it is fixed
+zero; after replacing dummy slots by empty slots, physical slack
+can only increase. Thus every row that has a positive fractional
+tiny assignment has at least 4*tau slack against its ACTUAL core.
+
+Apply the two-row assignment iterative-rounding lemma from
+oct5_arbitrary_heavy_mixed_tiny_physical_palette_audit.txt to the
+variables z_ec: each edge identity has equality sum_c z_ec=1 and
+each variable touches two vertex-color capacity rows. Permanently
+fix zero variables. A basic-solution count finds an active row with
+at most four fractional variables; dropping it can add at most
+4*tau weighted load. Repeating yields one physical color for every
+tiny identity without exceeding any actual row capacity. Zero-flow
+surrogate weight-one rows stay forbidden, so no tiny edge leaks into
+one of them. Parallel tiny identities and unbounded tiny degree cause
+no change in the counting argument.
+
+5. CONSEQUENCE AND LIMITS
+
+The total number of colors is at most
+
+  M + ceil((B+1)*M/Q)
+   <= [1+O(B/Q)]*(1+4*tau+sigma)*N /
+       [beta*(1-4*tau)*(1-B/(alpha Q))]
+       + O_epsilon(1).
+
+Choosing epsilon0,tau,sigma,B/Q small enough gives, for every fixed
+eta>0,
+
+  chi'_w(G) <= (3/2+eta)*bp(G) + O_eta(1)
+
+for this restricted matching-heavy/star-forest-tiny physical class.
+The implicit constant contains P and is extremely large. The proof
+is finite and constructive for rational weights, but its dependence
+on eta is not practical. It makes no claim for a physical weight
+exactly 1/2 in the heavy class: H<=bp can fail there, and the abstract
+source constraint x_pair<=1 could then fail. Nor does it resolve
+nonmatching heavy support or branching fluid support, the barriers
+for unrestricted weighted multigraphs.
+
+AUDIT CAUTIONS
+
+* Distinguish q_split for source sublabels from Q for the seed grid.
+* Build labels after M and the y_e have been chosen, but use the
+  a priori bound L in defining P before M; this is not circular.
+* Use pre-deletion alpha heavy slots and beta fluid means.
+* The dummy type must be included in the abstract local weighted
+  row and assigned surrogate weight one, then physically deleted.
+* Require beta*M>=kappa for the individual tiny cap check.
+* Round each physical heavy weight upward by 4*tau before solving
+  fluid recourse; merely subtracting 4*tau from each residual could
+  destroy an unbounded number of tiny leaf capacities.

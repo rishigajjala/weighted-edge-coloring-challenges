@@ -1,15 +1,16 @@
 {
   "base_commit": "65856c8e27e48efc51b429719e075f097a08e119",
+  "checkpoint": "five_hour_checkpoint_phase11.txt",
   "files": [
     {
       "path": "CLOUD_TASK.txt",
-      "bytes": 1377,
-      "sha256": "f0fc1743aaded35f339e16b49ddd5d7080fed047707a57fca23492006404fb4b"
+      "bytes": 2053,
+      "sha256": "76a67abeeaab2556605b34176dcc5e9c3bdbc1bcab5a7bfcd993b033b704321a"
     },
     {
       "path": "CONTINUE.txt",
-      "bytes": 10155,
-      "sha256": "b5a2dde5504c3877e266cd529ed880c607edabee63319b923c84de62922ef51a"
+      "bytes": 9392,
+      "sha256": "633dd15248268717da769f594d1436fdff143f5f2801795b63d63f41cd1cf477"
     },
     {
       "path": "SETUP.txt",
@@ -575,6 +576,11 @@
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase10.txt",
       "bytes": 8471,
       "sha256": "b12189937e3a6b41ad36669cf7756e6ee7acc782506a672d06dc04a7e8c7774c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase11.txt",
+      "bytes": 11177,
+      "sha256": "96598be40f052978e9324a502ff25a813835cde70166f427274daad72e51e493"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase2.md",
@@ -1247,9 +1253,29 @@
       "sha256": "608a54460a4b79aa561d028deca6035580006fe6a0abb4c4e9be6ab6befbb9fb"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_bounded_labels_mixed_star_hybrid_audit.txt",
+      "bytes": 6270,
+      "sha256": "07403ceac2c949c6b262ae7e4beac3ad248365c3d5fbb2d6e4725787190440ed"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_branching_hybrid_diagnostic_status.md",
       "bytes": 1067,
       "sha256": "0d57986f55c3e7b2dd161e7db4c67503d754e47d8656bf1876ee9efccf0e7327"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_endpoint_reduction_universal_mixed_law.txt",
+      "bytes": 7654,
+      "sha256": "db2f3078b4253cd382616bc4ecc295060714e4375a2375b2db490998fdd133e1"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_finite_calendar_mixed_star_forest_physical_transfer_audit.txt",
+      "bytes": 9139,
+      "sha256": "3d3d230667af18c8bf3c3f36b94ef7281bd7198df6d66bb3b2c710a5bf40d2f7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_all_strong_star_fixed_hybrid_audit.txt",
+      "bytes": 6529,
+      "sha256": "02d116254423dfcd28a293814e4f19628b79593c269168af6f4c03b0397874b3"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_center_branch_dichotomy.md",
@@ -1297,6 +1323,21 @@
       "sha256": "875119754533cf80121d6efc148854aee5fdf93c25e906fb13aba7165235502b"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_one_strong_group_fixed_hybrid_audit.txt",
+      "bytes": 5093,
+      "sha256": "a0ed8327636e7c5bf458c4b71a13c32cfbbea8e23a5af54027086dba5602219d"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt",
+      "bytes": 9105,
+      "sha256": "5c348f8e7404029d02797032f14a6d204abf9c29134164c80e790df5b60ae93f"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_forest_fixed_hybrid_independent_audit.txt",
+      "bytes": 6783,
+      "sha256": "9fe5a479eeacc467ac9522fc4e306a3228753f7a9005ea4def2a8bcb7b4d8599"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_hybrid_diagnostic.md",
       "bytes": 2897,
       "sha256": "2da85a131dbaaec1e1c218ac52ea19f9a1cf520e54b71be801e415b0a568e7c9"
@@ -1322,9 +1363,29 @@
       "sha256": "b042176e2b27146edb0e6c992cf515b4a8cd15552d5ff263da78ac32ff4f371c"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_physical_mixed_star_finite_calendar_independent_audit.txt",
+      "bytes": 6778,
+      "sha256": "1c1cc7f52595df7407ae04df4d01d24ecc5d5bc06d38df154376dd923e62c888"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_port_profit_polar_probe.py",
       "bytes": 1802,
       "sha256": "4299cd11f8ba6cad277da16f368fa80aad4adde18e063bd8dbd9cc5849b7e61c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_rank_shift_heavy_light_factor_findings.txt",
+      "bytes": 2622,
+      "sha256": "d1459f79a711e0320102fae35cdd84f26037d09b9cc78708eaf93ea0c626a931"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_rank_shift_heavy_light_factor_probe.py",
+      "bytes": 1867,
+      "sha256": "08ff9fd2d001c19a1e4a10dc211c6919245ef35ccec83bbac7ef3f991bcdbef5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_residual_overlap_full_bound_search.txt",
+      "bytes": 6884,
+      "sha256": "47c50b768a09f98cfafbb38e92c5b81fa224d52c75517f2335670593caa94e96"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_role_gradient_prism_probe.py",
@@ -2016,5 +2077,6 @@
       "bytes": 1307,
       "sha256": "4cd2b100d0a1dd092a15fc0625f3c4af6ab557840800ca1373158b607bc0dd36"
     }
-  ]
+  ],
+  "python_sources_parsed": 151
 }

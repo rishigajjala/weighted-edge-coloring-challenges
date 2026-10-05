@@ -1,0 +1,198 @@
+Research checkpoint, phase 11 — 5 October 2026
+
+STATUS
+
+This checkpoint records progress after five_hour_checkpoint_phase10.txt. The
+unrestricted asymptotic intervals have NOT changed: bipartite weighted
+multigraphs remain between 4/3 and 81/50 (=1.62) times bp, and general
+weighted multigraphs between 3/2 and 1999/1000 (=1.999) times bp. No
+manuscript or Lean source was changed during this research phase; the
+new arguments are saved only in scratch notes.
+The new result is a scoped 3/2+eta physical theorem for mixed heavy and
+tiny weights with matching heavy support and vertex-disjoint tiny stars.
+It resolves the phase-10 unequal-star coupling gap within that scope, not
+the unrestricted problem.
+
+FIXED-HYBRID DIVISIBLE-FLUID THEOREM
+
+The proof and separate audit are in
+oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt and
+oct5_mixed_star_forest_fixed_hybrid_independent_audit.txt. Heavy sources
+are categorical parallel-edge pairs whose simple support is a matching;
+their possible weights lie in [1/2,1]. Fluid identities may be parallel
+and have arbitrary positive targets on a vertex-disjoint star forest.
+Every local target row obeys heavy weighted load plus fluid target load
+at most one. Every fluid identity has a per-state cap at least K times
+its target. For 0<epsilon<=1/6, K>=64/epsilon, and beta=2/3-epsilon,
+there is one global law of feasible one-color heavy choices and divisible
+fluid flows with exact beta-scaled coordinate marginals.
+
+The law first samples a global mode: probability 3/4 independent heavy
+pair occupancy and probability 1/4 occupancy from one common uniform
+variable. In both modes a pair's selected heavy type has its prescribed
+categorical distribution. Before final heavy thinning, each heavy type
+has marginal alpha x with alpha=2/3, while a conditional fluid policy
+has exact mean beta y. Deleting selected heavies with probability
+1-beta/alpha gives the theorem's equal beta marginals. The law depends
+on local targets, not on a selected fluid profit vector.
+
+The proof controls every profit prefix. A capped leaf group with prefix
+mass at least 1/K is strong. Endpoint concavity reduces its adverse
+occupied heavy residual to 0 or 1/2; the all-strong algebra handles any
+number of unequal strong groups under the same hybrid law. Weak groups
+contribute an independent-mode product bound. Large weak mass is paid by
+that product bound plus the common all-free event; small weak mass can
+be discarded with an epsilon loss, and small total prefixes have direct
+rank bounds. A leaf that is the center's own heavy partner is handled
+separately. Greedy star recourse maximizes every prefix rank in profit
+order, so layer-cake gives all nonnegative profit support inequalities.
+Vertex-disjoint stars add statewise even when a heavy pair joins two
+different stars. Separation yields exact simultaneous fluid means.
+The independent audit checked the endpoint reduction, all-strong
+algebra, weak-group cases, own-partner case, and global assembly and
+reported no gap at this stated abstract scope.
+
+This replaces the phase-10 limitation: the earlier isolated-star
+conditional laws failed to glue unchanged across unequal stars joined
+by shared heavy pairs. The fixed 3/4-independent, 1/4-common hybrid is
+one common law for all unequal stars in the matching-heavy star-forest
+setting. The old nested-stratum example remains a counterexample to
+that particular older law, not to the new hybrid or to existence.
+
+BOUNDED SOURCE LABELS
+
+oct5_bounded_labels_mixed_star_hybrid_audit.txt proves that this law
+needs only L=O(K^2) independent source labels, regardless of graph
+size. A heavy pair touches at most two vertex-disjoint stars. At each
+star mark its center source and every leaf source of whole-star mass
+at least delta=1/(16K). At most D=floor(16K)+1 sources are marked.
+The conflict graph joins sources sharing a star when at least one is
+marked there. Every induced subgraph has at most 2D edges per source,
+so a (4D+1)-coloring makes each marked source unique at its star.
+Split each base color into ceil(2K) sublabels by a two-row assignment
+LP. At an unmarked star each final label then has whole-star leaf mass
+at most 3/(4K); at a marked star its base color occurs only once.
+
+All prefix-strong leaf groups therefore have distinct labels from
+each other and the center, preserving the independence needed by the
+all-strong proof. Weak groups sharing a label have aggregate lower-model
+rank at most 3/4 and mean at least K/3 times their aggregate prefix
+mass. Independent label blocks retain the weak product bound. In
+common mode the event that every heavy pair is absent is unchanged.
+Unguarded strong leaves give a direct rank bound; unguarded weak leaves
+form a deterministic block, so they do not consume labels or vanish
+from the weak estimate. This label result is a coupling lemma, not by
+itself a physical coloring or a finite denominator argument.
+
+FINITE PHYSICAL CALENDAR AND TWO AUDITS
+
+The complete construction is in
+oct5_finite_calendar_mixed_star_forest_physical_transfer_audit.txt;
+oct5_physical_mixed_star_finite_calendar_independent_audit.txt checks
+the same stock and rounding bridge independently. Both rely on the
+abstract full-prefix and label lemmas above, and found no calendar
+contradiction at the stated scope. Let the physical heavy weights be
+strictly greater than 1/2, with matching simple support. Let all other
+physical weights be at most tau, with vertex-disjoint star-forest
+simple support; tiny parallels and unbounded tiny degree are allowed.
+Put N=max{maximum heavy count at a vertex, maximum weighted degree}.
+Then N<=bp. The strict >1/2 condition matters: exact half-weight
+parallel stock can have heavy count greater than bp.
+
+Fix eta>0. Choose beta=2/3-epsilon, K>=64/epsilon, sufficiently small
+tau and heavy bucket width sigma, and a large finite seed grid Q.
+Choose a priori label bound L=O(K^2), period P=4Q^(2L+1), and bulk
+palette size M divisible by P. The 4 encodes the hybrid 3/4 versus
+1/4 mode weights. Every physical heavy weight w is rounded upward to
+the surrogate min{1, sigma ceil((w+4tau)/sigma)}. At a heavy pair with
+d physical items and bucket counts d_j, set
+
+  p=floor(Qd/M)/Q,  r_j=floor(Qd_j/d)/Q,
+
+and give the missing conditional probability to a dummy unit-weight
+type. The dummy must be included in the abstract local weighted row.
+Taking M at least a fixed constant times N plus a fixed additive
+period ensures those rows are at most one, p/(2/3)<=1, and the fluid
+cap multiplier is at least K. The seed table is the PRE-deletion heavy
+law, with exact beta y fluid means. Using the post-thinning law here
+would undercount physical heavy slots.
+
+Each real bucket j occupies exactly M p r_j slots. M is divisible by
+Q^2, so this is an integer, and p<=d/M and r_j<=d_j/d make it at
+most d_j. Assign distinct physical heavy items to those slots and
+delete dummy slots. Fewer than (B+1)M/Q heavy items remain per pair,
+where B=O(1/sigma) is the number of buckets. Because heavy support
+is a matching, all leftovers fit into that many extra shared colors,
+independent of the number of pairs.
+
+For each physical tiny edge e, use abstract fluid target
+y_e=w_e/[beta M(1-4tau)] and cap C_e=w_e/(1-4tau); M is chosen so
+beta M>=K. Solve the finite conditional-flow LP on the seed states,
+repeat the period, and scale each flow by 1-4tau. Its total flow
+across M bulk colors is exactly w_e, and each color's fractional
+inclusion is at most one. A free surrogate row has 4tau slack after
+scaling; an occupied surrogate of weight below one is at least
+4tau heavier than its assigned physical item; a surrogate unit row
+has zero fluid support. The source-preserving two-endpoint LP rounding
+from oct5_arbitrary_heavy_mixed_tiny_physical_palette_audit.txt fixes
+zero variables and drops only vertex-color rows with at most four
+fractional incident variables, so its additive load increase is at
+most 4tau. Every tiny identity receives exactly one physical bulk
+color without violating the actual residual capacity.
+
+The two calendar audits agree that the coefficient tends to 1/beta
+as epsilon, tau, sigma, and B/Q tend to zero. Rounding M to a multiple
+of P costs only O_eta(1) colors. Consequently, for every eta>0 there
+is a sufficiently small tau(eta)>0 and a constant C_eta such that
+
+  chi'_w(G) <= (3/2+eta) bp(G) + C_eta
+
+for this restricted matching-heavy/star-forest-tiny physical class.
+The period and additive constant are enormous but independent of
+graph order and the minimum positive tiny weight. The construction
+is finite and polynomial for fixed eta on rational input. It does
+not claim 3/2 for a fixed positive tau as bp grows.
+
+RELATED PHYSICAL COMPLETION AND RESIDUAL OVERLAP
+
+Phase 10's direct physical completion lemma remains useful for an
+arbitrary feasibly precolored core and arbitrary tiny support. Its
+local c^2 K overlap condition, with c=1-4tau, gives an extension in
+the same palette, but does not construct a favorable core coloring.
+oct5_residual_overlap_full_bound_search.txt states the exact
+fixed-core fractional assignment LP and its nonnegative price dual:
+for every price vector p on vertex-color rows, the sum over tiny
+edges of w_e times the cheapest allowed endpoint-price pair must be
+at most the priced residual capacity. The product assignment has an
+exact row test that can succeed even when the cruder scalar residual
+overlap S_uv>=max(T_u,T_v) fails badly, as in a near-unit heavy
+triangle. The note also proves a coefficient-one tiny-only palette
+bound ceil(Delta_T/(1-4tau)). A fixed heavy coloring can have poor
+residual overlap despite a potentially repairable recoloring; none
+of these observations is a lower bound on the unrestricted ratio.
+
+LOWER-BOUND SEARCH AND REMAINING PROBLEMS
+
+oct5_rank_shift_heavy_light_factor_findings.txt records a failed
+mixed-medium lower-bound probe. Its bipartite eight-cycle heavy
+support and K4,4 smaller-edge pattern have exact two-bin local
+packing, but the repeated-pattern pricing oracle ended at numerical
+polar value one after 96 cuts. The all-small one-color pattern is
+feasible because total small load at each vertex is 0.72. More
+generally, if two >1/2 heavy edges already occupy two full local
+bins, their combined residual small load is below one, so merely
+frustrating which small factor follows which heavy phase cannot
+remove the all-small escape in that architecture. This is a search
+diagnostic and design constraint, not an exact global upper bound.
+
+The substantial open scope is still unrestricted weighted
+multigraphs: nonmatching heavy support, arbitrary branching fluid
+support, medium weights, and physical stocks at the half-weight
+boundary. The finite calendar eliminates the physical-palette gap
+for the restricted mixed star class, but it does not turn the
+abstract hybrid law into a theorem for those other topologies.
+Future work should seek a common heavy law or exact fixed-core dual
+certificate for branching support, and a medium-core decomposition
+that preserves the local bin-packing advantage. Do not describe the
+restricted 3/2+eta theorem as an improvement to the unchanged
+unrestricted [4/3,1.62] and [3/2,1.999] intervals.

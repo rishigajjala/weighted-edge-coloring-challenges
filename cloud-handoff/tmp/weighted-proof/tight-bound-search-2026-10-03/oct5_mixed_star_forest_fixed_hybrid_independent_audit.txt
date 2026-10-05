@@ -1,0 +1,148 @@
+INDEPENDENT AUDIT: UNIVERSAL FIXED-HYBRID MIXED STAR-FOREST TRANSFER
+5 October 2026
+
+VERDICT AND SCOPE
+
+I independently checked the proof candidate in
+oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt, together
+with its endpoint, one-strong-group, and all-strong supporting notes.
+I found no mathematical gap at the stated scope: matching simple
+support of categorical heavy pairs, weights in [1/2,1], arbitrary
+vertex-disjoint divisible-fluid stars with parallel identities,
+per-identity caps C_e>=K y_e, fixed global hybrid heavy law,
+0<epsilon<=1/6, beta=2/3-epsilon, K>=64/epsilon. The result is a
+one-color fluid convex-hull transfer with exact beta-scaled heavy
+type and fluid marginals. It is not a physical tiny-edge palette,
+does not handle general fluid branching, and does not remove the
+matching restriction on heavy support.
+
+ALL-STRONG CORE, CHECKED FROM THE PAYOFF MODEL
+
+For a prefix without a center-paired leaf, let total target mass be
+Y, group masses Y_i, and t_i>=1/2 their largest-leaf fractions.
+Strong means K Y_i>=1. The group rank lower bound is
+Z_i=min(1,R_i/t_i); at endpoint residual R_i=1/2 it is
+z_i=1/(2t_i)>=1/2. This follows from the individual caps even
+when a group has two leaves: if their target fractions are t and
+1-t, the summed throughput at residual 1/2 is at least
+min(1/2,t)+min(1/2,1-t)=3/2-t>=1/(2t).
+
+Endpoint reduction is legitimate because optimized fluid recourse
+is concave in each shared pair residual. Replacing any occupied
+residual in [0,1/2] by a mean-preserving {0,1/2} variable can only
+decrease expected recourse, conditional on all other pair states.
+The global law still samples original physical heavy types.
+
+At saturated local weighted loads put alpha=2/3,
+A=alpha(1-Y), B_i=alpha(1-t_iY_i). Let p be center occupancy,
+r_i leaf-group occupancy, h_i leaf half-type fraction,
+r=min_i r_i, Rprod=prod_i r_i. Then
+p h_c=2(p-A), r_i h_i=2(r_i-B_i),
+p∈[A,min(alpha,2A)], and r_i∈[B_i,min(alpha,2B_i)].
+Saturation is adverse: adding unit-type presence or converting half
+type to unit lowers the pair residual under a coupling that keeps
+the common occupancy U, while actual full-star load at least Y
+only reduces admissible center heavy load. If the center or a leaf
+is unguarded, a proof-only virtual guard pair can be added under the
+same hybrid mode and U, with that unguarded leaf as a singleton
+group. This can only lower recourse in the coupled comparison;
+physical heavy marginals remain those of the actual graph.
+
+Let P0=prod_i(1-h_i),
+Q0=sum_i h_i(1-z_i)prod_{j!=i}(1-h_j), L=P0+Q0.
+The only nonzero leaf-rank deficits conditional on all groups
+occupied are all unit (deficit one) or exactly one half group
+(deficit 1-z_i); two half groups supply at least one. I rederived
+
+  I=(1-A)(1-Rprod P0)-(1-p)Rprod Q0,
+  C=1-A-(r-A)P0-(r-p)Q0  when p<=r.
+
+At fixed A and leaf parameters both expressions are nondecreasing
+in p in the p<=r region. Since B_i>=A, p=A is feasible and adverse.
+There the hybrid rank is 1-A-F with
+
+  F=L[(3/4)(1-A)Rprod+(1/4)(r-A)].
+
+The target alpha Y is equivalent to F<=1/3. Independently,
+Rprod L<=prod_i B_i follows from
+1-min(1,sum Z_i)<=prod_i(1-Z_i) and
+E(1-Z_i)=r_i(1-z_i h_i)<=B_i.
+For an index with r_i=r, L<=1-z_i h_i<=B_i/r.
+Consequently (r-A)L<=(r-A)B_i/r<=Y B_i because r<=alpha.
+
+I also checked the product merge. For nonnegative a+b<=1,
+alpha^2(1-a/2)(1-b/2)<=alpha(1-(a+b)/2);
+after division by alpha the difference is
+(2-a-b-ab)/6>=0. Repeated merging gives the needed
+prod B_j<=alpha(1-Y/2) and, for k>=2,
+prod_{j!=i}B_j<=alpha(1-(Y-Y_i)/2).
+With y=Y_i, the resulting upper bound on F is
+
+  g(Y,y)=(2/3)(1-y/2)
+    *{(1+2Y)[1-(Y-y)/2]/6+Y/4}.
+
+Its y derivative is [Y(Y-1)-y(2Y+1)]/18<=0, and
+1/3-g(Y,0)=(Y-2)(Y-1)/9>=0. The Y<=1/2 baseline and
+the p>=r branch similarly give the displayed nonnegative gaps in
+the source notes. The k=1 case is covered by the separately audited
+one-group proof; no k>=2 merge is used there. I found no gap in
+these calculations.
+
+WEAK GROUP ABSORPTION, CHECKED CASE BY CASE
+
+For an ordinary weak group (K Y_i<1), the cap lemma gives
+Z_i=K Y_i min(1,R_i/t_i)∈[0,1]. Each Z_i has independent-mode
+mean at least K Y_i/3, since min(1,R_i/t_i)>=R_i and
+E R_i=1-alpha a_i>=1/3. Distinct ordinary groups are independent
+of each other and of the center in independent mode. Thus, for
+ordinary weak mass W,
+
+  I_weak>=E R_c[1-exp(-K W/3)],
+  E R_c>=1-alpha(1-Y)=(1+2Y)/3.
+
+If W>=6/K, the independent lower bound and the common all-free
+event U>alpha give hybrid rank at least
+(1+2Y)(1-exp(-2))/4+1/12. Using exp(-2)<=1/6,
+this is at least (7+10Y)/24>=2Y/3 for Y∈[0,1].
+
+If W<6/K and Y>=1/8, discarding weak groups loses at most
+alpha*6/K from the all-strong target, bounded by epsilon Y for
+K>=32/epsilon. If the center's own partner bundle is weak, its
+mass is below 1/K, so discarding it as well loses at most
+alpha*7/K; K>=56alpha/epsilon suffices. The stated
+K>=64/epsilon exceeds both requirements. If the own-partner
+bundle is strong, it carries R_c pointwise, so rank>=E R_c>=alpha Y.
+
+For Y<=1/8 with a weak own-partner bundle y0, either y0>=Y/2
+and its pointwise flow min(R_c,K y0)>=K y0 R_c gives mean
+at least K Y/6>=alpha Y, or ordinary mass exceeds Y/2.
+In the latter case one ordinary strong group gives independent
+rank at least 1/9 and hybrid rank at least 1/12>=alpha Y.
+If all ordinary groups are weak, the hybrid rank is at least
+(1/4)[1-exp(-K Y/6)]. Concavity reduces comparison with
+alpha Y on [0,1/8] to the endpoint; it holds for
+K>=48 ln(3/2), much smaller than the stated K.
+These cases also cover y0=0. At Y=0 the claim is immediate.
+
+GLOBAL ASSEMBLY AND LIMITS
+
+For a fixed star residual state, the feasible divisible-fluid
+region is a laminar capacity system: each edge has a cap, each
+leaf a residual capacity, and the center a common residual
+capacity. Greedy filling in profit order maximizes the rank of
+every profit prefix, so layer-cake integrates the prefix bound
+for arbitrary nonnegative profits. Stars are vertex-disjoint;
+their recourse values add statewise even if one heavy pair links
+different stars. The hybrid uses the same mode coin and common U
+globally, so every star's one-law estimate applies to this single
+global law. Downward-closed convex support separation gives a
+conditional fluid policy with exact means beta y while heavy
+types still have means alpha x. Independently deleting selected
+heavy types with retention beta/alpha gives exact beta x and
+only enlarges residual capacities; the fluid policy remains
+feasible. The cap hypotheses and all categorical marginals are
+preserved.
+
+The main remaining bridge is from this divisible one-color law
+to a graph-order-uniform finite physical palette. This audit does
+not assert that bridge or any improved unrestricted coefficient.

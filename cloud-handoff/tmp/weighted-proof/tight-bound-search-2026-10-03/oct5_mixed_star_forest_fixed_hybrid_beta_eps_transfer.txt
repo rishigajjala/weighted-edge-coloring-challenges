@@ -1,0 +1,199 @@
+UNIVERSAL FIXED-HYBRID TRANSFER FOR MIXED-HEAVY STAR FORESTS
+5 October 2026 -- independent audit of full-prefix assembly
+
+THEOREM (divisible-fluid convex hull; no physical palette claim)
+
+Let a finite loopless multigraph have heavy categorical pairs whose
+simple support is a matching. At pair i, physical heavy types h have
+targets x_ih>=0 with x_i=sum_h x_ih<=1 and weights w_ih in
+[1/2,1]. Let the positive fluid support be a vertex-disjoint star
+forest; parallel fluid identities are allowed. Let target y>=0 obey
+every local weighted row
+
+  sum_{heavy h incident v} w_h x_h + sum_{fluid e incident v} y_e <=1.
+
+Let every fluid identity e have per-state cap C_e>=K y_e.
+Fix 0<epsilon<=1/6, alpha=2/3, beta=alpha-epsilon, and
+K>=64/epsilon. Then there is one joint law of feasible one-color
+heavy choices and divisible fluid flows with exact coordinate means
+beta x_h for every physical heavy type and beta y_e for every fluid
+identity. Stars may have unequal whole-star loads, and a heavy pair
+may join vertices of different stars. The theorem is an abstract
+one-color fluid-hull result. It does not yet provide a finite physical
+palette or handle unrestricted heavy support or arbitrary branching
+fluid support.
+
+FIXED HEAVY LAW BEFORE PROFITS
+
+Sample one global mode coin. With probability 3/4, choose each heavy
+pair independently: select type h with probability alpha x_ih,
+or select none with the remaining probability. With probability 1/4,
+draw one global uniform U; occupy pair i iff U<=alpha x_i and,
+conditional on occupancy, select type h with probability x_ih/x_i,
+independently across pairs. Each mode gives every physical heavy
+identity marginal alpha x_ih. The law depends on x, not on fluid
+profits, star loads, or caps. Its real residual R_i is 1-w_h if
+occupied and one if absent, shared by the pair's two endpoints.
+
+ALL-STRONG PREFIX INPUT
+
+The exact endpoint reduction and all-strong prefix proof are recorded
+in oct5_endpoint_reduction_universal_mixed_law.txt,
+oct5_mixed_one_strong_group_fixed_hybrid_audit.txt, and
+oct5_mixed_all_strong_star_fixed_hybrid_audit.txt. Their conclusion:
+for any one star profit prefix whose positive external leaf-pair
+groups all have prefix mass Y_i>=1/K, and whose center-pair partner
+is not a prefix leaf, the expected optimal unit-profit prefix rank
+under the fixed heavy law is at least alpha times its total target
+mass. This remains valid if the star has other, omitted fluid edges:
+their load only tightens center/leaf heavy allowances, improving the
+lower bound. If the prefix has no positive edge, the claim is trivial.
+When a center or leaf is actually unguarded, a proof-only virtual
+guard pair to a dummy vertex may be added and saturated. Sampling that
+virtual pair under the same mode/U can only lower the star's residual
+and recourse; it does not change the actual heavy law or its marginals.
+Each unguarded leaf gets a separate singleton virtual group.
+
+WEAK GROUP FACTS
+
+Fix any star prefix of total target mass Y<=1. The center's original
+weighted heavy load is at most 1-Y, so in either mode
+
+  E R_c=1-alpha*(center heavy weighted load)
+       >=(1+2Y)/3>=1/3.                              (1)
+
+Separate any prefix identities to the center's own heavy partner
+into a bundle of target mass y0 (possibly zero). For every other
+heavy leaf pair, group all its prefix leaves (one or two) and let
+Y_i be their total prefix target mass. Call an ordinary group weak
+when 0<Y_i<1/K and strong otherwise. Let W be the sum of ordinary
+weak masses. Each weak group has a feasible rank lower model
+
+  Z_i=K Y_i * min(1,R_i/t_i) in [0,1],              (2)
+
+where t_i in [1/2,1] is its largest-leaf target fraction. The
+single-star cap lemma proves (2) pointwise from C_e>=K y_e. In
+independent mode, ordinary groups are independent of one another
+and of R_c. The independent-mode leaf-group calculation in
+oct5_unequal_star_common_law_audit.txt gives
+
+  E Z_i>=K Y_i/3.
+
+As min(1,sum_i Z_i)>=1-prod_i(1-Z_i), independence yields an
+ordinary-weak-only rank lower bound
+
+  I_weak >= E R_c * [1-exp(-K W/3)].                 (3)
+
+The center inequality min(R_c,L)>=R_c min(1,L) justifies its factor.
+All other groups and the center-partner bundle can be ignored in (3).
+
+LARGE WEAK MASS
+
+If W>=6/K, (3) and (1) imply
+
+  I >= (1+2Y)/3 * (1-exp(-2)).
+
+In common mode the event U>alpha has probability 1/3 and makes
+EVERY heavy pair free. The ordinary weak groups then have aggregate
+available caps at least K W>=6, so the prefix center can carry one;
+thus C>=1/3. The hybrid rank is at least
+
+  H >= (1+2Y)/4*(1-exp(-2))+1/12 >= alpha Y.       (4)
+
+The final inequality is affine in Y and has its smallest gap at
+Y=1; it follows, for example, from exp(-2)<=1/6. The argument is
+unchanged if the center's own partner is also a prefix leaf.
+
+CENTER-PARTNER BUNDLE
+
+If K y0>=1, the bundle can carry R_c in every state because both
+endpoints share that residual and its aggregate caps are at least
+one. Then expected prefix rank is at least E R_c>=alpha Y by (1).
+If 0< K y0<1, the same bundle can carry at least
+min(R_c,K y0)>=K y0 R_c in every state. The y0=0 case is empty.
+
+LARGE PREFIX WITH LITTLE WEAK MASS
+
+Suppose Y>=1/8 and W<6/K. If y0=0, discard ordinary weak groups and
+apply the all-strong result to the remaining ordinary strong prefix.
+Its expected rank is at least alpha(Y-W)
+>=alpha Y-alpha*6/K>=beta Y because K>=32/epsilon.
+
+If 0<K y0<1, discard the center-partner bundle too. Its mass is
+y0<1/K, so the remaining ordinary strong prefix has target mass
+greater than Y-7/K. The all-strong result gives expected rank at
+least alpha(Y-7/K)>=beta Y when
+K>=56alpha/epsilon=112/(3epsilon); K>=64/epsilon suffices.
+This use of all-strong transfer is valid even if no strong group
+remains: in that case the bound's right-hand side is nonpositive,
+because Y<W+y0<7/K; the actual rank is nonnegative.
+
+SMALL PREFIX
+
+Suppose Y<=1/8. A strong center-partner bundle is already handled.
+If its weak bundle has y0>=Y/2, its pointwise lower bound and (1)
+give expected rank at least K y0 E R_c>=K Y/6>=alpha Y for K>=4.
+
+Otherwise the ordinary group mass is at least Y/2. If any ordinary
+group is strong, use that group alone in independent mode: its
+expected rank into a free center is at least 1/3, and E R_c>=1/3.
+Thus I>=1/9 and the hybrid H>=3I/4>=1/12>=alpha Y.
+
+If every ordinary group is weak, then W>=Y/2. Equation (3) gives
+
+  H>= (3/4)I_weak
+    >=(1/4)[1-exp(-K Y/6)] >=alpha Y.               (5)
+
+The last difference is concave in Y on [0,1/8] and vanishes at
+zero, so it suffices to check Y=1/8. The endpoint condition is
+exp(-K/48)<=2/3, i.e. K>=48 ln(3/2)<24, implied by K>=64/epsilon.
+
+These cases exhaust every prefix and prove expected prefix rank at
+least beta Y under one and the same heavy law. In many cases the
+stronger alpha Y bound holds; epsilon pays only for discarding a
+small amount of weak mass.
+
+FROM PREFIXES TO JOINT MARGINALS
+
+For a fixed residual state of a star, greedily fill fluid identities
+in descending profit order subject to individual caps, leaf residual
+capacities, and the center residual. This maximizes every profit
+prefix's unit rank simultaneously. Layer-cake therefore converts the
+prefix bound into
+
+  E[maximum feasible star fluid profit]
+      >=beta * sum_{e in star} q_e y_e
+
+for every nonnegative profit vector q. The fixed heavy law is common
+to all stars. Because the stars are vertex-disjoint, their statewise
+feasible recourse polytopes and optimum profits add even if a heavy
+pair links two stars. Summing gives the global support-function
+inequality. The set of conditional feasible mean fluid vectors is
+compact, convex, and downward closed; separation and coordinatewise
+discarding yield a conditional flow policy with exact means beta y.
+The heavy identities still have means alpha x. Finally, independently
+delete each selected physical heavy identity with retention beta/alpha;
+this increases residual capacities and preserves the chosen fluid
+flow. The resulting heavy means are exactly beta x, completing the
+one-color fluid-hull theorem.
+
+CONSTANTS AND PHYSICAL SCOPE
+
+For the earlier parameter beta=alpha/(1+2delta), one has
+epsilon=alpha-beta=4delta/[3(1+2delta)]. This theorem would require
+K>=48(1+2delta)/delta, not merely K=4/delta, and its stated
+epsilon<=1/6 corresponds to delta<=1/6. Larger target thinning can
+be obtained from the epsilon=1/6 case by further deletion if
+K>=384, but this does not recover the earlier small cap constant.
+Most importantly, the theorem concerns divisible-fluid one-color
+recourse. A separate finite-palette transfer and physical tiny-edge
+rounding are needed before asserting an integer weighted edge
+coloring bound.
+
+The limiting factor 2/3 is sharp even within this abstract class:
+take one unit-weight heavy guard pair across two leaves with target
+presence 1/2, and two fluid spokes of target 1/2 from those leaves
+to one unguarded center. Any common scaling gamma makes the guard
+present with probability gamma/2, so expected total fluid recourse
+is at most 1-gamma/2; its required total fluid mean is gamma.
+Hence gamma<=2/3.

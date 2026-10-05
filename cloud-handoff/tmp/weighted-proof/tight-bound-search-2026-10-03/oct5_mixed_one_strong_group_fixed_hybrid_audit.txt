@@ -1,0 +1,126 @@
+AUDIT: ONE STRONG MIXED LEAF GROUP UNDER UNIVERSAL FIXED HYBRID
+5 October 2026
+
+STATUS AND SCOPE
+
+The proposed one-group argument passes independent algebraic audit. It
+proves the 2/3 unit-profit prefix recourse inequality for ONE star
+prefix whose leaves lie in exactly one heavy guard pair distinct from
+the center guard pair, with weight in [1/2,1], categorical types,
+target mass Y, and cap sum strong enough that K Y>=1. The heavy law
+is the universal 3/4 independent + 1/4 common occupancy-threshold law
+at alpha=2/3, with categorical types independent of the occupancy
+uniform conditional on selection. It is a fixed law, so it would glue
+across unequal stars IF the multi-group prefix inequality were proved.
+This note does not prove that multi-group inequality, a star forest
+theorem, arbitrary branching, or a physical palette transfer.
+
+PRELIMINARY REDUCTIONS
+
+The endpoint-reduction lemma in
+oct5_endpoint_reduction_universal_mixed_law.txt permits replacing
+occupied residuals in [0,1/2] by endpoint values 0 or 1/2 for a
+lower bound on expected recourse. Thus write each pair's original
+unit-type presence a and half-type presence b. Let p=alpha(a_c+b_c)
+for the center pair and r=alpha(a_l+b_l) for the leaf pair. Let
+h_c=b_c/(a_c+b_c), h_l=b_l/(a_l+b_l), with zero-presence cases by
+continuity. Then p,r<=alpha and residuals lie in {0,1/2,1}.
+
+The center whole-star load S is at least prefix mass Y. Greater S
+only tightens its guard allowance, so the adverse center case has
+S=Y. It is legitimate to saturate each pair's weighted-load local
+constraint. To do so without increasing recourse, add unit-type
+presence while the pair's total presence is below one. If a weighted
+load gap remains when total presence reaches one, convert half-type
+presence to unit type at fixed total presence. Adding unit presence
+stochastically lowers the pair residual at every common-mode uniform
+value U: the old occupied interval gets more unit type and the new
+occupied interval replaces free by occupied. Converting half to unit
+also lowers the residual pointwise in stochastic order conditional
+on U. Independent mode is likewise monotone. The procedure reaches
+the allowed weighted load because its maximal possible load is one.
+
+Put A=alpha(1-Y), B=alpha(1-tY), where t in [1/2,1] is the largest
+leaf's target fraction. After saturation,
+
+  p(1-h_c/2)=A,       r(1-h_l/2)=B,
+  p in [A,min(alpha,2A)],  r in [B,min(alpha,2B)].
+
+The group can carry Z=min(1,R_l/t) into a free center; for an endpoint
+half residual it carries z=1/(2t) in [1/2,1]. The exact lower-model
+payoff table is in the endpoint note. The independent-mode recourse I
+is at least E[R_c]E[Z]>=(1-A)(1-B), because
+min(R_c,Z)>=R_c Z and E[Z]>=1-B. In common mode the interval where
+both pairs are free has length at least 1/3, so C>=1/3. Write
+H=(3/4)I+(1/4)C. We seek H>=alpha Y.
+
+CASE 1: Y<=1/2
+
+Since t>=1/2,
+
+  H >= [(1+2Y)(1+Y)+1]/12.
+
+The difference from 2Y/3 is
+
+  (2-5Y+2Y^2)/12=(2Y-1)(Y-2)/12>=0.
+
+CASE 2: Y>1/2 AND p>=r
+
+Here p<=2A, since 2A<alpha. Whenever U>p, both pairs are fully
+free, so C>=1-p>=1-2A=(4Y-1)/3. With the independent baseline and
+t>=1/2, direct subtraction gives
+
+  H-alpha Y >= Y(2Y-1)/12>=0.
+
+CASE 3: Y>1/2 AND p<=r
+
+The endpoint payoff table gives
+
+  I=(1-p)(1-r+z r h_l)+(p h_c/2)(1-r+r h_l),
+  C=1-r+z(r-p)h_l+(p h_c h_l/2).
+
+Substitute p h_c=2(p-A), r h_l=2(r-B). Both I and C are
+nondecreasing in p in this region: their p slopes are respectively
+(2-1/t)(r-B) and (2-1/t)(r-B)/r, both nonnegative. Since A<=p
+and A<=B<=r, replacing p by A is adverse. Then h_c=0, and
+H as a function of r has the form
+
+  H(r)=constant+L r+Q/r,
+  L=(1/t-1)(1-3A/4),   Q=AB/(4t).
+
+The derivative H'(r)=L-Q/r^2 is increasing in r>0. Its sign at r=B
+is the sign of
+
+  D=2(1-t)(1-tY)(1+Y)-(1-Y).
+
+The coarse baseline above already proves the target if
+t>=t0=(3Y-1)/[Y(1+2Y)]. In the remaining region t<t0,
+D decreases with t, so D(t)>=D(t0). Exact simplification gives
+
+  D(t0)=[8Y^3-Y^2-7Y+4]/[Y(1+2Y)^2].
+
+For Y>=1/2, the numerator is at least
+3Y^2-7Y+4=(1-Y)(4-3Y)>=0, since the difference is
+4Y^2(2Y-1)>=0. Therefore H'(r)>=0 throughout r>=B.
+Its minimum is at r=B (pure unit leaf guard). At p=A,r=B,
+
+  H=(1+2tY)(1+Y)/6
+   >=(1+Y)^2/6
+   =2Y/3+(1-Y)^2/6.
+
+This proves the one-strong-group inequality in all cases. The only
+potential division by zero is B=r=0, which requires Y=t=1; that
+endpoint is already covered by the coarse baseline, so it is never
+used in the derivative branch.
+
+UNRESOLVED ASSEMBLY
+
+The unit-weight star proof combines an independent-mode product
+estimate with a common-mode contribution from one strongest group.
+For mixed weights the common contribution can be below the unit
+activation bound, as shown by the legal center-half/leaf-unit example
+in oct5_unequal_star_common_law_audit.txt. This one-group theorem
+budgets the independent and common modes together, but adding other
+groups changes both terms. No valid absorption or telescoping rule
+has yet been shown to turn this theorem into a multi-group prefix
+bound. That is the next required step for unequal star forests.

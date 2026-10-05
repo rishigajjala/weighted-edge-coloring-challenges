@@ -1,0 +1,182 @@
+ALL-STRONG MIXED STAR PREFIXES UNDER A UNIVERSAL FIXED HYBRID
+5 October 2026
+
+STATUS
+
+Proof candidate independently derived and algebraically checked here;
+the k=1 base case is independently audited in
+oct5_mixed_one_strong_group_fixed_hybrid_audit.txt. For every profit
+prefix of one divisible-fluid star whose positive leaf guard groups
+are ALL strong (K Y_i>=1), this note proves expected unit-profit
+recourse at least alpha times total prefix mass under one fixed heavy
+law: 3/4 independent categorical heavy sampling plus 1/4 one common
+occupancy threshold, always at alpha=2/3. All occupied physical
+weights are in [1/2,1]. The center guard is distinct from the
+external leaf groups; a center-paired leaf needs a separate add-on.
+Weak leaf groups are not handled. This alone is not a full star forest
+law, a branching theorem, or a physical palette theorem.
+
+ENDPOINT AND LOCAL REDUCTIONS
+
+The arbitrary-graph concavity argument in
+oct5_endpoint_reduction_universal_mixed_law.txt lowers recourse when
+each occupied categorical residual is replaced by a mean-preserving
+spread to {0,1/2}. Do this only for proof; the physical heavy law
+keeps exact original identity marginals.
+
+Let the prefix have k strong guard groups, masses Y_i>0, total
+Y=sum_i Y_i<=1. At group i its largest leaf has fraction
+t_i in [1/2,1] of Y_i, and its endpoint half residual supplies
+z_i=1/(2t_i) in [1/2,1] units to a fully free center. Let
+A=alpha(1-Y), B_i=alpha(1-t_iY_i). As in the one-group audit, the
+adverse center case takes whole-star load S=Y and all center/leaf
+weighted loads saturated, using only additions of unit-type presence
+or conversions of half type to unit. These operations stochastically
+lower pair residuals conditional on every common uniform threshold.
+An actually unguarded center or leaf can receive a proof-only virtual
+guard pair to a dummy vertex under that same threshold; the virtual
+residual is at most the physical residual one. This comparison never
+alters the actual heavy identity marginals.
+
+Write p for center occupancy probability, r_i for group i occupancy
+probability, h_i for its conditional half-type fraction, and h_c for
+the center fraction. Then
+
+  p h_c=2(p-A), p in [A,min(alpha,2A)];
+  r_i h_i=2(r_i-B_i), r_i in [B_i,min(alpha,2B_i)].
+
+Put r=min_i r_i and Rprod=prod_i r_i. Conditional on all leaf pairs
+being occupied, group i carries 0 if unit type and z_i if half type.
+If any pair is absent, that group alone carries one unit, so the
+truncated leaf aggregate is one. Let
+
+  P0=prod_i(1-h_i),
+  Q0=sum_i h_i(1-z_i)prod_{j!=i}(1-h_j),
+  L=P0+Q0.
+
+Indeed the aggregate's only deficit occurs when every pair is unit
+(deficit one) or exactly one pair is half and all others unit
+(deficit 1-z_i); two half groups already supply at least one.
+Thus L is its conditional deficit when all pairs are occupied.
+
+INDEPENDENT AND COMMON MODE FORMULAS
+
+In independent mode, the leaf aggregate has expected rank
+1-Rprod L. When the center is half residual it carries 1/2 iff at
+least one group is not unit; this has probability 1-Rprod P0.
+Center half-state probability is p h_c=2(p-A), and center free-state
+probability is 1-p. Hence independent recourse is
+
+  I=(1-A)(1-Rprod P0)-(1-p)Rprod Q0.           (1)
+
+Its derivative in p is Rprod Q0>=0. In common mode all leaf groups
+are occupied below r, and above r at least one group is absent, so
+leaf rank is one. If p<=r, exact common recourse is
+
+  C=1-A-(r-A)P0-(r-p)Q0,                     (2)
+
+whose derivative in p is Q0>=0. Therefore the hybrid H=(3I+C)/4
+is worst at p=A in this region, where the center is a unit guard:
+
+  H=1-A-L[(3/4)(1-A)Rprod+(1/4)(r-A)].     (3)
+
+Since 1-A-alpha Y=1/3, it suffices to show the bracketed failure
+term times L is at most 1/3.
+
+For p>=r, the common event U>p makes center and at least one leaf
+group fully free, so C>=1-p. In all cases C>=1/3 from the interval
+U>max(p,r_1,...,r_k).
+
+TWO LEAF-DEFICIT BOUNDS
+
+Let Z_i be group i's rank in independent mode: 0 for unit, z_i for
+half, and one for absent. Pointwise
+
+  1-min(1,sum_i Z_i) <= prod_i(1-Z_i).
+
+The groups are independent, and
+
+  E(1-Z_i)=r_i(1-z_i h_i)
+           =B_i+(1-1/t_i)(r_i-B_i)<=B_i.
+
+Thus Rprod L<=prod_i B_i. More generally I is at least
+(1-A)(1-prod_i B_i) because min(R_center,leaf_rank) is at least
+R_center times leaf_rank and the independent center mean is 1-A.
+
+Choose an index i with r_i=r. Conditional on all pairs occupied,
+the leaf aggregate rank is at least group i's rank Z_i, hence
+
+  L<=1-z_i h_i<=1-h_i/2=B_i/r.
+
+Also B_i>=A because t_iY_i<=Y; thus r>=A.
+
+MERGING PRODUCT FACTORS
+
+Each B_j<=alpha(1-Y_j/2). For masses a,b>=0 with a+b<=1,
+
+  alpha^2(1-a/2)(1-b/2)
+       <=alpha(1-(a+b)/2).
+
+After division by alpha, the difference is
+(2-a-b-ab)/6>=0. Repeated merging gives
+
+  prod_i B_i<=alpha(1-Y/2),
+
+and, for k>=2 with chosen group i of mass y,
+
+  prod_{j!=i} B_j<=alpha(1-(Y-y)/2).
+
+BASELINE: Y<=1/2
+
+The product bound gives I>=(1-A)[1-alpha(1-Y/2)]
+=(1+2Y)(1+Y)/9. Combined with C>=1/3, the hybrid minus
+alpha Y is at least (2Y-1)(Y-2)/12>=0 for Y<=1/2.
+
+CASE p>=r, Y>1/2
+
+Now p<=2A=4(1-Y)/3, so C>=1-p>=1-2A=(4Y-1)/3.
+The same independent baseline gives hybrid gap at least
+Y(2Y-1)/12>=0.
+
+CASE p<=r, Y>1/2, k>=2
+
+Use (3), Rprod L<=prod B_j, and L<=B_i/r:
+
+  (3/4)(1-A)Rprod L+(1/4)(r-A)L
+    <=(3/4)(1-A)prod B_j
+      +(1/4)B_i(1-A/r).
+
+As r<=alpha and A=alpha(1-Y), the last parenthesis is at most Y.
+Use the product merge over j!=i and B_i<=alpha(1-y/2). The failure
+term is at most
+
+  g(Y,y)=(2/3)(1-y/2)
+       *{(1+2Y)/6*[1-(Y-y)/2]+Y/4}.
+
+Direct differentiation gives
+
+  partial g/partial y=[Y(Y-1)-y(2Y+1)]/18<=0
+
+for 0<=y<=Y<=1. Hence g(Y,y)<=g(Y,0), and
+
+  1/3-g(Y,0)=(Y-2)(Y-1)/9>=0.
+
+Thus H>=alpha Y. The proof even works for all Y in this branch,
+though the preceding baseline already handles Y<=1/2.
+
+CASE k=1
+
+The product merge over other groups is unavailable. The exact
+one-group hybrid proof is in
+oct5_mixed_one_strong_group_fixed_hybrid_audit.txt and covers all
+Y,t, including zero-denominator endpoints by the baseline.
+
+WHAT REMAINS
+
+To make this a full star theorem, weak leaf groups (K Y_i<1) must be
+absorbed while preserving the fixed-hybrid bound; the center's own
+guard partner as a prefix leaf must also be handled. After that,
+star additivity and support-function separation would produce one
+fluid convex-hull law for unequal vertex-disjoint stars, even when
+guard pairs link distinct stars. Arbitrary branching fluid support
+and a physical palette realization would still be separate.

@@ -1,0 +1,133 @@
+5 October 2026 — residual-overlap route toward full heavy+tiny bounds
+
+STATUS. This is scratch research, not a new unrestricted coefficient.
+It isolates the fractional feasibility test that remains after the
+audited physical LP rounding, proves a tiny-only palette lemma, and
+records a fixed-coloring failure mode. No manuscript or Lean edits.
+
+1. EXACT FIXED-CORE ASSIGNMENT DUAL
+
+Fix a feasible K-coloring of any core J. Let residual capacity at
+vertex v and color c be R_vc, and reserve 4τ by setting
+R'_vc=(R_vc-4τ)_+. Let T be physical edges of weight at most τ.
+Allow tiny edge e=uv in color c only when R'_uc R'_vc>0.
+The physical rounding of oct5_arbitrary_heavy_mixed_tiny_physical_palette_audit.txt
+works whenever the following fractional LP is feasible:
+
+  z_ec>=0,  Σ_{c allowed for e} z_ec=1  (every tiny physical edge e),
+  Σ_{e∋v} w_e z_ec<=R'_vc        (every vertex-color row).
+
+There are no additional stock constraints; the first equality makes
+each z_ec<=1. By separation/Farkas, this LP is feasible if and only if
+for every nonnegative vertex-color price vector p,
+
+  Σ_{e=uv∈T} w_e min_{c allowed for e}(p_uc+p_vc)
+      <= Σ_{v,c} p_vc R'_vc.                                (DUAL)
+
+If an edge has no allowed color, the LP is infeasible. The product
+assignment z_ec=R'_uc R'_vc/S_uv from the audit is one sufficient
+certificate for this LP. Its exact row condition is
+
+  Σ_{e=uv∈T} w_e R'_uc/S_uv <=1
+
+for each row v,c with R'_vc>0, where
+S_uv=Σ_d R'_ud R'_vd. The simpler S_uv>=max(T_u,T_v)
+condition is strictly stronger. A better flow can satisfy the LP even
+when the product row fails. For a universal heavy+tiny factor, the
+remaining task is to choose/recolor a physical heavy palette so
+that (DUAL) holds with K near the desired coefficient times bp.
+
+2. TINY-ONLY PALETTE IS ALREADY COEFFICIENT ONE
+
+Let Δ_T=max_vΣ_{e∋v}w_e for a loopless tiny-only multigraph.
+For any τ<1/4 and K>=Δ_T/(1-4τ), the uniform fractional assignment
+z_ec=1/K has load Δ_T/K<=1-4τ at every row. Applying the same
+support-preserving iterative LP rounding adds at most 4τ per row,
+so every physical tiny edge receives one color and
+
+  χ'_w(T)<=ceil[Δ_T/(1-4τ)].
+
+This is finite, graph-order uniform, allows arbitrary multiplicity,
+and needs no source-preserving packet approximation. It implies that
+a separate palette for a tiny subgraph costs its weighted degree
+plus O(τ) proportionally. The obstacle in mixing with heavy edges
+is the load of tiny edges crossing from high-heavy-load vertices
+to low-heavy-load vertices: the former have small tiny degree, but
+many of them can send aggregate tiny load nearly N into one low
+vertex, so a small global fresh palette does not suffice.
+
+3. WHY A FIXED PROPER HEAVY COLORING NEEDS COORDINATION
+
+Normalize bp scale to N and consider K=3N/2 colors (ignore integer
+rounding). At one vertex u, place N unit-weight heavy edges in N
+distinct colors. At another v, place N heavy edges: N/2 of weight
+one and N/2 of weight just above one half. Arrange v's unit edges
+in all N/2 colors where u has no heavy edge, and v's near-half
+edges in N/2 colors where u does have a heavy edge. In the remaining
+N/2 colors u is occupied and v has no heavy edge. For the idealized
+weight exactly 1/2, the product residual overlap S_uv is zero:
+every color has zero residual at u or v. With weight just above 1/2,
+it remains zero because u is unit-occupied in all colors where v has
+positive residual, and v is unit-occupied in the u-free colors.
+
+This is only a *fixed-coloring pattern*, not a physical lower-bound
+construction: at u, unit-heavy load N leaves no local room for any
+positive tiny edge if bp=N. Replacing a vanishing fraction of u's
+unit heavy load by tiny capacity allows a tiny edge but only a
+vanishing target there. Moreover, if the heavy stars at u and v
+are independent, recoloring v aligns their free colors and repairs
+the overlap immediately. The pattern shows that weighted load totals
+alone cannot certify a fixed core coloring at coefficient 3/2; a
+full theorem needs a favorable physical heavy coloring or a more
+adaptive residual-flow assignment. It is not a counterexample to
+1.5, 1.75, or any universal heavy+tiny coloring bound.
+
+4. PRECISE LIMIT OF A 1.75 SPLIT ARGUMENT
+
+One tempting route is to call vertices with heavy weighted load
+above 3N/4 high. Each such vertex has tiny weighted load below N/4.
+The tiny-only lemma would color edges induced by high vertices in a
+fresh ~N/4 palette after ~3N/2 heavy colors. But tiny edges from high
+vertices to a low vertex can have aggregate load nearly N at that
+low vertex, because they may come from arbitrarily many high
+neighbors. Thus the same fresh ~N/4 palette cannot color all edges
+touching high vertices. The cross edges are exactly where the
+fixed-core LP or a coordinated recoloring is needed. This is a
+structural obstacle to that split proof, not a lower bound on χ'_w.
+
+5. NEARUNIT TRIANGLE: SMALL OVERLAP BUT EXACT PRODUCT ROW SUCCEEDS
+
+Take a heavy triangle u,v,z with m parallel copies on each side.
+Give each uv copy weight 1-2δ and each uz,vz copy weight one, where
+0<δ<1/4. Put a tiny physical bundle on uv whose total weight is
+2δm, split into items of weight at most τ<<δ and chosen so it can
+be packed into the 2δ residual of each of m uv-heavy colors.
+At u and v, the heavy weighted load is 2m(1-δ), and the tiny load
+is 2δm; at z the two unit-heavy bundles give bp at least 2m.
+The intended local bins use one heavy per bin and fill the residual
+of each uv-heavy bin, so bp=2m=N when the tiny items divide evenly.
+
+A proper heavy coloring uses K=3m=3N/2 colors, one heavy edge in
+each color. All m colors carrying uv heavy have residual 2δ at
+both u and v. In colors carrying uz or vz heavy, one of u,v has
+zero residual. Ignoring the 4τ reservation, the product overlap is
+
+  S_uv=m(2δ)^2=2δ²N,
+
+whereas T_u=T_v=δN. Thus S_uv>=max(T_u,T_v) fails by an unbounded
+factor 1/(2δ) as δ→0. Nevertheless z_ec is uniform over exactly
+the m uv-heavy colors. It gives tiny load (2δm)/m=2δ in each of
+those colors, exactly their physical residual. The *exact product
+row* succeeds at the 3N/2 palette. Reserving 4τ requires a small
+additional palette margin or slightly reduced tiny target, and the
+example still shows the qualitative point: a tiny product moment
+does not imply difficult flow when every active color has a
+proportionally small residual. This example is mixed heavy, not the
+already solved unit-heavy/tiny case.
+
+NEXT. A meaningful target is a heavy-coloring/recoloring lemma that
+ensures (DUAL) for all nonnegative price vectors with K=(3/2+ε)N
+or even K<=1.75N in the heavy+tiny regime. The dual makes the
+required statement precise and avoids committing to the product
+assignment; once it is proved, the audited LP rounding completes
+the physical theorem without another packet bridge.

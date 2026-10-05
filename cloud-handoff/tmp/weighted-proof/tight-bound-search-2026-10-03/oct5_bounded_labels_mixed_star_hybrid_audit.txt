@@ -1,0 +1,128 @@
+BOUNDED SOURCE LABELS FOR THE MIXED STAR-FOREST HYBRID: AUDIT
+5 October 2026
+
+SCOPE
+
+This audits a bounded-dependence implementation of the fixed heavy law
+used in oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt.
+Let kappa be the cap multiplier (C_e>=kappa y_e), set
+delta=1/(16kappa), q=ceil(2kappa), and let a heavy source mean one
+categorical guard pair. The positive fluid support is a
+vertex-disjoint star forest, so a source's two endpoints touch at
+most two stars. Exact physical palette realization is not proved here.
+
+MARKING AND BASE COLORS
+
+At each star mark its center source, if guarded. Also mark each leaf
+source whose WHOLE-star fluid target mass on leaves of that source is
+at least delta. The whole-star leaf masses sum to at most one, so the
+number of marked sources at a star is at most
+D=floor(1/delta)+1. Define a conflict edge between two sources that
+touch the same star whenever at least one is marked there. For any
+induced set A of sources, the number of conflict edges contributed
+at a star is at most D times the number n_s(A) of its sources in A.
+Each source touches at most two stars, hence
+
+  |E(A)| <= D sum_s n_s(A) <= 2D |A|.
+
+Every induced subgraph has average degree at most 4D, so the conflict
+graph is 4D-degenerate and has a proper base coloring with at most
+4D+1 colors. At a star, a locally marked source's base color is
+unique among ALL sources touching that star.
+
+SUBLABEL LOAD BALANCING
+
+For each base color, allocate its sources among q sublabels. Impose a
+star-row only at a star with no marked source of this base color.
+Each coefficient in such a row is that source's whole-star leaf mass,
+strictly below delta, and the row's total source mass is at most one.
+The uniform fractional assignment 1/q per sublabel is feasible with
+row bound 1/q. Each source×sublabel variable occurs in its source
+equality and at most two star rows. Standard basic-solution iterative
+rounding fixes all zero variables permanently, fixes all unit
+variables, and otherwise finds an active row with at most four
+fractional variables: n fractional variables, m<=n/2 source
+equalities, at least n-m>=n/2 active star rows, and at most 2n row
+incidences. Dropping that row raises its eventual mass by at most
+4delta. Thus every unmarked star×label has whole-star leaf mass
+
+  <=1/q+4delta <=1/(2kappa)+1/(4kappa)
+                     =3/(4kappa).
+
+At a star with a marked source of a base color, that source is the
+only source of that base color there; whichever sublabel it receives
+is a singleton at that star. The total number of final labels is
+at most (4D+1)q=O(kappa^2).
+
+SHARING SEEDS WITHIN LABELS
+
+In independent mode, sample one independent pair of uniforms
+(U_label,V_label) per label. Source i in that label is occupied when
+U_label<=alpha x_i; conditional on occupation, map V_label through
+its own categorical inverse CDF. Each physical type h retains exact
+one-color marginal alpha x_ih. In common mode use one global U for
+all source occupancies, but independent V_label per label for type
+choices. Sources in one label may correlate, but sources in distinct
+labels have independent (U,V) in independent mode and independent
+type seeds conditional on global U in common mode.
+
+Every prefix-strong leaf group has prefix mass >=1/kappa, hence its
+whole-star mass >=1/kappa>delta and is marked at that star. Its
+label is unique among all sources at that star. The center source is
+also marked, so the all-strong proof retains exactly the required
+within-star independence. A prefix-weak locally marked source may be
+alone in its label, with Z_i<1. All other prefix-weak sources of one
+label have total WHOLE-star mass <=3/(4kappa), so their aggregate
+lower-model rank Z_label=sum_i kappa Y_i min(1,R_i/t_i) lies in
+[0,3/4]. Its mean is at least kappa times its prefix mass divided
+by three, by linearity of expectation. Distinct label blocks and
+the center are independent in independent mode. Thus the original
+weak product estimate holds with labels as blocks:
+
+  product_label E(1-Z_label)
+      <=exp(-kappa W_guarded/3).
+
+The common-mode event U>alpha still makes every source absent,
+regardless of label sharing, so the all-free weak-cap estimate is
+unchanged. A center source can be a leaf source of another star, but
+it touches at most two stars and the local mark/uniqueness argument
+still applies independently at each.
+
+UNGUARDED LEAVES: REQUIRED ADDENDUM
+
+An unguarded fluid leaf is not a heavy source and has no seed. Its
+whole target mass must not silently disappear from W. A prefix-strong
+unguarded leaf (prefix target >=1/kappa) supplies one unit whenever
+the center is free, so its star prefix already has expected rank at
+least E R_center >=alpha times the total prefix mass. For all
+prefix-weak unguarded leaves, let W0 be their total target mass and
+use one deterministic superblock Z0=min(1,kappa W0). Its failure
+factor obeys
+
+  1-Z0 <= exp(-kappa W0/3)
+
+(indeed it is zero when kappa W0>=1, and otherwise 1-kappa W0 is
+smaller than the exponential). This block is independent of every
+label and the center. It restores the exact weak product bound with
+W=W_guarded+W0. Proof-only virtual guards can still be used in the
+analytic all-strong comparison, but they should not be counted as
+physical sources or require additional palette labels.
+
+LIMITS
+
+This establishes bounded LABEL count and preserves the fixed-hybrid
+star recourse estimates, including shared guard pairs between stars.
+It does not by itself specify an exact finite color calendar for
+arbitrary rational/real type marginals. Even with O(kappa^2) labels,
+the number and denominators of U/V threshold intervals can depend
+on the graph and its probabilities; that calendar-size/stock issue
+requires a separate construction. Nothing here handles arbitrary
+branching fluid support.
+
+More precisely, with M physical heavy identities, each label's
+(U,V) outcome is constant on at most (M+1)^2 rectangles cut by its
+occupancy and inverse-CDF thresholds. The joint independent-mode
+support is at most (M+1)^(2L), and the common-mode support at most
+(M+1)^(L+1), where L=O(kappa^2). This is polynomial in graph size
+for fixed kappa, but the exponent and exact rational denominators
+are not bounded independently of kappa or bit complexity.

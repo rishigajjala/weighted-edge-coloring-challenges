@@ -1,0 +1,136 @@
+Independent audit of the finite physical calendar for mixed star forests
+5 October 2026. Scratch only. No manuscript edit.
+
+Scope checked: physical heavy weights strictly above 1/2, heavy simple
+support a matching, tiny weights at most tau, tiny support a vertex-
+disjoint star forest (parallel tiny identities allowed). Let N be the
+maximum of weighted degree and heavy edge-count degree; N<=bp.
+
+I read oct5_mixed_star_forest_fixed_hybrid_beta_eps_transfer.txt,
+oct5_bounded_labels_mixed_star_hybrid_audit.txt,
+physical_tiny_cap_rounding_route.md, and
+oct5_physical_heavy_tiny_product_rounding_audit.txt, and checked the
+proposed period/calendar formulas communicated by the rounding agent.
+The checks below are conditional on the abstract full-prefix transfer
+and bounded-label lemma as stated in those notes. I found no stock or
+rounding contradiction in the calendar described here.
+
+Parameters and exact finite law. Fix target eta>0. Choose
+0<epsilon<=1/6, beta=2/3-epsilon, kappa>=64/epsilon,
+s=1-4tau>0, bucket width sigma>0, J=O(1/sigma) bucket weights, and
+an integer grid Q with J/(alpha Q)<1, alpha=2/3. The number L of
+heavy-source labels is O(kappa^2), independent of graph order.
+Take period P=4Q^(2L+1) and choose bulk color count M a multiple of
+P. All random choices can then be represented by exact uniform seed
+enumeration: mode 3/4 independent and 1/4 common, U/V grid variables
+for each label, and one common U grid variable. A seed state appears
+exactly M/P times. Both occupancy probabilities and categorical bucket
+probabilities are multiples of 1/Q, so every expected slot count times
+M is an integer. This is the PRE-deletion alpha-heavy law; using the
+post-deletion beta-heavy law would undercount heavy slots.
+
+Heavy stock. At a heavy pair let d_j physical edges lie in bucket j,
+d=sum_j d_j. For d>0 set
+
+  p=floor(Qd/M)/Q,
+  r_j=floor(Qd_j/d)/Q,
+  r_0=1-sum_j r_j.
+
+For d=0 use p=0. Feed the abstract law bucket targets
+x_j=p r_j/alpha and a dummy unit-weight target x_0=p r_0/alpha.
+Every bulk color selects bucket j at the pair in exactly M p r_j
+slots, and M p r_j<=d_j. Assign distinct physical edges of that
+bucket injectively to those slots. The actual weight never exceeds
+the upward surrogate bucket weight. Delete dummy selections; this
+only increases residual capacity. The total number of unassigned
+physical heavy identities at the pair is
+
+  d-Mp sum_j r_j=(d-Mp)+Mp r_0 <(J+1)M/Q.
+
+Heavy support is a matching, so all leftover identities fit in fewer
+than (J+1)M/Q additional heavy-only colors, simultaneously across
+all pairs. The bound is independent of the number of pairs.
+
+Bucket inflation and local input. Bucket each physical heavy weight
+w upward to w'=min(1,ceil((w+4tau)/sigma)sigma). Thus w'>=w+4tau
+unless w'=1, and always w'<=w+4tau+sigma. For each tiny physical
+identity e put y_e=w_e/(beta M s) and use the minimal fluid cap
+C_e=kappa y_e. The pre-deletion law has heavy bucket marginal
+alpha x_j=p r_j; its conditional fluid policy has exact mean
+beta y_e. Including the dummy load, the pseudo-heavy target row at
+a pair is at most
+
+  [L_v+(4tau+sigma+J/Q)d]/(alpha M),
+
+where L_v is actual heavy weighted load and d its heavy count. The
+tiny target row is T_v/(beta M s). Since L_v+T_v<=N and d<=N,
+and beta s<alpha, a sufficient local condition is
+
+  M/N >= 1/(beta s)+(4tau+sigma+J/Q)/alpha.       (A)
+
+The proposed stronger calendar choice
+
+  M/N >= (1+4tau+sigma)/[beta s(1-J/(alpha Q))]
+
+implies (A): after multiplying by beta s, its left coefficient is
+(1+a)/(1-b)>=1+a+b, where a=4tau+sigma and b=J/(alpha Q), while
+the right coefficient of (A) is 1+(beta s/alpha)a+beta s b.
+Also p/alpha<=d/(alpha M)<=1 when M>=N/alpha, so the categorical
+pair target is admissible. The dummy term is essential in this check;
+discarding it before the local-row test would be invalid.
+
+Tiny stock and row reserve. For each seed state solve the star-wise
+conditional capped-flow LP with exact means beta y_e; repeat the
+seed table M/P times. Multiply every fluid load by s. Each physical
+tiny identity then has total fractional stock
+
+  M*s*beta*y_e=w_e
+
+exactly, with per-color load at most s*kappa*y_e
+=kappa*w_e/(beta M). For M>=kappa/beta, its per-color inclusion
+fraction is at most one. This lower bound on M can be included as an
+eta-dependent additive palette floor. When a bucket-heavy edge is
+selected and w'<1, pseudo residual 1-w' is at least 4tau below the
+actual residual 1-w; multiplying fluid by s only increases that
+slack. If w'=1, pseudo residual is zero and no tiny flow touches that
+pair in that color. When the pair is free, scaling by s leaves 4tau
+slack. Dummy deletion and replacing a bucket by a lighter physical
+identity can only help. Thus every row used by tiny flow has at
+least 4tau reserve below its actual residual.
+
+The general two-endpoint source-preserving LP rounding in
+oct5_physical_heavy_tiny_product_rounding_audit.txt applies to the
+finite table: fix zeros permanently, drop a tight vertex-color row
+with at most four fractional edge-color variables, and later lose at
+most 4tau there. It uses no bipartiteness or bound on tiny parallel
+multiplicity. Rows with pseudo residual zero have no positive option.
+Consequently each tiny physical edge is assigned exactly one bulk
+color and every actual vertex-color capacity remains at most one.
+
+Parameter order and additive term. Choose epsilon, sigma and then Q
+large enough (with J=O(1/sigma)) that
+
+  [(1+4tau+sigma)/(beta s(1-J/(alpha Q)))]
+      *[1+(J+1)/Q] < 3/2+eta
+
+for all sufficiently small tau. This is possible because the left
+side tends to 1/beta as sigma,tau,J/Q tend to zero, and beta can be
+chosen arbitrarily close to 2/3. Round M upward to a multiple of
+P=4Q^(2L+1); this adds only O_eta(1) colors. Ensure also
+M>=kappa/beta and M>=N/alpha by another O_eta(1) floor. Then bulk
+plus leftover-heavy colors are at most (3/2+eta)N+O_eta(1), hence
+(3/2+eta)bp+O_eta(1). The actual weighted graph may have arbitrarily
+many heavy pairs or arbitrarily small positive tiny weights; neither
+enters L,P or the additive term.
+
+Audit caveat. The proof must explicitly use the finite-seed version
+of the bounded-label full-prefix inequality, yielding one conditional
+fluid LP with exact means beta y under the PRE-deletion heavy law.
+The abstract theorem's final heavy thinning is omitted in this
+physical construction. If the finite law only guaranteed support
+after thinning, or if label-sharing failed a star prefix, the stock
+calculation above would not close. The bounded-label audit states the
+needed pre-deletion support. Also, proof-only virtual guards at
+unguarded leaves must not be counted as physical sources or calendar
+labels; the label audit handles them by a deterministic weak block
+and direct strong-leaf argument.

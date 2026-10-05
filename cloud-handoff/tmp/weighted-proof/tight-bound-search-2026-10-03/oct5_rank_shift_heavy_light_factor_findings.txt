@@ -1,0 +1,43 @@
+Structured rank-shift heavy/light factor test
+5 October 2026. Scratch only; no new lower bound.
+
+Attempted geometry. Use four vertices on each shore. The heavy types
+form an 8-cycle: U_i--V_i and U_i--V_(i-1), with indices mod 4. All
+sixteen U_i--V_j small types form K4,4; the edges with offset j-i in
+{0,1} have weight .16 and the others weight .20. Thus each vertex has
+two small edges of each size, and their total weight is .72. The heavy
+cycle has weight sequence (.64,.60,.56,.64,.60,.56,.60,.56) in the
+alternating edge order emitted by the script. Every vertex has two
+heavy types. In each local bin packing, assign the two .16 edges to
+the heavier heavy type and the two .20 edges to the lighter one:
+both resulting bins weigh at most one. Since every heavy copy weighs
+more than 1/2, the m-fold blowup has exact local bound beta=2m.
+The .64 heavy types occur on opposite parity positions of the heavy
+cycle, so a naive two-phase assignment would require the low-small
+factor to track conflicting heavy phases.
+
+The accompanying oct5_rank_shift_heavy_light_factor_probe.py solves
+the nonnegative-profit polar for the canonical local point x_e=1/2.
+It uses a mixed-integer pricing oracle with every type allowed its
+full per-color integer multiplicity floor(1/w_e), and adds the found
+global count patterns to a linear polar master. It terminated after
+96 cuts at numerical polar value exactly 1. A prior sequence with
+.64 types on the same heavy matching parity also terminated at 1
+after 81 cuts. These are numerical diagnostics, not exact certificates
+of gamma/beta=1 or of a general theorem.
+
+The clear structural repair is the all-small one-copy pattern: each
+vertex sees total small weight .72<1. There are also small 2-factors
+that can accompany heavy matchings in many colors. Thus a merely
+frustrated assignment of local heavy/small pairs does not remove enough
+global one-color value; the full repeated-count oracle found no gap.
+Any next candidate of this type should make the all-small pattern
+infeasible while preserving a two-bin local packing. With two heavy
+edges occupying both bins, however, the total small weight at each
+vertex is at most the sum of their two residual capacities, strictly
+less than one. Therefore that escape is impossible in this entire
+two-heavy/two-full-bin architecture. One must add a third local bin,
+use nonuniform profits/targets that exploit more than this canonical
+half-point, or change the heavy support so local bins are not all
+filled by heavy edges. The last sentence is a design constraint, not
+an upper bound on arbitrary profits or arbitrary target points.

@@ -1,0 +1,160 @@
+ENDPOINT REDUCTION FOR MIXED GUARD RECOURSE; THREE-LEVEL LAW
+5 October 2026
+
+EXACT REDUCTION LEMMA
+
+Fix any finite fluid multigraph (stars, branching, and parallel fluid
+identities are all allowed), fixed nonnegative profit vector q, per-edge
+caps C, and a random selection of guard PAIRS forming a matching. The
+matching-selection law may have arbitrary dependence between pairs but
+is chosen without looking at the categorical guard weights realized
+afterwards. At each selected pair i, independently of all other pair
+types conditional on the selected matching, choose a physical type h
+from a fixed distribution p_ih, with weight w_ih in [1/2,1]. The same
+pair residual R_i=1-w_ih is used at both endpoints. Unselected pairs
+have residual one. For any residual vector R, let
+
+  F_q(R)=max{sum_e q_e f_e: 0<=f_e<=C_e,
+            sum_{e incident v} f_e<=R_{P(v)} for every v}.
+
+At unguarded vertices take residual one. The function F_q is jointly
+concave and nondecreasing in pair residuals. Indeed, convex-combining
+feasible flows at two residual vectors gives a feasible flow at the
+combined residual vector; repeating one pair residual at its two
+endpoints is an affine restriction.
+
+For a selected pair whose conditional mean weight is mu_i, replace its
+residual 1-w by an endpoint residual Z_i in {0,1/2} with
+
+  Pr(Z_i=1/2)=2(1-mu_i),
+  Pr(Z_i=0)=2mu_i-1.
+
+This has the same conditional mean residual. For every r in [0,1/2],
+concavity gives
+
+  F_q(...,r,...) >= (1-2r)F_q(...,0,...)
+                    +2r F_q(...,1/2,...).
+
+Condition first on the selected matching and on all other pair types,
+then average and replace pairs one at a time. Consequently the actual
+expected optimal recourse is at least the expected optimal recourse of
+the endpoint surrogate. This is a lower-bound comparison only: actual
+physical categorical type marginals remain those of the original law.
+It works for ANY fluid support, not just stars. It also works when the
+matching law is a fixed hybrid independent/common occupancy law,
+because categorical types are independent of the occupancy uniform
+conditional on selection. The surrogate preserves each pair's total
+presence x_i and its weighted original load a_i=x_i mu_i, so all local
+weighted-load constraints survive exactly. The lemma does not by
+itself prove a 2/3 fluid transfer or a physical palette.
+
+ENDPOINT PARAMETERIZATION
+
+At pair i write a_i for original presence of unit-weight types and
+b_i for original presence of half-weight types (aggregating physical
+identities). Then x_i=a_i+b_i<=1 and weighted load is a_i+b_i/2.
+Under alpha=2/3 sampling, the residual has three levels:
+
+  R_i=0 with marginal alpha a_i,
+  R_i=1/2 with marginal alpha b_i,
+  R_i=1 with marginal 1-alpha(a_i+b_i).
+
+In the fixed hybrid's independent mode these levels are independent
+across pairs. In its common occupancy mode a single uniform U first
+sets pair occupancy by U<=alpha(a_i+b_i), and conditional on occupancy
+the unit/half type probabilities are a_i/x_i and b_i/x_i,
+independently across pairs. Thus all quantities for a finite graph
+are piecewise polynomial/rational in the a_i,b_i, with breakpoints
+only at alpha x_i. This reduces the continuous-weight search to two
+weights per guard pair without changing pair presences or local rows.
+
+For one star prefix with a center guard c and one distinct strong leaf
+guard group l, let Y be the group's target mass and t in [1/2,1] the
+largest leaf's fraction. Its group throughput is at least
+min(1,R_l/t). Put z=1/(2t) in [1/2,1]. At endpoint residuals, the
+recourse lower-model payoff table is:
+
+             leaf 0   leaf 1/2   leaf 1
+ center 0       0         0          0
+ center 1/2     0        1/2        1/2
+ center 1       0         z          1.
+
+The center local row is a_c+b_c/2+S<=1; the largest leaf row is
+a_l+b_l/2+tY<=1. This small table is the exact two-pair object to
+optimize for a common-mode correction. It retains the center's
+half-unit occupied residual which the binary-chord shortcut loses.
+
+For explicit algebra set p=alpha(a_c+b_c), r=alpha(a_l+b_l), and let
+h_c=b_c/(a_c+b_c), h_l=b_l/(a_l+b_l), with zero-presence fractions
+defined arbitrarily. The independent-mode lower-model value is
+
+  I=(1-p)(1-r+z*r*h_l)+(p*h_c/2)(1-r+r*h_l).
+
+The common-mode value, with categorical types independent of U, is
+
+  C=1-p+(h_c/2)(p-r+r*h_l)                  if p>=r;
+  C=1-r+z(r-p)h_l+(p*h_c*h_l/2)             if p<=r.
+
+The local constraints become p(1-h_c/2)<=alpha(1-S) and
+r(1-h_l/2)<=alpha(1-tY), with p,r<=alpha. Differential evolution
+over these parameters, using S=Y as the adverse center allowance,
+found no violation of (3/4)I+(1/4)C>=alpha Y for one strong group.
+This is numerical evidence, not an analytic certificate, and does
+not control several interacting groups.
+
+There is an exact dimension reduction before any numerical search:
+I and C are nonincreasing in p and r at fixed h_c,h_l,t. This follows
+by differentiating the two displayed formulas; for example,
+-dI/dp=(1-r+z r h_l)-(h_c/2)(1-r+r h_l)
+ >=(1-r)/2, while each derivative of C in p or r is nonpositive
+because z>=1/2 and h_c,h_l<=1. The derivative of I in r is also
+nonpositive because z h_l<=1 and h_l<=1. Thus the adverse values are
+
+  p=min{alpha, alpha(1-S)/(1-h_c/2)},
+  r=min{alpha, alpha(1-tY)/(1-h_l/2)}.
+
+For a fixed prefix mass Y, increasing the whole-star load S only
+decreases the admissible center presence, so S=Y is adverse. A
+one-group proof can therefore focus on Y,t,h_c,h_l alone, split by
+the regions p>=r and p<=r and the two saturation boundaries.
+
+One candidate extremal family emerging from this reduction has t=1/2,
+the leaf guard purely unit weight with original presence 1-Y/2,
+and center weighted load 1-Y. For Y<=1/2, the center has original
+presence one with half-weight conditional fraction 2Y. For Y>=1/2,
+it is purely half weight with presence 2(1-Y). Direct substitution
+gives the following exact HYBRID SLACK for this family:
+
+  (2-5Y+3Y^2)/12,       0<=Y<=1/2;
+  (2-5Y+4Y^2)/24,       1/2<=Y<=2/3;
+  (1-Y)^2/6,           2/3<=Y<=1.
+
+All values are nonnegative and the pieces agree at their joins.
+These formulas prove feasibility only for this particular family;
+the claim that it minimizes over all t,h_c,h_l is unproved.
+
+WHY TWO UNIT-GUARD LAYERS DO NOT IMMEDIATELY SOLVE IT
+
+In a monotone quantile coupling of endpoint types, R_i is the average
+of nested unit-free indicators with effective unit presences a_i and
+a_i+b_i. Concavity then gives an average of two binary recourse values.
+But the original fluid target y need not split into two locally
+feasible unit-guard targets whose average is y. Consider a single
+fluid edge uv of target 1/2. At u put one half-weight guard of
+presence one, so its two layer allowances are 1 and 0. At v put one
+unit-weight guard of presence 1/2, so both layer allowances are 1/2.
+The original row is tight at both vertices. A two-layer target split
+y=(y^(1)+y^(2))/2 would require y^(2)=0 at u and hence y^(1)=1,
+but v's first-layer allowance is only 1/2. The decomposition is
+impossible even though the fixed hybrid on this one-edge instance
+has enough recourse. Thus applying the audited unit-star theorem
+separately to the two binary layers is not a valid general proof.
+
+CURRENT GAP
+
+The three-level endpoint reduction removes continuum weight choices,
+but the hybrid law still needs a common-mode estimate that pays for
+center/leaf complementarity while controlling correlation among
+multiple leaf groups. The one-group payoff table is tractable but
+does not by itself bound an arbitrarily branching fluid graph. No
+one shared heavy law for unequal-load star forests is proved here.
