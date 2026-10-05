@@ -1,0 +1,142 @@
+RESEARCH CHECKPOINT — 5 October 2026, phase 10
+
+STATUS AND PREVIOUS-TURN AUDIT
+The preceding research turn made concrete progress: saved independent audits
+prove the mixed-center single-star conditional transfer; finite-state probes
+completed, and the unit-heavy scope audit changed the next research priority.
+This turn adds a physical palette-completion theorem independently checked by
+two agents and root, and a stronger structural obstruction to lower-bound
+constructions. Neither turn proves a new unrestricted constant. The active
+objective remains tight bounds for both bipartite and general multigraphs.
+Established manuscript intervals remain bipartite [4/3,81/50] and general
+[3/2,1999/1000]. Main manuscript and Lean sources have not been changed or
+freshly rebuilt during this research pass.
+
+1. MAIN NEW TOOL: DIRECT PHYSICAL PALETTE COMPLETION
+Read oct5_arbitrary_heavy_mixed_tiny_physical_palette_audit.txt first, then
+its independent check oct5_physical_heavy_tiny_product_rounding_audit.txt.
+The first note has the strongest scope: the precolored core need not be
+properly colored, only feasibly weighted-colored. The second note initially
+states the proper-core special case, and its proof verifies the same steps.
+
+Let G=J union T be a finite loopless multigraph, with a given feasible
+K-coloring of J. Every remaining edge has weight at most tau<1/4. Put
+c=1-4tau, W(v)=total core weight at v, and T(v)=total remaining weight.
+If every remaining edge uv obeys
+
+ c^2 K >= max(T(u),T(v)) + c(W(u)+W(v)),
+
+then the given core coloring extends to all physical edges in the SAME
+K colors. This is a finite theorem, uniform in graph order, multiplicity,
+and minimum positive tiny weight. It has a polynomial-time construction
+for rational input and polynomially many supplied color slots.
+
+Proof mechanism: reserve 4tau at each vertex-color slot, leaving
+r(v,k)=(1-4tau-coreload(v,k))_+. The inequality
+(c-a)_+(c-b)_+ >= c^2-c(a+b) makes
+S(uv)=sum_k r(u,k)r(v,k) >= max(T(u),T(v))>0.
+Assign each tiny physical edge fraction r(u,k)r(v,k)/S(uv) to color k.
+Every edge's fractions sum to one; vertex-color loads fit the reserved
+capacities. Iterative LP rounding drops a tight row with at most four
+fractional variables: basicness gives n<=m+t, item equalities give
+m<=n/2, and two endpoints give at most2n row incidences. Fix all zero
+variables permanently, so a dropped row gains at most4tau. Positive
+reserved rows fit the original residual; zero rows are never used.
+No divisible-to-physical gap or sampling argument remains in this lemma.
+
+COROLLARY. If edges are heavy (>1/2) or tiny (<=tau), let H be maximum
+heavy edge-count degree, N>=Delta_w, and Lmax maximum heavy weighted
+load over tiny-edge endpoints. A sufficient palette is
+
+ max{3ceil(H/2), ceil((N+c Lmax)/c^2)}
+
+in general; replace the first term by H for bipartite heavy support.
+The general proof includes an elementary polynomial proper heavy-coloring
+algorithm: even-regular augmentation, Euler orientation, bipartite perfect
+matchings, then three colors per resulting cycle factor.
+For N=bp, H<=N. If Lmax<=N/2, this is (3/2+O(tau))N+O(1), with arbitrary
+heavy and tiny supports. In bipartite graphs Lmax<=N/3 similarly gives
+(4/3+O(tau))N+O(1). Choose tau depending on desired accuracy; fixed tau
+does NOT make O(tau) vanish as bp grows. The computable bound can use
+N=Delta_w and retain H separately; no exact bp computation is needed.
+The bipartite load-threshold corollary does not improve the existing harmonic
+charge bound in this heavy/tiny regime: H_v-W_v<=W_v for heavy weights>1/2.
+The substantial new scoped improvement is on general graphs. The medium-weight
+range is still missing. No unrestricted improvement or literature-novelty
+claim is justified by this result alone.
+
+2. IMPORTANT SCOPE CORRECTION
+Read oct5_unit_heavy_scope_audit.md. Existing manuscript methods ALREADY
+handle weights exactly1 or sufficiently tiny with factors1+epsilon
+bipartite and3/2+epsilon general, arbitrary topology. Do not present the
+unit-guard star/bridge/smoothing lemmas as new physical progress for that
+already-covered regime. The useful remaining targets must exploit mixed
+heavy residuals and medium-weight compatibility.
+
+3. MIXED STAR RESULTS AND A GLOBAL COUPLING OBSTRUCTION
+The strong-group and complete single-star proofs passed independent audits:
+ oct5_mixed_center_strong_group_audit.md
+ oct5_mixed_center_single_star_conditional_assembly_audit.md
+Heavy support is a matching, all categorical weights are in[1/2,1], fluid
+support ONE star, and per-state caps are at least K times target. With
+K=4/delta, retention is (2/3)/(1+2delta). Arbitrary star degree, parallel
+fluid identities, and the center's own guard partner as a leaf are covered.
+Unguarded-center mixed star forests have a separate fixed-independent-law
+proof in oct5_mixed_guard_unguarded_center_star_transfer.md and
+ oct5_mixed_hybrid_scope_and_unguarded_star.md.
+
+Read oct5_unequal_star_common_law_audit.txt for the exact next boundary.
+Equal-load high stars glue under ONE auxiliary center-free bit, including
+heavy pairs linking different stars. The audited conditional constructions
+cannot be glued unchanged across unequal loads when two shared guard pairs
+force incompatible conditional independence. A fully feasible two-star
+nested-stratum example has recourse13/30<1/2, so naive stratification fails.
+This is a counterexample to that LAW, not to existence of a better law.
+The universal 3/4-independent +1/4-common hybrid remains unproved for
+arbitrary mixed stars and general branching. Its unit strong-group lower
+bound cannot be copied verbatim; occupied-center residual must be used.
+
+Diagnostic caveat: oct5_mixed_star_hybrid_probe.py aggregates two unequal
+spoke caps as min(2R,12Y), potentially overstating true capacity. Do not use
+that probe as evidence for arbitrary unequal individual caps. The separate
+per-edge global LP probe uses the caps correctly. It completed4,000 mixed
+instances with no failure, and detects the exact below-half counterexample
+in oct5_mixed_hybrid_scope_and_unguarded_star.md. These remain diagnostics,
+not unrestricted proofs. The3,000-instance unit branching LP also completed.
+
+4. LOWER-BOUND SEARCH
+Read oct5_two_palette_blowup_sieve.txt. For any fixed weighted support,
+uniform m-fold blowups have exact asymptotic ratio gamma/beta, where gamma
+is the covering LP over ALL integer global patterns and beta is maximum
+local covering LP value. One-copy integer gaps need not persist.
+Two feasible global patterns covering(3/2)x coordinatewise rule out a
+strictly greater-than4/3 support-function gap at local target x.
+The note proves a subcubic bipartite barrier for weights>1/3 and at most
+one incompatible incident pair per vertex. Root and agent also verified
+the degree-two signed NAE3 argument closing the analogous general case:
+if no vertex has two >1/2 types, forced-conflict path components each
+occur in at most two remaining cubic clauses, which are satisfiable.
+The completed note gives physical2m or3m palette bounds and exact scope.
+No improved unrestricted lower construction was found.
+Also retain oct5_two_bin_port_phase_barrier.md: repeatability permits8/9
+marginal retention in a rank-three local alternative-pattern gadget, and
+port-completion examples destroy the hoped-for phase deficit.
+
+5. NEXT RESEARCH PRIORITIES
+Apply the physical completion lemma as a clean terminal step where its
+load condition can be PROVED. Seek a way to color the medium core while
+exploiting both the local bin patterns and remaining tiny load. A precolored
+core hypothesis is not a construction of that core. Separately, resolve
+mixed-star/global branching with a joint heavy law; an isolated-star law
+cannot simply be used independently when heavy pairs connect stars.
+For lower bounds move beyond two-palette/subcubic one-conflict architectures.
+Do not spend the next pass polishing already-covered unit-weight motifs or
+claiming tiny diagnostic gains as progress toward an unrestricted theorem.
+
+CLOUD STATUS
+The private handoff branch is cloud/research-2026-10-04. Refresh it with this
+checkpoint and audited notes. Repository-backed cloud task has not started;
+no published repository environment was available at the last check.
+The user already authorized a new Codex Cloud task. Do not ask that choice
+again. An environment ID or a published environment is still needed to
+submit it. Local mathematical research remains possible in the meantime.

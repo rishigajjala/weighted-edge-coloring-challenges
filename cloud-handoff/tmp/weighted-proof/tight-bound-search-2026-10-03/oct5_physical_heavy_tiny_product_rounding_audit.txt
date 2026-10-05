@@ -1,0 +1,143 @@
+PHYSICAL HEAVY + TINY WEIGHTED EDGE COLORING: INDEPENDENT AUDIT
+5 October 2026
+
+STATEMENT (loopless multigraph; rational weights for polynomial-time wording)
+
+Partition physical edges into precolored edges and tiny edges. The extension
+lemma itself permits precolored weights anywhere in (0,1], provided their
+K-coloring is proper; the intended heavy application has weights in
+(1/2,1]. Tiny weights lie in (0,tau], with 0<=tau<1/4. Let H be maximum
+HEAVY edge-count degree, L(v) the weighted heavy load at v, T(v) the
+weighted tiny load, and d(v)=L(v)+T(v). Fix any proper K-edge-coloring
+of the heavy submultigraph, with K>=ceil(3H/2) sufficient by Shannon.
+Put c=1-4tau>0. If for every tiny edge uv,
+
+  c^2 K >= T(u)+c[L(u)+L(v)]
+  c^2 K >= T(v)+c[L(u)+L(v)],                         (A)
+
+then the heavy coloring extends to a physical K-coloring of every tiny
+edge with total weight at most one in each vertex-color row. In
+particular, with N>=max_v d(v) and Lmax=max_v L(v), it suffices to take
+
+  K >= max{ceil(3H/2), ceil((N+c Lmax)/c^2)}.       (B)
+
+The original proposed weaker condition K>=(N+Lmax)/(1-8tau) for
+tau<1/8 is also sufficient. Condition (A) is the sharper local form;
+it equals c^2 K>=d(u)-4tau L(u)+c L(v) and its u/v swap.
+If no tiny edges exist, only proper heavy coloring is needed.
+
+FULL CHECK OF THE FRACTIONAL ASSIGNMENT
+
+In color k, let h(v,k) be the weight of the unique heavy edge at v,
+or zero. Properness guarantees uniqueness. The physical residual is
+R(v,k)=1-h(v,k), and the reserved residual is
+R'(v,k)=max(0,R(v,k)-4tau)=(c-h(v,k))_+.
+For any a,b>=0, pointwise
+
+  (c-a)_+(c-b)_+ >= c^2-c(a+b).                     (1)
+
+If a,b<=c, the difference is ab>=0. If either exceeds c, the
+right-hand side is nonpositive. Averaging (1) over the K colors gives
+
+  M'(uv):=(1/K) sum_k R'(u,k)R'(v,k)
+       >= c^2-c[L(u)+L(v)]/K.
+
+Condition (A) gives M'(uv)>=T(u)/K and >=T(v)/K.
+Because a positive tiny edge contributes to both T(u),T(v),
+M'(uv)>0. Thus no zero denominator is possible for any tiny edge.
+
+For tiny edge e=uv define its fractional load in color k by
+
+  f(e,k)=(w_e/K) R'(u,k)R'(v,k)/M'(uv).
+
+It is nonnegative and sum_k f(e,k)=w_e exactly. At vertex u and
+color k,
+
+  sum_{e=uv} f(e,k)
+    =R'(u,k) sum_{e=uv} (w_e/K)R'(v,k)/M'(uv)
+    <=R'(u,k) sum_{e=uv} w_e/T(u)
+    =R'(u,k),
+
+using R'(v,k)<=1. If T(u)=0 there are no incident positive tiny
+edges and the row is vacuous. Set z(e,k)=f(e,k)/w_e. It obeys
+sum_k z(e,k)=1, 0<=z<=1 and sum_{e∋v}w_e z(e,k)<=R'(v,k).
+Only pairs with R'(u,k)R'(v,k)>0 are allowed in the rounding LP.
+
+ITERATIVE ROUNDING AND ZERO SUPPORT
+
+Repeatedly choose a basic feasible solution of the remaining LP.
+Fix every z=0 permanently to zero and every z=1 permanently to one,
+updating all remaining row capacities and edge equations. If no
+fractional variable remains, stop. Let n be the number of currently
+fractional variables and m the number of remaining edge equalities.
+Each such equality has at least two fractional variables, because
+its right-hand side is zero or one after fixing integral variables;
+therefore m<=n/2. If t vertex-color rows are tight and independent
+at the BFS, rank gives n<=m+t, so t>=n/2. Every fractional
+variable occurs in exactly two vertex-color rows (its two endpoints),
+giving at most 2n row incidences among tight rows. Some tight row
+therefore contains at most 4 fractional variables. Drop that row and
+repeat. (It is also enough to count all currently enforced rows; the
+rank argument selects a tight one.) Fixing all zeros is essential:
+otherwise new positive variables could appear in a dropped row and
+invalidate the four-variable bound.
+
+When a row is dropped, its fixed load plus current fractional load
+obeys its residual capacity. Every remaining variable touching it
+has weight <=tau, and there are at most four, so any later integral
+assignment adds at most 4tau beyond the fixed load. Its final tiny
+load is at most R'(v,k)+4tau. If R'(v,k)>0 then
+R'(v,k)=R(v,k)-4tau, so the final tiny load is at most R(v,k).
+If R'(v,k)=0, all incident z(e,k) were zero in the initial product
+support, so that color receives no tiny edge at v. Thus every
+physical row has heavy-plus-tiny load at most one. Each tiny edge
+ends with exactly one assigned color. Rational LP/BFS steps and a
+constructive Shannon coloring give polynomial time for rational data
+when the chosen K is polynomially bounded. If the ceiling in (B) is
+larger than the total edge count, simply give every physical edge a
+different color; this uses fewer colors than (B) and is polynomial.
+
+ORIGINAL COARSER CONSTANT AND SMALL IMPROVEMENT
+
+The proposed estimate R'_u R'_v >= R_u R_v-8tau is valid, since each
+residual drops by at most 4tau and all factors lie in [0,1]. Also
+R_u R_v>=R_u+R_v-1, giving
+M'>=1-[L(u)+L(v)]/K-8tau. This yields
+(1-8tau)K>=d(u)+L(v) and its swap, or the global
+K>=(N+Lmax)/(1-8tau). A direct bound on the maximum product loss
+improves 8tau to 8tau-16tau^2, because
+ab-(a-4tau)_+(b-4tau)_+ increases in both a,b in [0,1] and is
+maximal at (1,1). The stronger inequality (1) further improves the
+heavy-load coefficient, leading to (A).
+
+ASYMPTOTIC READING AND LIMITS
+
+Let A=Lmax/N, assuming N>0. Bound (B) is
+
+  K <= max{ceil(3H/2), ceil([1+cA]N/c^2)}
+
+when K is chosen minimally. If A<=1/2, then every heavy weight >1/2
+implies H<2Lmax<=N, so this gives
+K<=[(1+c/2)/c^2]N+O(1)
+ = (3/2+10tau+O(tau^2))N+O(1).
+The coefficient 10tau follows from c=1-4tau:
+(1+c/2)/c^2=(3/2-2tau)/(1-8tau+16tau^2).
+This is a physical coloring result for arbitrary tiny-edge topology
+and arbitrary heavy multigraph, provided there are no medium-weight
+edges. It does not imply the same factor for unrestricted weights.
+For bipartite heavy support, K>=H suffices in place of Shannon's
+ceil(3H/2); the fractional and rounding arguments are unchanged.
+
+LITERATURE SCOPE CHECK (not a novelty certification)
+
+A targeted search found the related weighted-edge-coloring literature,
+including Debarsho Sannyasi, "Improved Approximation Algorithms for
+Weighted Edge Coloring of Graphs" (2020),
+https://arxiv.org/abs/2012.15056. Its abstract studies the same
+per-vertex/color capacity-one definition but reports different online
+and graph-specific offline results; it does not state this specific
+heavy-plus-tiny extension. Constructive polynomial Shannon coloring
+is documented by "Edge-Coloring Algorithms for Bounded Degree
+Multigraphs" (2023), https://arxiv.org/abs/2307.06579.
+This search is insufficient to claim the present result is new or
+absent from other literature.

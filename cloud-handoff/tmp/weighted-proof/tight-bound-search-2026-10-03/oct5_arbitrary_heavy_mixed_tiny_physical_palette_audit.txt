@@ -1,0 +1,219 @@
+5 October 2026 — audit of arbitrary-heavy mixed/tiny physical palette
+
+STATUS. This proof was proposed by the root agent and independently checked
+here. It is a nonasymptotic physical coloring theorem for a genuine mixed
+heavy regime, with arbitrary heavy topology, arbitrary tiny topology and
+parallel multiplicity. The palette-completion part actually allows a
+precolored core of arbitrary weights and topology; the heavy/tiny result
+is its immediate corollary. No manuscript or Lean source was changed.
+
+GENERAL PALETTE-COMPLETION LEMMA. Let G=J∪T be a finite loopless
+weighted multigraph, every edge in T having weight at most τ∈(0,1/4).
+Suppose J has any feasible weighted K-coloring. Write W_v for the
+total weight of J-edges at v, T_v for the total weight of T-edges at
+v, and c=1-4τ. If every tiny edge uv satisfies
+
+  c² K >= max(T_u,T_v)+c(W_u+W_v),                 (LOCAL)
+
+then the given J-coloring extends to a feasible K-coloring of all G.
+No properness of J's color classes is needed: several core edges may
+share one color at a vertex as long as their total weight is at most
+one. The criterion is local to tiny-edge endpoints.
+
+If T is empty, completion is immediate. Otherwise, if
+N>=max_v(W_v+T_v) and A=max_{v incident to T} W_v/N, then the
+simpler sufficient condition
+
+  K >= N(1+cA)/c²                                  (GLOBAL)
+
+implies (LOCAL). For uv∈T, set W_hi=max(W_u,W_v) and
+W_lo=min(W_u,W_v). Since T_v<=N-W_v,
+
+  max(T_u,T_v)+c(W_u+W_v)
+    <=N-W_lo+c(W_hi+W_lo)
+    =N+cW_hi-(1-c)W_lo<=N+cAN.
+
+This completion lemma may be applied after a medium-edge or packet
+precoloring, but does not itself construct that precoloring.
+
+THEOREM. Let G be a finite loopless weighted multigraph. Suppose each edge
+has weight either strictly above 1/2 (heavy) or at most τ (tiny), where
+0<τ<1/4. Let N=bp(G)>=1, let H be the maximum number of heavy physical
+edges incident to a vertex, and put
+
+  A=max_{v incident to a tiny edge}(1/N)Σ_{h∋v}w_h,
+  c=1-4τ.
+
+For any integer K satisfying
+
+  K >= 3ceil(H/2),
+  K >= N(1+cA)/c²,
+
+the whole graph has a feasible weighted K-coloring. In particular, since
+H<=N, one may take K=max{3ceil(H/2),ceil(N(1+cA)/c²)}.
+As N tends to infinity, this is at most
+
+  max(3/2, (1+cA)/c²)N+O(1).
+
+For bipartite G, replace the first threshold by K>=H; then the same
+proof gives K=ceil{N(1+cA)/c²}. At A<=1/2 these are respectively
+(3/2+O(τ))N and (3/2+O(τ))N, while the theorem permits A up to one.
+
+PROOF. Each heavy physical edge needs its own local bin, so H<=N.
+Also Σ_{e∋v}w_e<=N for every vertex. The self-contained proper
+heavy-coloring algorithm below uses 3ceil(H/2) colors; add unused
+colors to obtain K. In the bipartite case use Kőnig instead. From
+here onward the proof works for any feasible precolored core J.
+
+Let h_{v,c} be the weight of J-edges of color c incident to v,
+R_{v,c}=1-h_{v,c}, and
+
+  R'_{v,c}=max(0,R_{v,c}-4τ)=max(0,c-h_{v,c}),
+  S_{uv}=Σ_d R'_{u,d}R'_{v,d}.
+
+For a,b∈[0,1] one has
+
+  (c-a)_+(c-b)_+ >= c²-c(a+b):
+
+if a+b>=c, the right side is nonpositive; otherwise both positive
+parts open and the difference is ab>=0. Since Σ_d h_{v,d}=W_v,
+
+  S_{uv}>=c²K-c(W_u+W_v)>=max(T_u,T_v)>0
+
+for every tiny edge uv, by (LOCAL). Give that physical edge the
+fractional color assignment
+
+  z_{e,c}=R'_{u,c}R'_{v,c}/S_{uv}.
+
+These fractions are nonnegative, at most one, and sum to one. At
+vertex v in color c, use S_{uv}>=T_v and R'_{u,c}<=1 to get
+
+  Σ_{e=uv tiny} w_e z_{e,c}
+    = R'_{v,c} Σ_{e=uv tiny} w_e R'_{u,c}/S_{uv}
+    <=R'_{v,c} Σ_{e∋v tiny}w_e/T_v
+    =R'_{v,c}.
+
+Thus z is a feasible fractional assignment of every physical tiny
+edge to the K actual core-color slots, with 4τ held back at each slot.
+
+Round z by iterative relaxation of the assignment LP. Maintain one
+equation Σ_c z_{e,c}=1 for each unassigned tiny physical edge and one
+weighted-load inequality per active vertex-color row. Fix 0/1
+variables, remove their edge equations, and update row capacities.
+Take a basic feasible solution. If fractional variables remain, let n
+be the number of positive fractional variables, m the number of
+unassigned edges, and t the number of tight active vertex-color rows.
+Every unassigned edge has at least two fractional choices, so n>=2m.
+Basicness gives n<=m+t, hence t>=n/2. Each variable participates in
+at most two active rows, one at each endpoint, so total incidences
+over tight rows are at most 2n. Some tight row consequently contains
+at most four positive fractional variables: if all contained at least
+five, then 5t<=2n, whereas t>=n/2 would give 5n/2<=2n.
+Drop that row and repeat.
+
+At the moment a row is dropped its fractional load is within its
+current capacity. Only the at most four still-fractional variables in
+that row can subsequently increase its load; each corresponds to a
+tiny edge of weight at most τ. Its final tiny load is therefore at
+most R'_{v,c}+4τ. If R'_{v,c}=0, every incident z_{e,c}=0 initially,
+and zero variables remain fixed, so its final tiny load is zero.
+If R'_{v,c}>0, then R'_{v,c}+4τ<=R_{v,c}. Thus every final color is
+physically feasible. Every tiny physical edge is assigned exactly once,
+and the heavy edges were already assigned exactly once.
+
+SELF-CONTAINED PROPER HEAVY COLORING. Put r=ceil(H/2). Take two
+disjoint copies of the heavy multigraph. For each original vertex v,
+join its two copies by 2r-deg_H(v) new parallel dummy edges. The
+result is a loopless 2r-regular multigraph on twice as many vertices.
+Orient an Euler tour in each connected component, giving every
+vertex indegree and outdegree r. Make a bipartite r-regular graph
+whose left and right shores are copies of this vertex set; represent
+each directed edge u→v by a bipartite edge from left u to right v.
+Repeatedly find a perfect matching and delete it. Hall's condition
+holds in every regular bipartite residual graph, so this decomposes
+the directed edges into r sets having indegree and outdegree one at
+each vertex. Each set is a vertex-disjoint union of directed cycles,
+including possible two-cycles from parallel edges, and admits a
+proper edge coloring with at most three colors. Use separate three-
+color palettes for the r sets, then restrict to the original copy
+of the heavy graph. This constructs a proper heavy coloring with
+exactly at most 3r=3ceil(H/2) colors in polynomial time. For H=0,
+the empty heavy coloring uses zero colors; the completion palette
+still has K colors from (GLOBAL).
+
+DETAILS/QUANTIFIERS. The denominator S_{uv}>0 was checked above.
+The z variables are automatically <=1 because each numerator is one
+nonnegative term in the denominator; no additional stock constraint
+is needed. The iterative rounding works for arbitrary parallel
+physical edges since each edge has its own assignment equation and
+touches exactly its two endpoint-color rows. The proof is finite and
+nonasymptotic. Fix every initially zero z variable permanently,
+including every row with R'=0; otherwise a later LP could introduce
+new choices in a dropped row and invalidate the four-edge count.
+The process is polynomial in the number of physical edges and K.
+If a sufficient K exceeds the physical edge count, assigning one
+distinct color to each edge is trivially feasible and keeps the
+algorithm polynomial in input size. Computing exact bp for the stated
+ratio is a separate algorithmic issue.
+
+SCOPE. This improves the existing harmonic-charge treatment on mixed
+heavy (>1/2) plus tiny (<=τ) instances when A is not too close to
+one. For unit-heavy plus tiny edges the manuscript already has
+stronger coefficients, as recorded in oct5_unit_heavy_scope_audit.md.
+The new contribution is retention of residual capacity when heavy
+weights are strictly below one. The general completion lemma accepts
+medium edges inside its already colored core, but does not construct
+that core coloring. Thus it does not improve the unrestricted constants
+by itself.
+
+MEDIUM-CORE APPLICATION. The same self-contained proper coloring
+works for any designated core J whose edges have weight at least
+ρ>0, without a >1/2 condition. Let N=bp(G), let A=max_v W_v/N,
+and suppose all remaining edges weigh at most τ<1/4. Since every
+core edge contributes at least ρ to weighted degree, its maximum
+ordinary degree H satisfies H<=AN/ρ. Color J with 3ceil(H/2)
+colors and then apply (GLOBAL). This gives the physical bound
+
+  χ'_w(G) <= max{3ceil(AN/(2ρ)), ceil[N(1+cA)/c²]}
+
+in a general multigraph; in a bipartite graph replace the first
+term by ceil(AN/ρ). Using actual H in place of AN/ρ is sharper.
+For example, when ρ=49/100, A<=1/2, and τ tends to zero, the
+general coefficient is at most 75/49≈1.5307 and the bipartite
+coefficient at most 3/2. This includes physical medium edges below
+one half, arbitrary topology, and arbitrary parallel copies.
+
+LIMIT OF REPLACING THE MANUSCRIPT'S 1.999 FINISH. To fill tiny edges
+inside a κN-color precolored core palette using (LOCAL), one needs
+for every tiny uv
+
+  max(T_u,T_v)/N+c(W_u+W_v)/N <= c²κ.
+
+For κ=1999/1000 and τ tending to zero, the global sufficient
+condition (GLOBAL) is available when A<=κ−1=999/1000,
+with an O(τ) deduction from that threshold for positive τ.
+The current 1.999 proof does not guarantee this: a vertex can have
+core weighted degree arbitrarily close to N while still incident
+to a tiny edge. For a concrete load pattern, put q unit core edges
+at each of two endpoints u,v and one tiny edge uv; then bp=q+1,
+W_u=W_v=q and T_u=T_v is tiny. At κ(q+1) colors, the bound (LOCAL)
+fails for all sufficiently large q at every c∈(0,1), because
+cκ<2. The actual color overlap might still be ample, but the local
+weighted-load data do not certify it. The manuscript's residual
+insertion also manages medium residual objects and block endpoint
+labels; this completion lemma handles only genuinely tiny physical
+edges after a feasible core coloring has been established. Thus it
+can replace that bridge only in a subclass where (LOCAL) is proved
+for the constructed core palette, not in the unrestricted 1.999
+proof on the present evidence. Adding the missing roughly 0.001N
+colors in this saturated example would reach coefficient two and
+erase the strict sub-two conclusion.
+
+ADDITIONAL SCOPE CHECK BY ROOT. The new general-graph load-sensitive bound
+can improve the existing harmonic-plus-Shannon estimate. The bipartite
+heavy/tiny corollary should not be presented as a better constant than
+existing harmonic charging: at a vertex H_v-W_v<=W_v because all heavy
+weights exceed1/2, so harmonic charge H_v+T_v is already at most
+N+W_v up to the tiny rounding loss. The generic completion lemma may
+still simplify a proof or apply to a supplied medium core; that is a
+separate benefit from improving a bipartite coefficient.

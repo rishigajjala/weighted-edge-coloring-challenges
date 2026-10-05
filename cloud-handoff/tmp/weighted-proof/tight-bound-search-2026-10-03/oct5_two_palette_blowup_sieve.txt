@@ -1,0 +1,251 @@
+Two-palette support sieve and the exact blowup limit
+5 October 2026. Scratch research only; no improved unrestricted lower bound.
+
+1. Exact asymptotic model for a fixed weighted support.
+
+Fix finitely many positive-weight edge types e of a loopless weighted
+multigraph H, and replace every type by m identical parallel physical
+copies. A one-color pattern is an integer vector z>=0 satisfying
+sum_{e incident to v} w_e z_e <= 1 at every vertex. A local pattern at
+v obeys just its one vertex inequality. Both pattern sets are finite:
+z_e <= floor(1/w_e). Let gamma be the covering LP minimum
+
+  min sum_P lambda_P,  lambda_P>=0,
+  sum_P lambda_P z_e(P) >= 1 for every edge type e,
+
+over global one-color patterns. Let beta_v be the analogous LP over
+local patterns at v, and beta=max_v beta_v. Then
+
+  chi'_w(H^(m)) = m gamma + O_H(1),
+  bp(H^(m))     = m beta  + O_H(1),
+  lim_{m->infinity} chi'_w(H^(m))/bp(H^(m)) = gamma/beta.
+
+Proof: divide any actual coloring or local packing by m for the LP
+lower bound. Conversely choose a finite optimal LP solution and round
+each m lambda_P upward. This uses at most m gamma + number-of-patterns
+colors. Any overcovered copies can be deleted from their assigned
+patterns, since feasibility is downward closed. The local statement is
+identical. This works for arbitrary fixed positive real weights; only
+the finite pattern sets matter. In particular, a 3-color versus 2-bin
+obstruction for m=1 says nothing about gamma/beta until repeated-count
+patterns (including two or more copies of a type in one color) are
+included. It is the global and local covering LPs, not the one-copy
+integer optima, that certify a scalable lower ratio.
+
+2. A q-independent two-palette sieve.
+
+Let x be any nonnegative vector in every exact local one-color hull.
+Suppose there are two feasible global integer-count patterns P,Q with
+
+  P_e+Q_e >= (3/2)x_e  for every type e.                 (*)
+
+Then for every nonnegative profit vector q,
+
+  q.x / max{q.z : z a global one-color pattern} <= 4/3.
+
+Indeed max(q.P,q.Q)>=(q.P+q.Q)/2>=(3/4)q.x. Equivalently,
+(3/4)x belongs to the downward-closed global pattern hull. Thus a
+candidate local-hull point can witness a strict >4/3 lower gap only
+if it evades every such two-pattern cover. This is a sufficient
+obstruction for one target x, not a general graph coloring theorem.
+
+A concrete instance: partition types into disjoint sets A and B, and
+assume selecting one copy of every type in A is feasible globally, as
+is selecting one copy of every type in B. For the uniform local point
+x_e=2/3, the two indicator patterns have P+Q=1=(3/2)x. Hence no
+nonnegative reweighting of the edge types can improve the 4/3 polar
+ratio of that point. This remains true regardless of cycles,
+connectivity, bipartiteness, or the number of weight scales. For a
+medium-core/private-guard architecture, take A as all guards and B
+as all core edges whenever the whole core is feasible in one color
+(for example, a degree-two core with each core weight <=1/2). The
+strictly graded path is sharp for this sieve. The balanced guarded
+cycle barrier and the stronger forest coloring theorem are already
+recorded elsewhere; this note only isolates the profit-independent
+dual mechanism and extends the immediate test to any two feasible
+global type palettes.
+
+3. What a genuinely new lower construction must change.
+
+The LP formula requires a fixed weighted support with beta and gamma
+computed using all integer-count patterns; for a sequence of supports
+growing with m, uniform O(1) rounding cannot be assumed. The two-palette
+sieve says a rank-two local target with x=2/3 is hopeless whenever its
+types admit two feasible one-copy global palettes, even if individual
+vertex pairings have phase frustration. A plausible escape must use a
+local target whose coordinates cannot be covered at the 3/2 rate by
+two global patterns: higher-rank bins, an edge type recurring in one
+palette at a different multiplicity, or shared guards/core constraints
+that prevent either palette from being globally feasible. Any proposed
+construction still needs an explicit nonnegative dual profit q and a
+global-pattern upper bound; one-copy chromatic failure is insufficient.
+
+No >4/3 bipartite or >3/2 general asymptotic instance follows from
+these lemmas.
+
+4. A subcubic bipartite parity theorem (new exact obstacle).
+
+Let H be a bipartite graph of maximum degree three, with one positive
+weighted edge type on each support edge; parallel physical copies are
+created only by the uniform m-fold blowup. Assume every type weight is
+in (1/3,1], and, at each original vertex, at most one pair of incident
+types has weight sum greater than one. Then all types can be split into
+two globally feasible one-copy patterns. At every degree-three vertex,
+choose a pair of incident types to have opposite pattern colors: choose
+the incompatible pair if there is one, and any pair otherwise. At a
+degree-two vertex choose its pair only if incompatible. Make an
+auxiliary graph C whose vertices are the edge types of H, and whose
+edges are these chosen local pairs. Each type is in at most two chosen
+pairs, one per endpoint, so C has maximum degree two. Every cycle in C
+is even: the chosen-pair labels along it alternate between the two
+shores of H, because the two incidences of any original edge type are
+on opposite shores. Hence C is bipartite and its two-coloring assigns
+the types to patterns A,B. At a degree-three original vertex the chosen
+pair is split, so either pattern has at most two incident types; any
+two that remain in one pattern are compatible by the assumption. At a
+degree-two vertex an incompatible pair is split. Thus both one-copy
+patterns are globally feasible.
+
+For the m-fold blowup, use m identical colors of each pattern to color
+all physical copies, giving chi'_w(H^(m))<=2m. If H has a degree-three
+vertex, every local bin contains at most two physical edges because
+all weights exceed 1/3, so bp(H^(m))>=ceil(3m/2). Therefore
+
+  chi'_w(H^(m))/bp(H^(m)) <= 2m/ceil(3m/2) <= 4/3.
+
+This is a physical coloring bound, stronger than the pointwise polar
+sieve above, and includes cyclic subcubic bipartite supports where
+the guard/medium forest theorem does not apply. It pinpoints a necessary
+feature of a subcubic >4/3 candidate with weights >1/3: at some vertex
+there must be at least two incompatible incident pairs. That change
+usually raises the local bin cost, so it needs a separate analysis.
+The argument uses bipartiteness essentially: an odd cycle in H can give
+an odd auxiliary cycle C, as in the classical triangle obstruction.
+If H has no cubic vertex, the same 4/3 conclusion still holds. An
+incompatible degree-two pair has one weight above 1/2; its m copies
+need m distinct bins, and the other m incompatible copies need at
+least ceil(m/2) more. Thus B>=m+ceil(m/2), while the two palettes use
+2m colors. With no incompatible pair and at least one degree-two
+vertex, the full one-copy type set is feasible and m colors suffice;
+the degree-two vertex has 2m incident copies and at most two fit per
+bin, so B>=m. If every vertex has type degree at most one, H is a
+matching of types. Each component is a single parallel bundle after
+blowup, and its optimal coloring equals its local bin packing; reuse
+the largest such palette across components to obtain chi'_w=B. The
+empty support is trivial.
+
+5. Closing the all-compatible cubic case by a bounded-occurrence NAE lemma.
+
+The apparent exclusion of a nonbipartite all-compatible cubic vertex
+is unnecessary. The key is the following elementary Boolean lemma.
+
+Lemma. Every not-all-equal 3-CNF formula in which each Boolean variable
+occurs in at most two literal positions has a satisfying assignment.
+Negated literals and repetitions within one clause are allowed.
+
+Proof. A clause containing both x and not-x is automatically NAE. If
+a clause repeats the same signed literal of x twice, its third literal
+is a different variable (the total occurrence bound is two); x occurs
+nowhere else and can be chosen opposite to that third literal after
+all other variables are assigned. Delete such clauses and their private
+variables. It remains to handle distinct variables per clause.
+
+Consider the nonempty polytope P in [0,1]^n given by
+
+  1 <= L_1+L_2+L_3 <= 2
+
+for every clause, interpreting a positive literal as x and a negative
+literal as 1-x. The all-half vector is feasible. Choose an extreme
+point. Let F be its fractional variables. If F is empty, it is the
+desired assignment. Otherwise choose F linearly independent tight
+clause rows on the fractional coordinates; these exist because no
+fractional box inequality is tight and the point is extreme. A tight
+clause has at least two fractional literals: with exactly one, its
+integer right side and its other two integral literals would force
+the remaining variable integral. Each fractional variable occurs in
+at most two clauses. Counting incidences between the chosen F tight
+rows and F fractional variables therefore gives
+
+  2F <= number of incidences <= 2F.
+
+Hence every chosen row has exactly two fractional variables, every
+fractional variable appears in exactly two chosen rows, and no such
+variable appears in any other clause. The third literal of each chosen
+clause is integral. Its two fractional literals sum to one: their sum
+is an integer strictly between zero and two. The incidence graph of
+chosen clauses and fractional variables is thus a disjoint union of
+cycles, allowing a two-clause/two-variable cycle. On each cycle the
+complementarity equations have the half solution and full rank;
+therefore that solution is unique. Choose one clause of a cycle to
+omit, set one variable to zero or one, and propagate around the
+remaining path, making its two fractional literals complementary at
+each clause. At the omitted clause the two literals must be equal;
+otherwise every equation would hold and the original half solution
+would not be unique. The two propagated assignments complement all
+variables of the cycle, so at that exceptional clause we may choose
+its two equal literals to be opposite the fixed integral third
+literal. Then its total is one or two, as required. All other chosen
+clauses remain NAE; no other clause involves those fractional
+variables. Round each cycle independently. This produces a Boolean
+NAE assignment and proves the lemma.
+
+Theorem. Let H be any loopless weighted multigraph whose edge types
+have weights in (1/3,1] and whose type degree is at most three at every
+vertex. Assume that at most one pair of incident types has sum greater
+than one at each vertex. Let H^(m) uniformly replicate every type m
+times. Then
+
+  chi'_w(H^(m)) <= (3/2) bp(H^(m))
+
+for every m. If H has no vertex incident with two types above 1/2,
+the stronger bound chi'_w(H^(m)) <= (4/3) bp(H^(m)) holds. Separately,
+section 4 gives the 4/3 bound for all bipartite H in this class, even
+if they do contain such a heavy pair.
+
+Proof. If some vertex has two types above 1/2, their 2m copies need
+2m separate local bins, so B=bp(H^(m))>=2m. Choose one pair of
+incident types at every cubic vertex, taking its incompatible pair if
+present; at degree-two vertices choose the incompatible pair if
+present. The auxiliary graph C on edge types has maximum degree two,
+so it is 3-colorable. Each of its three color classes is a feasible
+one-copy global pattern: the chosen pair is split, leaving at most
+two types of any class at a cubic vertex, and the only incompatible
+pair there is split. Thus chi'_w<=3m<=(3/2)B.
+
+Now suppose no vertex has two types above 1/2. Every actual
+incompatible pair then joins one heavy (>1/2) type to one light
+(<=1/2) type. The auxiliary graph C_0 consisting only of these forced
+incompatible pairs is bipartite by heavy/light labels and has maximum
+degree two. Each path component has two free endpoint incidences; a
+cycle component has none. Choose a 2-coloring on each component,
+with one Boolean variable for its choice of orientation; isolated
+types are path components of length zero. A cubic vertex with an
+incompatible pair is already safe: that pair is split, the remaining
+two pairs fit, and no palette receives three types. A degree-two
+vertex is also safe. Each cubic vertex with no incompatible pair
+requires merely that its three incident type colors are not all
+equal. This is a signed NAE clause in the component-orientation
+variables. A component variable occurs in at most two such clauses,
+because only its path endpoints can have an incidence at a vertex
+without a forced incompatible pair; an isolated type likewise has
+only its two physical endpoints. If two endpoint types of one
+component appear at the same cubic vertex, the clause has a repeated
+variable, covered by the lemma. Assign component orientations using
+the lemma. The resulting two type palettes are each globally
+feasible. Hence chi'_w<=2m. If H has a cubic vertex, B>=ceil(3m/2)
+because weights exceed 1/3, giving 2m/B<=4/3. If H has no cubic
+vertex but has an incompatible pair, its heavy type needs m separate
+bins and the incompatible other type needs at least ceil(m/2) more,
+so B>=m+ceil(m/2) and again 2m/B<=4/3. If there is no cubic vertex
+and no incompatible pair but some degree-two vertex exists, all types
+together form one feasible pattern, so chi'_w<=m; that vertex has 2m
+copies and at most two fit in a bin, so B>=m. If instead every vertex
+has type degree at most one, H is a matching of types: each replicated
+parallel bundle has coloring number equal to its local bin count, and
+the component palettes can be reused, giving chi'_w=B. The empty
+support is trivial. This proves the theorem.
+
+The theorem is specific to uniform blowups of supports of type degree
+at most three with weights above 1/3 and at most one forbidden pair
+per vertex. It does not prove the unrestricted 4/3 bipartite or 3/2
+general upper bounds.

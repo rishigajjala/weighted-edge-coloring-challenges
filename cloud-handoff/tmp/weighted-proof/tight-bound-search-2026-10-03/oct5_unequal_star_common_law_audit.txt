@@ -1,0 +1,167 @@
+UNEQUAL-LOAD MIXED STAR FORESTS: COMMON-LAW AUDIT
+5 October 2026
+
+MODEL AND CLAIM LEVEL
+
+Heavy simple support is a matching. Each heavy pair has at most one selected
+categorical physical type, with original total presence at most one and each
+positive weight in [1/2,1]. Divisible fluid lies on vertex-disjoint stars,
+with per-edge caps C_e >= K y_e, K=4/delta, delta in (0,1/2]. Local rows
+sum_h w_h x_h + sum_e y_e <= 1. Write alpha=2/3 and
+beta=alpha/(1+2delta). This note concerns one-color convex-hull laws only;
+there is no physical palette transfer or general branching conclusion.
+
+1. POSITIVE COMMON LAW FOR EQUAL HIGH LOADS
+
+Suppose every star in a guard-connected component has the same whole-star
+load S>1/2+delta. Put T=4(1-S)/3 and q=1-T. Draw one Bernoulli bit B with
+Pr(B=1)=q. Conditional on B, draw a separate U_P for EVERY heavy pair P,
+independently across pairs: uniform on [T,1] for B=1 and on [0,T] for
+B=0. Pair P is occupied if U_P <= alpha x_P, with its categorical type
+chosen independently conditional on occupancy in proportion to x_h.
+
+Each U_P is marginally uniform, hence each physical heavy identity has
+exact marginal alpha x_h. At any star center c, local feasibility and
+w_h>=1/2 give x_c<=2(1-S), so alpha x_c<=T; B=1 makes its center pair
+free. Within that star, all other leaf guard pairs are independent
+conditional on B, even when a pair also supplies a vertex of a DIFFERENT
+star. If its center's heavy partner is a leaf of the same star, the
+single-star audit handles that leaf separately. If a pair joins two star
+centers, it is the center pair for both and remains free on B=1. Thus each
+star sees exactly the heavy-law marginal needed by
+oct5_mixed_center_single_star_conditional_assembly_audit.md. Its
+all-profit support inequality holds, and the disjoint stars' statewise
+recourse values add. Separation gives exact alpha fluid marginals under
+the one common heavy law; thinning gives exact beta heavy and fluid
+marginals. Different guard-connected components can be sampled separately
+when each has its own constant high load S.
+
+When ALL fluid-vertex loads are at most 1/2+delta, the low-load common
+quantile/product-flow branch of that audit already applies globally;
+star loads need not be equal. The equal-high-load statement above is the
+new gluing scope. It does not combine an unequal high component.
+
+2. WHY THE EXACT CONDITIONAL CONSTRUCTION CANNOT BE GLUED AT UNEQUAL S
+
+Let stars A and B have T_A<T_B, both in (0,1). Suppose two distinct
+heavy guard pairs P,Q each connect one leaf of A to one leaf of B. The
+audited construction for star A requires a center-free bit B_A such that
+U_P and U_Q, conditional on B_A, are independent uniforms on
+[T_A,1] when B_A=1, and B_A={U_P>T_A}={U_Q>T_A} a.s. Star B requires
+analogous B_B at T_B, so B_B={U_P>T_B}={U_Q>T_B} a.s. The bits are nested.
+Put r=(1-T_B)/(1-T_A), strictly between zero and one. The marginal
+conditional law says Pr(B_B=1|B_A=1)=r. Independence of U_P,U_Q
+conditional on B_A=1 instead says the common event B_B=1, equal to
+{U_P>T_B} intersect {U_Q>T_B}, has probability r^2. This is impossible.
+This proves incompatibility of the EXACT per-star conditional uniform and
+independence requirements. It does not rule out a different common law or
+the desired convex-hull inclusion.
+
+3. LEGAL TWO-STAR FAILURE OF NAIVE NESTED STRATIFICATION
+
+Take delta=1/20 (K=80), so both loads below are high. Star A has center
+a and five leaves a_1,...,a_5, each spoke target 3/20. Its load is
+S_A=3/4 and threshold T_A=1/3. Star B has center b and five leaves
+b_1,...,b_5, each spoke target 23/200. Its load is S_B=23/40 and
+threshold T_B=17/30. For each i, one weight-1 heavy pair (a_i,b_i)
+has original presence 17/20; its weighted load 17/20 plus A leaf's
+fluid load 3/20 is exactly one, and plus B leaf's fluid load 23/200
+is 193/200 <=1. The center a has a weight-1/2 heavy pair to an unused
+dummy vertex, of original presence 1/2; its weighted load 1/4 plus
+S_A=3/4 is one. Center b likewise has a weight-1/2 guard to another
+dummy, of presence 17/20; its weighted load 17/40 plus S_B=23/40
+is one. All heavy pairs are disjoint; their original presences are <=1.
+Caps exactly K y_e are ample to supply one unit on any free A leaf.
+
+Consider the tempting global nested-stratum law: sample W uniform on
+[0,1], partition it at T_A and T_B, and, conditional on W's stratum,
+draw each pair's U_P independently uniform within that same stratum.
+Each U_P is uniform marginally; the center-free bits are nested. In the
+strata [0,T_A] and (T_A,T_B], every A leaf pair is occupied, since its
+alpha-scaled presence is alpha*(17/20)=17/30=T_B. Its weight is one,
+so every A leaf has zero residual. Center a is occupied on the lower
+stratum (residual 1/2) and free on the middle stratum, but either way
+the A recourse is zero. In the upper stratum every A leaf and its center
+are free, so optimal A prefix recourse is one. Therefore the exact
+expected A unit-profit recourse is 1-T_B=13/30, strictly below
+alpha*S_A=1/2. The center's occupied residual has been accounted for:
+it cannot move flow into zero-residual leaves. This defeats this fixed
+stratified law's alpha support-function target. It is NOT a
+counterexample to some other law or to the convex hull. In fact, the
+separate fixed 3/4-independent + 1/4-common hybrid law has global LP
+retention about 0.9290858368 on this same two-star instance, well above
+2/3 (floating computation only).
+
+4. WHAT TRANSFERS TO THE UNIVERSAL FIXED HYBRID PROOF
+
+The fixed hybrid uses one global mode coin: with probability 3/4 sample
+heavy pairs independently at alpha x_h; with probability 1/4 use one
+common occupancy uniform, drawing categorical types independently
+conditional on occupancy. This law is defined for arbitrary unequal
+stars and guard links. If its one-star support inequalities were proved
+for mixed weights, summing statewise star recourse would immediately
+give a common-law star-forest theorem. Existing exact per-edge-cap
+global LP diagnostics found no failure, but do not certify it.
+
+The independent-mode LEAF GROUP estimate does extend analytically.
+For a profit-prefix group with mass Y, largest leaf fraction t in
+[1/2,1], and common pair residual R, the single-star audit gives
+throughput at least c min(1,R/t), c=min(1,KY). Let x be pair presence,
+mu its mean occupied weight, so x*mu<=1-tY. For a strong group
+(c=1), weights >=1/2 imply occupied R<=t, whence
+
+  E min(1,R/t) = 1 - alpha*x*(mu+t-1)/t.
+
+The quantity x*(mu+t-1) is at most t*(1-tY): if x<=1-tY use
+mu<=1 and x*(mu+t-1)<=xt; if x>=1-tY use
+x*mu<=1-tY and subtract x*(1-t). Consequently
+
+  E min(1,R/t) >= (1+2tY)/3 >= (1+Y)/3.
+
+For a weak group, E R=1-alpha*x*mu >=(1+2tY)/3, and
+min(1,R/t)>=R, so its expected throughput is at least
+c*(1+Y)/3. Distinct leaf pairs are independent in independent mode.
+At the center, min(R_c,L)>=R_c*min(1,L) pointwise, and
+E R_c>= (1+2S)/3. Thus the independent-mode product estimate of the
+audited UNIT-guard hybrid star proof carries over for external leaf
+groups. A center-paired leaf can be Bernoulliized jointly with the
+center for that mode; this requires a written full-prefix check if used.
+
+The COMMON-mode strong-group estimate from the unit proof is false for
+mixed center guards. A one-group legal example has S=Y=1/2, two leaves
+of target 1/4 each in the same weight-1 guard pair of presence 3/4,
+and a center weight-1/2 guard of presence one. Both center and leaf
+rows are tight. With U uniform, the common-mode recourse is zero for
+U<=1/2, then 1/2 for 1/2<U<=2/3, then one for U>2/3, yielding
+5/12. The binary/unit proof would require (1+Y)/3=1/2 from its strong
+group. The independent-mode recourse is 1/3, so the actual hybrid
+recourse is (3/4)(1/3)+(1/4)(5/12)=17/48 > alpha*Y=1/3.
+The lost common-mode activation is offset here by the independent
+mode's real center residual. A mixed proof must budget those two
+effects together; merely replacing each residual by a Bernoulli bit
+or importing the unit common-mode bound is invalid.
+
+A possible quantitative replacement, NOT PROVED, is the one-strong-group
+bound E_common min(R_center,R_leaf/t) >= (1+Y)/3-(1-S)^2/3 for
+Y<=S and t in [1/2,1]. Differential evolution over single-type
+weights/presences found a worst gap ratio 1/3 at the preceding
+S=Y=1/2 example; 200,000 random endpoint-categorical samples also
+found no violation. These computations do not establish the bound.
+The quadratic loss may be affordable because the unit one-strong-group
+hybrid proof has slack (1-s)^2/6 when its only group has s=Y.
+
+One additional diagnostic caveat: oct5_mixed_star_hybrid_probe.py uses
+min(ports*R,12*Y) for a two-leaf group. With unequal leaf targets the
+true capped sum is min(R,12*y_1)+min(R,12*y_2), which can be smaller.
+The stronger oct5_mixed_guard_hybrid_lp_probe.py models per-edge caps
+and is unaffected by this simplification. No numerical result here is
+a proof of the universal fixed hybrid.
+
+OPEN REQUIREMENTS
+
+Prove an all-prefix common-mode correction strong enough to combine
+with the independent-mode bound for a guarded mixed center, including
+center-partner leaves and categorical weights. Then use star additivity
+and support separation for unequal star forests. Branching fluid
+supports, unrestricted heavy support, integer colors, and physical
+tiny-edge palette compatibility remain beyond this note.

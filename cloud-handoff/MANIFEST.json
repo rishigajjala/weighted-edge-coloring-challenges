@@ -3,13 +3,13 @@
   "files": [
     {
       "path": "CLOUD_TASK.txt",
-      "bytes": 1092,
-      "sha256": "2912eb9ed4938dd28f753c9f8f8da5473b121af56c6c98a60cb6030e3d9fc1ff"
+      "bytes": 1377,
+      "sha256": "f0fc1743aaded35f339e16b49ddd5d7080fed047707a57fca23492006404fb4b"
     },
     {
       "path": "CONTINUE.txt",
-      "bytes": 9666,
-      "sha256": "a3946ad2634870bfafe5a90dd4c42df45b9390a75f19c387bc4733bda6f08dcf"
+      "bytes": 10155,
+      "sha256": "b5a2dde5504c3877e266cd529ed880c607edabee63319b923c84de62922ef51a"
     },
     {
       "path": "SETUP.txt",
@@ -572,6 +572,11 @@
       "sha256": "4234dd5632acc3dd8a13f7e53d426e32e9d93551f3ce1783c231a2840f3212ce"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase10.txt",
+      "bytes": 8471,
+      "sha256": "b12189937e3a6b41ad36669cf7756e6ee7acc782506a672d06dc04a7e8c7774c"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/five_hour_checkpoint_phase2.md",
       "bytes": 4965,
       "sha256": "00dc21e3128e56c4fc018b77e4ea5844ade3861ccbee2b0752d86f02c1bf89a7"
@@ -1067,9 +1072,29 @@
       "sha256": "ffe8885bed455472c5cb2504c36a43f6633f24c4248a3d6943a420ff5cd2a20d"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_arbitrary_unit_heavy_capped_lp.py",
+      "bytes": 6687,
+      "sha256": "43b4d2426ace6a40526da721ad0c914816edcfcf1fbb00ccf7759e944dc520ca"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_branch_surplus_uncapped_checkpoint.md",
       "bytes": 8669,
       "sha256": "01d98ccaca0ab049a36eaed841beec734b379893362d97e31afcf94836e7b676"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_branching_hybrid_global_lp_probe.log",
+      "bytes": 1755,
+      "sha256": "ba777e336e6666a14081e975d872998f7bb3642872660d0682f3c973c1e2aeaa"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_branching_hybrid_global_lp_probe.py",
+      "bytes": 3949,
+      "sha256": "74d1778303164de33a81216add60a5910272832c194401eed4b84e220efaf651"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_branching_hybrid_global_lp_probe_result.json",
+      "bytes": 781,
+      "sha256": "0a6a70adeab387b93d65f6b8b662e8b0118fa0de9ba46df963283ab3dfc6fa75"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_capped_two_stars_bridge_independent_audit.md",
@@ -1092,6 +1117,11 @@
       "sha256": "0370c18f8533db9ef18750582d53164faffcd4952b5c00d87b404d07a515abe3"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_double_cover_pair_correlation_scope.md",
+      "bytes": 3300,
+      "sha256": "213390ab9c121d8ce92474cf75141ca915173716ab21b5f9b1fd7d04419d77d1"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_double_star_hybrid_exact_feasibility_probe.py",
       "bytes": 2154,
       "sha256": "5d431c408080c57db3adc7b2d88e237f20308343474eb2073eb17c53aa1a6599"
@@ -1107,6 +1137,21 @@
       "sha256": "d0681641b273a569467bb788c2552389aaa5c177453882aae94f95fb0784d32b"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_hybrid_branch_probe.py",
+      "bytes": 2568,
+      "sha256": "bd596ff45763f801e6bfa2ea97cdadfc33c67e35c33f40d3b4dcbd705e3a86fb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_hybrid_extreme_probe.py",
+      "bytes": 2070,
+      "sha256": "e81ad10c86c10d41bb8038cdc7c2db50be238f1a6d6cdf6420316babc39b7e38"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_independent_pair_global_transfer_probe.md",
+      "bytes": 3262,
+      "sha256": "4e3b0810e5a00814245e54247b6e49aae89f9535e4a3f6b365e1ed5a3458bde7"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_local_normalization_failure.txt",
       "bytes": 1512,
       "sha256": "35885b86135e0c1c4f946134a142fcf6384a093426cd54cdea42314fc1baa8ed"
@@ -1117,9 +1162,24 @@
       "sha256": "1f25c538809fc3c13999e727cc146feebdb3ea1f9a9db3117447db71c8d43438"
     },
     {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_paired_capacity_global_dual.md",
+      "bytes": 15131,
+      "sha256": "5cb7ab8e5dc5a74290f5f6b9d4b3a7f8f69fe27b1ae16886ccb4968f0b6e9985"
+    },
+    {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_paired_leaf_naive_induction_counterexample.md",
       "bytes": 2192,
       "sha256": "f934e9e95718e9481be4e84bdeec4db6401f7901f9e035927f0aaf7d8e8b86f7"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_port_phase_frustration_probe.py",
+      "bytes": 2275,
+      "sha256": "b074ade213f131a3769a4cfdc54fe8b6e09af0a073a32618cebf25f4859573a4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_tree_pair_influence_path_gate.md",
+      "bytes": 3707,
+      "sha256": "41a2bfbc0400fdee95686733b6624e657f23a47907563669c98c08ab734c34a4"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_two_paired_stars_bridge_hybrid_analytic.md",
@@ -1160,6 +1220,146 @@
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_unit_guard_hybrid_octapolar.py",
       "bytes": 3369,
       "sha256": "ccdf5c7f92de2fd2b38ac5ed9b305a9cb185bff5c4f9ac6310186c5a53248d08"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_unit_heavy_arbitrary_support_capped_lp_diagnostic.md",
+      "bytes": 3772,
+      "sha256": "07715c07dc90f74dd77e4269b7e580da3f6dbc3bcb3b294b4c46b6751ca07094"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_unit_heavy_bip_n8_lp.jsonl",
+      "bytes": 2019,
+      "sha256": "5b405192c2704f692ea181e6be7ea2c2e9e5973b8810ecd092428a1d6cbcff5a"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_unit_heavy_general_n6_lp.jsonl",
+      "bytes": 17119,
+      "sha256": "ad5b5dd6843a84c2ed848bcd073ade8abe697573e11cf25f44438c13dce38076"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct4_unit_heavy_general_n8_lp.jsonl",
+      "bytes": 36924,
+      "sha256": "8d97a19538f5bd4b1e684119352718bdd17165acce32987ea592c2e9bed2a684"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_arbitrary_heavy_mixed_tiny_physical_palette_audit.txt",
+      "bytes": 10762,
+      "sha256": "608a54460a4b79aa561d028deca6035580006fe6a0abb4c4e9be6ab6befbb9fb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_branching_hybrid_diagnostic_status.md",
+      "bytes": 1067,
+      "sha256": "0d57986f55c3e7b2dd161e7db4c67503d754e47d8656bf1876ee9efccf0e7327"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_center_branch_dichotomy.md",
+      "bytes": 2368,
+      "sha256": "a457ecd6c37b929b18d128fbfa32e033dd5ce368bffb56cd744d7aba3a25597b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_center_single_star_conditional_assembly_audit.md",
+      "bytes": 6706,
+      "sha256": "3512f7690702e9f74d20505ed26cec537b746e8c170dbe379acd4a8a0b33f2ae"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_center_strong_group_audit.md",
+      "bytes": 5221,
+      "sha256": "429ea9b118e3115ee952ae7a4e85421871b86e6f6644a5d47f7ca6ba33a003fc"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_guard_hybrid_lp_probe.log",
+      "bytes": 2443,
+      "sha256": "2e031eedfaabae0b4229c07e1ccebeddcc17513e970ed5c1bb3a38dd0bc250d4"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_guard_hybrid_lp_probe.py",
+      "bytes": 3946,
+      "sha256": "b34e572deab2fc8d71480293ccd6b29ac4be063bc4797e44eb06eb8523c9b978"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_guard_hybrid_lp_probe_result.json",
+      "bytes": 834,
+      "sha256": "66c56e509907e520d6ddfef6ebf6fdbbb81581ba21c492a5286e1ead89c6d0ec"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_guard_triple_cycle_probe.py",
+      "bytes": 4340,
+      "sha256": "ec9d6b2e0ba93909f9164766a55e9a61055d9403d617cf04e2da0d8c36b2b0eb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_guard_unguarded_center_star_transfer.md",
+      "bytes": 5250,
+      "sha256": "3f7830a02bf506321cba2c4a1a0650f1af8f7c3d5b0bb66d749c77f082b52717"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_hybrid_scope_and_unguarded_star.md",
+      "bytes": 8115,
+      "sha256": "875119754533cf80121d6efc148854aee5fdf93c25e906fb13aba7165235502b"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_hybrid_diagnostic.md",
+      "bytes": 2897,
+      "sha256": "2da85a131dbaaec1e1c218ac52ea19f9a1cf520e54b71be801e415b0a568e7c9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_hybrid_probe.jsonl",
+      "bytes": 5292,
+      "sha256": "aa4e71fff245f36b987881034ad740c1ddd8e59ccdb77800e5966c78737e0789"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_mixed_star_hybrid_probe.py",
+      "bytes": 3859,
+      "sha256": "7f556691670c56fae4bb3702c22096a0b2e17d3d93d6e9b4a971954599ed9599"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_nonmatching_heavy_triangle_cap_barrier.txt",
+      "bytes": 8263,
+      "sha256": "51e02aa84d5cb6f0b1e965045565fb24e0b6d5224a07a9660fdf8eda37eefbcd"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_physical_heavy_tiny_product_rounding_audit.txt",
+      "bytes": 6548,
+      "sha256": "b042176e2b27146edb0e6c992cf515b4a8cd15552d5ff263da78ac32ff4f371c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_port_profit_polar_probe.py",
+      "bytes": 1802,
+      "sha256": "4299cd11f8ba6cad277da16f368fa80aad4adde18e063bd8dbd9cc5849b7e61c"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_role_gradient_prism_probe.py",
+      "bytes": 3175,
+      "sha256": "84af94cf4bec62ff35569e4f2b9b76f8b8db6dd627574c4cea8fe22feadaa847"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_two_bin_port_phase_barrier.md",
+      "bytes": 10654,
+      "sha256": "38864e8fadb33abf2edb91897c372bf3a849397bff6054dd1feb3fa7666f2ab9"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_two_palette_blowup_sieve.txt",
+      "bytes": 13838,
+      "sha256": "72777558177dea9f682ef4abe55f27bdd40a3fffbac6b865b5c53d0fbd983bb2"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_unequal_star_common_law_audit.txt",
+      "bytes": 9361,
+      "sha256": "df96d04e0f56b0dbbfe3ddd56a63ccc267deb9c0f0147b4bfb6e3a38dfd6f1e5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_unit_center_mixed_leaf_star_conditional_transfer.md",
+      "bytes": 6440,
+      "sha256": "8a1f847a2cf27c02de7bc3020d1479a80219a4d95ca667c6bd6fbc01b89853f5"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_unit_center_mixed_leaf_star_independent_audit.md",
+      "bytes": 4978,
+      "sha256": "32fd14b586cb6f8a4f2a038bcf2fcb24cd4cb7a359971366ed4896f5f671fbdb"
+    },
+    {
+      "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/oct5_unit_heavy_scope_audit.md",
+      "bytes": 2326,
+      "sha256": "ac4733152c228067dc472aae5dab656d59d7bdd117aacf4442a80584ce289714"
     },
     {
       "path": "tmp/weighted-proof/tight-bound-search-2026-10-03/one_fluid_edge_independent_audit.md",

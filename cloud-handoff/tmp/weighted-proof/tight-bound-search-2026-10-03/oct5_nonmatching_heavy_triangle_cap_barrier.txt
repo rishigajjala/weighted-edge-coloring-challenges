@@ -1,0 +1,156 @@
+5 October 2026 — nonmatching heavy support: triangle criticality and a cap barrier
+
+STATUS. Scratch research only. This does not improve an unrestricted coloring
+coefficient or disprove a two-thirds uncapped/configuration-aware transfer.
+The exact unit-heavy triangle cap obstruction and sharp K-versus-factor
+inequality in Section 2 were already proved in
+oct4_paired_capacity_global_dual.md; they are restated here for context,
+not claimed as new. The distinct observations here are (i) quantitative
+localization of near-tight odd-set constraints, (ii) the strictly subunit
+mixed-heavy variant of that obstruction, and (iii) a small positive
+reduction for fluid edges internal to near-tight triangles in Section 4.
+
+1. HEAVY TRIANGLE LOCALIZATION
+
+Let x be the target occurrence vector of edges of weight strictly above
+1/2, aggregating parallel/categorical identities by their endpoint pair.
+For an exact local configuration point, x(δ(v))<=1. Set α=2/3. The vector
+αx belongs to the ordinary matching polytope of every loopless graph:
+degree inequalities hold, and for any odd vertex set S of size n>=3,
+
+  αx(E(S)) <= (2/3)*(n/2)=n/3 <= (n-1)/2.
+
+For every odd n>=5, the slack in the odd-set inequality is at least
+(n-3)/6>=1/3, independent of graph size and x. Only triangles can have
+zero odd-set slack. For a triangle T define δ_T=3/2-x(E(T))>=0. Its
+matching inequality at αx has exact slack (2/3)δ_T. At factor
+β=2/3-ε, this slack is at least 3ε/2+(2/3-ε)δ_T.
+
+Near-critical triangles are structurally isolated. If δ_T<=η, then
+each vertex has internal triangle degree at least 1-2η, the total
+external heavy degree over its three vertices is at most 2η, and each
+triangle edge has x_e in [1/2-2η, 1/2+η]. If two distinct triangles
+share exactly one vertex, their deficits sum to at least 1/2: their
+internal degrees at that vertex are disjoint and total at most one.
+If they share an edge, their deficits sum to at least one: the sum of
+their internal edge masses is bounded by the total heavy degree at
+the two common endpoints, at most two. Consequently all triangles
+with δ_T<1/4 are vertex-disjoint. This is a useful reduction for any
+attempt to design a matching law: all potentially tight odd-set
+constraints consist of separated, nearly half-integral triangles.
+
+2. EXACT CAPPED-FLUID COUNTEREXAMPLE
+
+Let the heavy simple support be a triangle on u,v,z. Give its three
+edges weight one and target occurrence x_h=(1-s)/2 each. Add one
+divisible-fluid edge on uv with target load y=s. The load rows hold:
+at u and v, heavy load 1-s plus fluid load s equals one; at z the
+heavy load is 1-s. This is one fluid edge (hence one fluid star), and
+the heavy support is the only new feature relative to the audited
+single-star theorem. Give the fluid edge the allowed per-state cap
+C=K s, with K fixed. Take s<min(1/K,2/(3K)).
+
+Suppose a joint feasible law has each heavy marginal αx_h at α=2/3.
+All three heavy edges are pairwise incompatible, so the probability
+of some heavy edge is their marginal sum,
+
+  3α(1-s)/2=1-s.
+
+The heavy-free event therefore has probability exactly s, regardless
+of the coupling. Every heavy edge touches u or v and has weight one,
+so the fluid edge can carry positive load only in that heavy-free
+event. Its expected fluid load is at most s*C=K s^2, strictly below
+the required αy=2s/3. No statewise law with these marginals exists.
+This is an exact, law-independent obstruction; changing heavy
+correlations cannot repair it.
+
+For β<2/3, the same calculation gives a necessary cap multiplier as
+s tends to zero. The heavy-free probability is
+1-(3β/2)(1-s), hence exact β retention requires
+
+  K >= β/[1-3β/2+(3β/2)s].
+
+Thus K must diverge at least on the order of 1/(2/3-β) as β approaches
+2/3. This matches the qualitative slack/cap tradeoff in the current
+matching-heavy star result; it does not rule out β=2/3-o(1) with a
+growing K.
+
+The obstruction persists with every heavy weight strictly below one:
+give the triangle edges weight 1-λs for fixed 0<λ<2/3. The same heavy
+marginals force heavy-free probability s. In a heavy state, at least
+one fluid endpoint has residual at most λs. Thus for C=Ks,
+
+  E[f] <= (1-s)*min(λs,Ks)+s*min(1,Ks).
+
+For any fixed K and λ<min(K,2/3), this is less than 2s/3 for all
+sufficiently small positive s. The local load rows still hold, since
+(1-λs)(1-s)+s<=1. These are genuinely mixed heavy weights in (1/2,1),
+although they approach one as s tends to zero.
+
+3. WHY THIS DOES NOT CONTRADICT THE PHYSICAL UNIT-HEAVY RESULT
+
+The target can even arise from exact local configurations if the
+fluid load is a bundle of m parallel physical edges of weight 1/m.
+At u and v choose the full bundle with probability s, or one of the
+two incident heavy edges with probability (1-s)/2 each. At z choose
+one incident heavy edge with those probabilities and choose empty
+otherwise. Each fluid identity then has target load y_i=s/m.
+
+Globally, after α scaling, choose a heavy edge with its prescribed
+probability, leaving probability s for no heavy edge. In that empty
+state, choosing the whole fluid bundle with conditional probability
+α realizes every target fluid marginal αy_i. The uncapped physical
+configuration transfer works on this instance. The cap C_i=K y_i
+would forbid the whole bundle when Ks<1: each physical edge itself
+weighs 1/m>C_i. The failure is precisely the loss of a rare but full
+light configuration when it is replaced by fluid with bounded
+relative cap. It is not a coloring lower bound.
+
+NEXT TARGET. A useful genuinely unresolved lemma is a single-star
+transfer at factor 2/3 for arbitrary >1/2 heavy support with no
+per-identity relative cap, using the exact local configurations (or
+an explicit burst variable for rare full light patterns). The
+localization above reduces tight heavy matching constraints to
+vertex-disjoint near-half-integral triangles. A proof would still
+need to synchronize their rare heavy-free events with the star's
+fluid configurations; it would not itself solve arbitrary fluid
+branching or the physical palette. Any capped version at factor
+2/3 must either permit configuration bursts/additive cap or exclude
+near-tight heavy triangles. A β<2/3 version needs K=Ω(1/(2/3-β)).
+
+4. A POSITIVE EMPTY-STATE REDUCTION FOR NEAR-TIGHT TRIANGLE INTERNAL EDGES
+
+Here is a scoped way to dispose of the most critical odd-set geometry
+at a factor below 2/3. Fix β=2/3-ε>0 and θ=1-3β/2=3ε/2. Let x be
+any heavy fractional matching vector and let y be any divisible fluid
+target. By Section 1, (2/3)x is a convex combination of matchings.
+Sample that matching law with probability 1-θ=3β/2, and the empty
+matching with probability θ. This gives exact heavy marginals βx.
+
+Let W be a union of vertex-disjoint triangles. Suppose every vertex
+v∈W has total target fluid load Y_v=Σ_{e∋v}y_e≤θ/β. Let F[W] be all
+fluid identities with both endpoints in W, of arbitrary topology and
+parallel multiplicity. In the empty-heavy event only, put
+
+  f_e=(β/θ)y_e  for e∈F[W],
+
+and otherwise put zero on F[W]. At every vertex its statewise load is
+at most (β/θ)Y_v≤1. If each cap C_e≥K y_e with K≥β/θ, every cap holds.
+The exact fluid mean on F[W] is βy_e. Thus all internal fluid edges
+of a low-fluid-load triangle union admit a joint law with the required
+heavy marginals, regardless of internal fluid branching. The law says
+nothing about edges crossing W's boundary or lying outside W; those
+may compete for capacity in the empty-heavy event.
+
+For unit-weight heavies, a triangle T with deficit δ_T has each
+vertex's heavy target degree at least 1-2δ_T. The local row therefore
+gives Y_v≤2δ_T. Hence every triangle with
+δ_T≤θ/(2β) qualifies. If θ/(2β)<1/4, all such triangles are
+vertex-disjoint by Section 1, so W may contain all of them at once.
+For mixed heavy weights, write
+R_v=Σ_{h∋v}(1-w_h)x_h. The local weighted row gives
+Y_v≤1-x(δ(v))+R_v≤2δ_T+R_v, so the same reduction applies whenever
+2δ_T+R_v≤θ/β at each triangle vertex. The remaining hard cases are
+boundary-crossing fluid and near-tight triangles with appreciable
+occupied residual R_v; these are exactly where a real-residual law,
+rather than a binary free/occupied simplification, is needed.
